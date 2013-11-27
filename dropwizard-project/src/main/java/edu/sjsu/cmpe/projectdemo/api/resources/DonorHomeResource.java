@@ -4,8 +4,10 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
+import com.yammer.dropwizard.views.View;
 
+import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
+import edu.sjsu.cmpe.projectdemo.views.DonorCampsView;
 
 @Path("/login/donor/home")
 public class DonorHomeResource {
@@ -13,12 +15,12 @@ public class DonorHomeResource {
 	DatabaseConnection db;
 
 	@GET
-	public Response displayCamps (){
+	public View displayCamps (){
 		db  = new DatabaseConnection();
 		
 		//TODO 
 		db.getCamps("San Jose");
 		
-		return Response.status(401).build();
+		return new DonorCampsView();
 	}
 }

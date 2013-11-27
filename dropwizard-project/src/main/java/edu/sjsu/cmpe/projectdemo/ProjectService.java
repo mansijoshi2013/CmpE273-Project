@@ -30,6 +30,7 @@ public class ProjectService extends Service <ProjectServiceConfiguration>{
 		environment.addResource(RegistrationResource.class);
 		environment.addResource(AppointmentResource.class);
 		environment.addResource(EmailVerifyResource.class);
+		environment.addResource(DonorHomeResource.class);
 		
 		//environment.addResource(PortalResource.class);
 		//environment.addResource(SurveyResource.class);

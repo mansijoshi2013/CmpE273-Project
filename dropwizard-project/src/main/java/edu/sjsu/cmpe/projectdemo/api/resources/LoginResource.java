@@ -59,14 +59,13 @@ public class LoginResource
 		else if(user.getUser_Type().equals("donor"))
 		{
 			//return Response.seeOther(uri).build();
-			//System.out.println("Its a donor");
 			System.out.println("Its a donor");
 		}
 		else
 		{
 			System.out.println("Its null");
 		}
-		return Response.seeOther(uri).build();
+		//return Response.seeOther(uri).build();
 		
 		
 	
