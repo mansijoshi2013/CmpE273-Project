@@ -699,6 +699,7 @@ INFO  [2013-11-26 20:27:10,704] com.yammer.dropwizard.config.Environment: tasks 
 INFO  [2013-11-26 20:27:11,237] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
 INFO  [2013-11-26 20:27:11,240] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
 WARN  [2013-11-26 20:28:53,228] com.sun.jersey.spi.container.servlet.WebComponent: A servlet request, to the URI http://localhost:15000/portal/verify/activate?activationLink=40bff14d-0063-4ecc-a3ac-60ebbea6cc5f, contains form parameters in the request body but the request body has been consumed by the servlet or a servlet filter accessing the request parameters. Only resource methods using @FormParam will work as expected. Resource methods consuming the request body by other means will not work as expected.
+<<<<<<< HEAD
 WARN  [2013-11-27 06:58:51,643] com.yammer.dropwizard.config.ServerFactory: 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -833,3 +834,5 @@ ERROR [2013-11-27 07:00:24,481] com.yammer.dropwizard.jersey.LoggingExceptionMap
 ! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
 WARN  [2013-11-27 07:00:54,732] com.sun.jersey.spi.container.servlet.WebComponent: A servlet request, to the URI http://localhost:15000/portal/verify/activate?activationLink=01f711b6-aeb2-496e-bf52-a09ade4af417, contains form parameters in the request body but the request body has been consumed by the servlet or a servlet filter accessing the request parameters. Only resource methods using @FormParam will work as expected. Resource methods consuming the request body by other means will not work as expected.
+=======
+>>>>>>> e9273f72335c217d6838ef191f67f00d845c9cca

@@ -11,6 +11,7 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 
+
 import edu.sjsu.cmpe.projectdemo.domain.AllCamps;
 import edu.sjsu.cmpe.projectdemo.domain.BloodDonationCamps;
 import edu.sjsu.cmpe.projectdemo.domain.Donor;
@@ -140,6 +141,6 @@ public class DatabaseConnection {
 			AllCamps.allCamps.add(camp);
 		}		
 	}
-	
-	
+			
+	}
 }
