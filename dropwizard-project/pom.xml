@@ -13,6 +13,14 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <repositories>
+  <repository>
+        <id>java.net2</id>
+        <name>Java.net</name>
+        <url>https://oss.sonatype.org/content/repositories/java.net2</url>
+  </repository>
+  </repositories>
 
   <dependencies>
       <dependency>
@@ -31,6 +39,11 @@
     	<artifactId>dropwizard-core</artifactId>
     	<version>0.6.2</version>
     </dependency>
+    <dependency>
+  		<groupId>javax.mail</groupId>
+		<artifactId>mail</artifactId>
+		<version>1.4</version>
+  	</dependency>
      <dependency>
      <groupId>com.yammer.dropwizard</groupId>
      <artifactId>dropwizard-views</artifactId>
