@@ -1,37 +1,33 @@
-<#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.ClinicView" -->
+<#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.AppointmentView" -->
 <html>
 <head>
-	
+	<style type="text/css">
+	<#include "foundation.css">
+	<#include "normalize.css">
+	</style>
 </head>
 	<body>
 			<form action="" method="post">
 			<div id="cl"></div>
 			<input type = "hidden" id="hidden1" name = "checkedValue"/>
-
+			
 			
 			<script type="text/javascript">
-				<#list 0..sample?size-1 as i>
-				
+				<#list 0..appointments?size-1 as i>
 					var label=document.createElement("label");
-					
 					var radio=document.createElement("input");
 					radio.type="radio";
 					radio.name="name";
-					radio.value="${sample[i].clinicName?html}";
-					radio.id = "radioid";
-					
+					radio.value="${appointments[i].appointmentSlot?datetime?string.medium}";
 					label.appendChild(radio);
-					
-					var description=document.createTextNode("${sample[i].clinicName?html}");
-					label.appendChild(description);	
-					var description=document.createTextNode("${sample[i].clinicAddress?html}");
+					var description=document.createTextNode("${appointments[i].appointmentSlot?datetime?string.medium}");
 					label.appendChild(description);
 					var lb=document.createElement("br");
 					label.appendChild(lb);
 					document.getElementById('cl').appendChild(label);
 				</#list>
-						</script>
-
+			</script>
+			
 			<script>
 						
 					function testRadio(){						
@@ -47,9 +43,7 @@
 					}				
 			</script>
 			
-			<input type="submit" value="Next" onClick = "testRadio()"/>
-
+			<input type="submit" value="Book" onClick = "testRadio()">
 	</form>
 	</body>
 </html>
-

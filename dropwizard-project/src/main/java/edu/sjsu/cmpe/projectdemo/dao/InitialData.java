@@ -21,11 +21,19 @@ public class InitialData {
 	
 		
 		usersCollection = portalDatabase.getCollection("users");
-		BasicDBObject user = new BasicDBObject();
-		user.append("name","Ross Geller").append("hospital_id","D9NJ1").append("age",58)
+		BasicDBObject patient = new BasicDBObject();
+		patient.append("name","Ross Geller").append("hospital_id","D9NJ1").append("age",58)
 		.append("gender","M").append("blood group","B-").append("user_type","patient");
 		
-		usersCollection.insert(user);
+		usersCollection.insert(patient);
+		
+		BasicDBObject donor=new BasicDBObject();
+		donor.append("name","Monica Geller").append("DateOfBirth","11/05/1980")
+		.append("gender","F").append("blood group", "B-").append("email","monica_g@gmail.com")
+		.append("zipcode","95014").append("State", "CA").append("City", "Cupertino")
+		.append("Username","monica.geller").append("Password","monica123").append("user_type", "donor");
+		
+		usersCollection.insert(donor);
 	
 		BasicDBObject camp = new BasicDBObject();
 		campsCollection = portalDatabase.getCollection("camps");

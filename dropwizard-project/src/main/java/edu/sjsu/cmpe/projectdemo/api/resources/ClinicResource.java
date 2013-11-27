@@ -40,7 +40,7 @@ public class ClinicResource
 	
 	@POST
 	public Response chooseAppointmentDate(@FormParam ("checkedValue") String clinicName) throws URISyntaxException{
-		URI uri = new URI("http://localhost:8080/portal/login/donor/clinics/appointments/");
+		URI uri = new URI("http://localhost:15000/portal/login/donor/clinics/appointments/");
 		
 		return Response.seeOther(uri).build();
 	}

@@ -1,75 +1,101 @@
 package edu.sjsu.cmpe.projectdemo.domain;
 
+import java.util.UUID;
+
 import org.joda.time.DateTime;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-public class Donor {
+public class Donor extends User{
 	
-	@JsonProperty("Name")
-	private String Name;
 	@JsonProperty("DateOfBirth")
 	private DateTime DateOfBirth;
-	@JsonProperty("BloodGroup")
-	private String bloodGroup;
+	
 	@JsonProperty("PhoneNumber")
 	private long phoneNumber;
-	@JsonProperty("Email")
+	
+	@JsonProperty("email")
 	private String Email;
+	
 	@JsonProperty("Street")
 	private String Street;
+	
 	@JsonProperty("City")
 	private String City;
+	
 	@JsonProperty("State")
 	private String State;
-	@JsonProperty("ZipCode")
+	
+	@JsonProperty("zipcode")
 	private int ZipCode;
+	
 	@JsonProperty("UserName")
 	private String UserName;
+	
 	@JsonProperty("Password")
 	private String Password;
-
 	
-	private Login donorLogin;
+	@JsonProperty("name")
+	private String Name;
+	
+	@JsonProperty("blood group")
+	private String bloodGroup;
+	
+	@JsonProperty("activation_id")
+	private UUID activation_id;
+	
+	@JsonProperty("verified")
+	private boolean verified=false;
+	
+
+	public UUID getActivation_Id()
+	{
+		return this.activation_id;
+	}
+	
+	public void setActivation_Id()
+	{
+		this.activation_id=UUID.randomUUID();
+	}
+	
+	public void setVerified(boolean verified)
+	{
+		this.verified=verified;
+	}
+	
+	public boolean getVerified()
+	{
+		return this.verified;
+	}
 
 	public String getName() {
 		return Name;
 	}
 
-
-
-
 	public void setName(String name) {
 		Name = name;
 	}
-
-
-
-
-	public DateTime getDateOfBirth() {
-		return DateOfBirth;
-	}
-
-
-
-
-	public void setDateOfBirth(DateTime dateOfBirth) {
-		DateOfBirth = dateOfBirth;
-	}
-
-
-
 
 	public String getBloodGroup() {
 		return bloodGroup;
 	}
 
-
-
-
 	public void setBloodGroup(String bloodGroup) {
 		this.bloodGroup = bloodGroup;
 	}
 
+
+	
+	
+	private Login donorLogin;
+
+	
+	public DateTime getDateOfBirth() {
+		return DateOfBirth;
+	}
+
+    public void setDateOfBirth(DateTime dateOfBirth) {
+		DateOfBirth = dateOfBirth;
+	}
 
 
 
@@ -95,7 +121,7 @@ public class Donor {
 
 
 	public void setEmail(String email) {
-		this.Email = Email;
+		this.Email = email;
 	}
 
 
@@ -181,7 +207,8 @@ public class Donor {
 	public void setPassword(String password) {
 		Password = password;
 	}
-
+	
+	
 
 public Login getDonorLogin(){
 	return this.donorLogin;

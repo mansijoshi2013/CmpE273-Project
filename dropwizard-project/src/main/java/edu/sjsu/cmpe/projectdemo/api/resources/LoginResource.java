@@ -14,8 +14,10 @@ import com.yammer.dropwizard.views.View;
 import java.net.*;
 import java.sql.SQLException;
 
+import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
 import edu.sjsu.cmpe.projectdemo.domain.Donor;
 import edu.sjsu.cmpe.projectdemo.domain.Login;
+import edu.sjsu.cmpe.projectdemo.domain.User;
 import edu.sjsu.cmpe.projectdemo.views.*;
 import edu.sjsu.cmpe.projectdemo.dto.DonorDto;
 
@@ -24,6 +26,7 @@ import edu.sjsu.cmpe.projectdemo.dto.DonorDto;
 @Path("/login")
 public class LoginResource
 {
+	DatabaseConnection db;
 	
 	public LoginResource()
 	{
@@ -41,18 +44,27 @@ public class LoginResource
 	
 	@POST
 	//public Response verifyLogin(@QueryParam("Username") String Username, @QueryParam("Password") String Password) throws URISyntaxException
-	public Response verifyLogin(@FormParam("Username") String Username, @FormParam("Password") String Password) throws URISyntaxException
+	public void verifyLogin(@FormParam("Username") String Username, @FormParam("Password") String Password) throws URISyntaxException
 	{
 	
-		if(Password.equals("password"))
+		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics/appointments/");
+		db=new DatabaseConnection();
+		User user= db.verifyLogin(Username,Password);
+		if(user.getUser_Type().equals("patient"))
 		{
 			//return Response.seeOther(uri).build();
-			return Response.status(401).entity("Username or password is correct").build();
+			System.out.println("Its a patient.");
+		}
+		else if(user.getUser_Type().equals("donor"))
+		{
+			//return Response.seeOther(uri).build();
+			System.out.println("Its a donor");
 		}
 		else
 		{
-			return Response.status(401).entity("Username or password is wrong").build();
+			System.out.println("Its null");
 		}
+		
 		
 	
 	}
