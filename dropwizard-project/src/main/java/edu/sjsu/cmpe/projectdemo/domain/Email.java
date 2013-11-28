@@ -43,7 +43,6 @@ public class Email
 			String recipient=email;
 			final MimeMessage msg=new MimeMessage(session);
 			msg.setFrom(new InternetAddress("project.cmpe273@gmail.com"));
-			//msg.addRecipient(Message.RecipientType.TO, new InternetAddress("thomas.jeena65@gmail.com","Jeena"));
 			msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipient,false));
 			msg.setSubject("Activate your account");
 			msg.setText(msgBody);

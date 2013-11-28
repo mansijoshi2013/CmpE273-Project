@@ -10,21 +10,21 @@
 
 			
 			<script type="text/javascript">
-				<#list 0..sample?size-1 as i>
+				<#list 0..clinicList?size-1 as i>
 				
 					var label=document.createElement("label");
 					
 					var radio=document.createElement("input");
 					radio.type="radio";
 					radio.name="name";
-					radio.value="${sample[i].clinicName?html}";
+					radio.value="${clinicList[i].clinicName?html}";
 					radio.id = "radioid";
 					
 					label.appendChild(radio);
 					
-					var description=document.createTextNode("${sample[i].clinicName?html}");
+					var description=document.createTextNode("${clinicList[i].clinicName?html}");
 					label.appendChild(description);	
-					var description=document.createTextNode("${sample[i].clinicAddress?html}");
+					var description=document.createTextNode("${clinicList[i].clinicAddress?html}");
 					label.appendChild(description);
 					var lb=document.createElement("br");
 					label.appendChild(lb);

@@ -1,6 +1,7 @@
 package edu.sjsu.cmpe.projectdemo.dao;
 
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.UUID;
 
 import com.mongodb.BasicDBObject;
@@ -11,6 +12,7 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 
+import edu.sjsu.cmpe.projectdemo.domain.Clinic;
 import edu.sjsu.cmpe.projectdemo.domain.Donor;
 import edu.sjsu.cmpe.projectdemo.domain.Patient;
 import edu.sjsu.cmpe.projectdemo.domain.User;
@@ -118,6 +120,30 @@ public class DatabaseConnection {
 		}
 		
 		
-		
 	}
+	
+	//To view all clinics
+	public ArrayList<Clinic> getAllClinics()
+	{
+		ArrayList<Clinic> clinicList =new ArrayList<Clinic>();
+		DBCollection collection=portalDatabase.getCollection("clinics");
+		DBCursor cursor=collection.find();
+		while(cursor.hasNext())
+		{
+			for(int i=0;i<cursor.count();i++)
+			{
+				DBObject obj=cursor.next();
+				String clinicName=obj.get("name").toString();
+				String clinicAddress=obj.get("address").toString();
+				Clinic clinicObj=new Clinic();
+				clinicObj.setClinicName(clinicName);
+				clinicObj.setClinicAddress(clinicAddress);
+				clinicList.add(clinicObj);
+			}
+			
+		}
+		
+		return clinicList;
+	}
+	
 }
