@@ -47,6 +47,7 @@ public class LoginResource
 	public void verifyLogin(@FormParam("Username") String Username, @FormParam("Password") String Password) throws URISyntaxException
 	{
 	
+		//URI uri=new URI("http://localhost:15000/portal/login/donor/home");
 		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics/appointments/");
 		db=new DatabaseConnection();
 		User user= db.verifyLogin(Username,Password);
@@ -64,6 +65,7 @@ public class LoginResource
 		{
 			System.out.println("Its null");
 		}
+		//return Response.seeOther(uri).build();
 		
 		
 	

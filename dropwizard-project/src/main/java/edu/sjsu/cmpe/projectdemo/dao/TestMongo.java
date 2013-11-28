@@ -3,6 +3,7 @@ package edu.sjsu.cmpe.projectdemo.dao;
 import java.net.UnknownHostException;
 import java.util.Set;
 
+import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
@@ -25,22 +26,7 @@ public class TestMongo {
        System.out.println(s);
        }
        
-       /*
-       DBCollection collection = database.getCollection("clinics");
-       
-  
-       String name = "shweta";
-       DBObject dbObject = (DBObject) JSON.parse("{'name':\""+name+"\"}");
-       collection.insert(dbObject);
-       
-       DBCursor document = collection.find();
-       
-       while (document.hasNext()){
-    	   System.out.println(document.next().get("name").toString());   
-       }
-       
-       System.out.println(document.count());
-*/
+
         
     }
 }

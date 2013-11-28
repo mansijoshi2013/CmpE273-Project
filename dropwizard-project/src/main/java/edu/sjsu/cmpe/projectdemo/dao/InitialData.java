@@ -18,7 +18,7 @@ public class InitialData {
 	private DBCollection campsCollection;
 	
 	public void createInitialData(){
-	
+
 		
 		usersCollection = portalDatabase.getCollection("users");
 		BasicDBObject patient = new BasicDBObject();
@@ -38,7 +38,8 @@ public class InitialData {
 		BasicDBObject camp = new BasicDBObject();
 		campsCollection = portalDatabase.getCollection("camps");
 		camp.append("event_name","Connecting People")
-		.append("venue","Dudley Morris Hall, San Jose State University, One Washington Square, San Jose, CA 95112");
+		.append("venue","Dudley Morris Hall,San Jose State University, One Washington Square, ")
+		.append("city","San Jose").append("state", "CA").append("zip",95112);
 		
 		campsCollection.insert(camp);
 		

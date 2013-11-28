@@ -12,7 +12,13 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 
+
 import edu.sjsu.cmpe.projectdemo.domain.Clinic;
+
+
+import edu.sjsu.cmpe.projectdemo.domain.AllCamps;
+import edu.sjsu.cmpe.projectdemo.domain.BloodDonationCamps;
+
 import edu.sjsu.cmpe.projectdemo.domain.Donor;
 import edu.sjsu.cmpe.projectdemo.domain.Patient;
 import edu.sjsu.cmpe.projectdemo.domain.User;
@@ -118,9 +124,31 @@ public class DatabaseConnection {
 			//invalid link
 			return 3;
 		}
-		
-		
+	
 	}
+	
+	public void getCamps (String city){
+		BloodDonationCamps camp = new BloodDonationCamps();
+		DBObject obj;
+		DBCollection collection=portalDatabase.getCollection("camps");
+		DBObject query = new BasicDBObject("city",city);
+		DBCursor cur=collection.find(query);
+		if(cur.hasNext())
+		{
+			obj=cur.next();
+			camp.setCity(city);
+			camp.setEventName((String) obj.get("event_name"));
+			camp.setVenue((String) obj.get("venue"));
+			camp.setState((String) obj.get("state"));
+			camp.setZipCode((Integer) obj.get("zip"));
+			
+			AllCamps.allCamps.add(camp);
+		}		
+	}
+		
+
+		
+	
 	
 	//To view all clinics
 	public ArrayList<Clinic> getAllClinics()
@@ -146,4 +174,7 @@ public class DatabaseConnection {
 		return clinicList;
 	}
 	
+
+		
+
 }
