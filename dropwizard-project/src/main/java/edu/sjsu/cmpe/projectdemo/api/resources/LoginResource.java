@@ -71,6 +71,15 @@ public class LoginResource
 	
 	}
 	
-	
+	@Path("/login/donor/home")
+	@GET
+	public View displayCamps (){
+		db  = new DatabaseConnection();
+		
+		//TODO 
+		db.getCamps("San Jose");
+		
+		return new DonorCampsView();
+	}
 	
 }

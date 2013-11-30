@@ -19,7 +19,8 @@ public class TestMongo {
        MongoClient client = new MongoClient(new ServerAddress("54.215.197.26", 27017));
        
        DB database = client.getDB("portal");
-      
+     
+       
        Set<String> colls = database.getCollectionNames();
 
        for (String s : colls) {
@@ -27,7 +28,11 @@ public class TestMongo {
        }
        
 
-        
+       /*
+       DBCollection usersCollection = database.getCollection("users");
+		BasicDBObject admin = new BasicDBObject();
+		admin.append("name","Admin").append("Username","admin").append("Password","password").append("user_type","admin");
+        */
     }
 }
 
