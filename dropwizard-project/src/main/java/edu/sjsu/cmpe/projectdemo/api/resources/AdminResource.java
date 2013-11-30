@@ -22,16 +22,13 @@ import javax.jms.TextMessage;
 import org.fusesource.stomp.jms.StompJmsConnectionFactory;
 import org.fusesource.stomp.jms.StompJmsDestination;
 
-@Path("/portal/login/admin")
+@Path("/login/admin")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-
 public class AdminResource {
 
 
-	@POST
-	@Path("/portal/login/admin")
-	@Consumes(MediaType.APPLICATION_JSON)
+	@POST	
 	public void getRequest (BloodRequest bloodRequest) {
 				
 		try {
@@ -45,7 +42,8 @@ public class AdminResource {
     public void createNewBloodRequest(BloodRequest bloodRequest) throws JMSException {
     	String user = env("APOLLO_USER", "admin");
     	String password = env("APOLLO_PASSWORD", "password");
-    	String host = env("APOLLO_HOST", "54.215.210.214");
+    	//String host = env("APOLLO_HOST", "54.215.210.214");
+    	String host = env("APOLLO_HOST", "54.219.156.168");
     	int port = Integer.parseInt(env("APOLLO_PORT", "61613"));
     	String queue = "/queue/69676.portal.request";
     	String destination = arg(0, queue);
@@ -63,7 +61,7 @@ public class AdminResource {
     	System.out.println("Sending messages to " + queue + "..."); 
     	String data = bloodRequest.getBloodGroup() + ":" + bloodRequest.getHospital()
     			    + ":" + bloodRequest.getAddress() + ":" + bloodRequest.getCity() 
-    			    + ":" + bloodRequest.getState() + ":" + bloodRequest.getZipCode()+ ":" + bloodRequest.getPhoneNumber();
+    			    + ":" + bloodRequest.getState() + ":" + bloodRequest.getZipCode() + ":" + bloodRequest.getPhoneNumber();
     	
     	TextMessage msg = session.createTextMessage(data);
     	msg.setLongProperty("id", System.currentTimeMillis());
