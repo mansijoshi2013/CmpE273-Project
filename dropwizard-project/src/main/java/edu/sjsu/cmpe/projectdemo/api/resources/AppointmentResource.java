@@ -14,6 +14,7 @@ import javax.ws.rs.core.Response;
 
 import edu.sjsu.cmpe.projectdemo.domain.AllAppointments;
 import edu.sjsu.cmpe.projectdemo.views.AppointmentView;
+import edu.sjsu.cmpe.projectdemo.views.TimeView;
 
 
 @Path("login/donor/clinics/appointments/")
@@ -44,5 +45,11 @@ public class AppointmentResource {
 		return Response.status(401).entity("Your appointment is booked at " + bookedSlot).build();
 	}
 	
-	
+	@GET
+	@Path("time")
+	public TimeView timeBook()
+	{
+		return new TimeView();
+		
+	}
 }
