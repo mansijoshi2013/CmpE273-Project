@@ -30,7 +30,7 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 
 
-@Path("/login/clinics")
+@Path("/login/donor/clinics")
 public class ClinicResource
 {
 	ArrayList<Clinic> clinicList=new ArrayList<Clinic>();
@@ -47,5 +47,11 @@ public class ClinicResource
 		clinicList=db.getAllClinics();
 		
 		return new ClinicView(clinicList);
+	}
+	
+	@POST
+	public Response showAppointments () throws URISyntaxException{
+		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics/appointments/");
+		return Response.seeOther(uri).build();
 	}
 }

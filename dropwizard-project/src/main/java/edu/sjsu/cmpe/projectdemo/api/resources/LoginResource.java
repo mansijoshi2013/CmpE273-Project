@@ -44,11 +44,11 @@ public class LoginResource
 	
 	@POST
 	//public Response verifyLogin(@QueryParam("Username") String Username, @QueryParam("Password") String Password) throws URISyntaxException
-	public void verifyLogin(@FormParam("Username") String Username, @FormParam("Password") String Password) throws URISyntaxException
+	public Response verifyLogin(@FormParam("Username") String Username, @FormParam("Password") String Password) throws URISyntaxException
 	{
 	
 		//URI uri=new URI("http://localhost:15000/portal/login/donor/home");
-		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics/appointments/");
+		URI uri=new URI("http://localhost:15000/portal/login/donor/home/");
 		db=new DatabaseConnection();
 		
 		User user= db.verifyLogin(Username,Password);
@@ -66,21 +66,10 @@ public class LoginResource
 		{
 			System.out.println("Username/password not found");
 		}
-		//return Response.seeOther(uri).build();
+		return Response.seeOther(uri).build();
 		
 		
 	
-	}
-	
-	@Path("/login/donor/home")
-	@GET
-	public View displayCamps (){
-		db  = new DatabaseConnection();
-		
-		//TODO 
-		db.getCamps("San Jose");
-		
-		return new DonorCampsView();
 	}
 	
 }

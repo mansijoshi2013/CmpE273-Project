@@ -155,7 +155,7 @@ public class DatabaseConnection {
 	
 	}
 	
-	public void getCamps (String city){
+	public ArrayList<BloodDonationCamps> getCamps (String city){
 		BloodDonationCamps camp = new BloodDonationCamps();
 		DBObject obj;
 		DBCollection collection=portalDatabase.getCollection("camps");
@@ -172,6 +172,7 @@ public class DatabaseConnection {
 			
 			AllCamps.allCamps.add(camp);
 		}		
+		return AllCamps.allCamps;
 	}
 		
 

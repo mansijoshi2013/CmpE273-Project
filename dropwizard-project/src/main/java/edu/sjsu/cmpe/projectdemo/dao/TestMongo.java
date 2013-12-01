@@ -27,8 +27,12 @@ public class TestMongo {
        System.out.println(s);
        }
        
-
-       /*
+       DBCollection usersCollection = database.getCollection("users");
+       DBObject query=new BasicDBObject("Username","shwetarameshk");
+		DBObject obj=usersCollection.findOne(query);
+		
+		System.out.println(obj.toString());
+/*
        DBCollection usersCollection = database.getCollection("users");
 		BasicDBObject admin = new BasicDBObject();
 		admin.append("name","Admin").append("Username","admin").append("Password","password").append("user_type","admin");
