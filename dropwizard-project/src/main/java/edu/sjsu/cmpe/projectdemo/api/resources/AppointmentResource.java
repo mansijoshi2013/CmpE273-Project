@@ -44,5 +44,11 @@ public class AppointmentResource {
 		return Response.status(401).entity("Your appointment is booked at " + bookedSlot).build();
 	}
 	
-	
+	@GET
+	@Path("time")
+	public TimeView timeBook()
+	{
+		return new TimeView();
+		
+	}
 }
