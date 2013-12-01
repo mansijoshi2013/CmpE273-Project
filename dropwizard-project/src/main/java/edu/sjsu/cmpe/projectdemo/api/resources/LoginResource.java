@@ -64,7 +64,7 @@ public class LoginResource
 		}
 		else
 		{
-			System.out.println("Its null");
+			System.out.println("Username/password not found");
 		}
 		//return Response.seeOther(uri).build();
 		
