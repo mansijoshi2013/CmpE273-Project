@@ -12,6 +12,7 @@ public class BloodRequest {
 	private int zipCode;
 	private long phoneNumber;
 	private DateTime timeOfRequest;
+<<<<<<< HEAD
     
     public DateTime getTimeOfRequest() {
             return timeOfRequest;
@@ -19,6 +20,15 @@ public class BloodRequest {
     public void setTimeOfRequest(DateTime timeOfRequest) {
             this.timeOfRequest = timeOfRequest;
     }
+=======
+	
+	public DateTime getTimeOfRequest() {
+		return timeOfRequest;
+	}
+	public void setTimeOfRequest(DateTime timeOfRequest) {
+		this.timeOfRequest = timeOfRequest;
+	}
+>>>>>>> be7e77945d419875cd9604ed2ae11d821e6e3155
 	public String getBloodGroup() {
 		return bloodGroup;
 	}

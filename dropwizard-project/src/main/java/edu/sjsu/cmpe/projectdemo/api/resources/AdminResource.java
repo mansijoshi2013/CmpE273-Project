@@ -62,7 +62,10 @@ public class AdminResource {
     	System.out.println("Sending messages to " + queue + "..."); 
     	String data = bloodRequest.getBloodGroup() + ":" + bloodRequest.getHospital()
     			    + ":" + bloodRequest.getAddress() + ":" + bloodRequest.getCity() 
+
     			    + ":" + bloodRequest.getState() + ":" + bloodRequest.getZipCode() + ":" + bloodRequest.getPhoneNumber() + ":" + bloodRequest.getTimeOfRequest();
+
+    			   
     	
     	TextMessage msg = session.createTextMessage(data);
     	msg.setLongProperty("id", System.currentTimeMillis());
