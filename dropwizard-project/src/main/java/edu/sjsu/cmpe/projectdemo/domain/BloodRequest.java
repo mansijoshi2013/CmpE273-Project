@@ -9,6 +9,14 @@ public class BloodRequest {
 	private String state;
 	private int zipCode;
 	private long phoneNumber;
+	private DateTime timeOfRequest;
+	
+	public DateTime getTimeOfRequest() {
+		return timeOfRequest;
+	}
+	public void setTimeOfRequest(DateTime timeOfRequest) {
+		this.timeOfRequest = timeOfRequest;
+	}
 	public String getBloodGroup() {
 		return bloodGroup;
 	}
