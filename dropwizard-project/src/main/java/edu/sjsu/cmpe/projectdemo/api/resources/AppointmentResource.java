@@ -14,6 +14,7 @@ import javax.ws.rs.core.Response;
 
 import edu.sjsu.cmpe.projectdemo.domain.AllAppointments;
 import edu.sjsu.cmpe.projectdemo.views.AppointmentView;
+import edu.sjsu.cmpe.projectdemo.views.TimeView;
 
 
 @Path("login/donor/clinics/appointments/")
