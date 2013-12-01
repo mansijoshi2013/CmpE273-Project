@@ -10,7 +10,9 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
+import com.mongodb.MongoException;
 import com.mongodb.ServerAddress;
+
 
 
 
@@ -46,7 +48,10 @@ public class DatabaseConnection {
 		if(obj!=null)
 		{
 			String hashedAndSalted=obj.get("Password").toString();
+			try{
 			String salt=hashedAndSalted.split(",")[1];
+			
+			
 			if (hashedAndSalted.equals(PasswordEncryption.makePasswordHash(Password, salt)))
 			{
 				String user_type=(String)obj.get("user_type");
@@ -72,6 +77,13 @@ public class DatabaseConnection {
 				nullDonor.setUser_Type("NotFound");;
 				return nullDonor;
 			}
+			}
+			catch(Exception e)
+			{
+				Donor nullDonor=new Donor();
+				nullDonor.setUser_Type("NotFound");;
+				return nullDonor;
+			}
 		}
 		else
 		{
@@ -87,25 +99,29 @@ public class DatabaseConnection {
 	public void insertDonor(Donor donor)
 	{
 		DBCollection collection=portalDatabase.getCollection("users");
+		try
+		{
+			BasicDBObject obj=new BasicDBObject();
+			obj.put("name",donor.getName());
 		
-		BasicDBObject obj=new BasicDBObject();
-		obj.put("name",donor.getName());
+			obj.put("blood group", donor.getBloodGroup());
+			obj.put("phoneNumber", donor.getPhoneNumber());
+			obj.put("email", donor.getEmail());
+			obj.put("State", donor.getState());
+			obj.put("Street", donor.getStreet());
+			obj.put("City", donor.getCity());
+			obj.put("zipcode", donor.getZipCode());
+			obj.put("Username", donor.getUserName());
+			obj.put("Password", donor.getPassword());
+			obj.put("user_type", "donor");
+			obj.put("activation_id", donor.getActivation_Id());
+			obj.put("verified", donor.getVerified());
 		
-		obj.put("blood group", donor.getBloodGroup());
-		obj.put("phoneNumber", donor.getPhoneNumber());
-		obj.put("email", donor.getEmail());
-		obj.put("State", donor.getState());
-		obj.put("Street", donor.getStreet());
-		obj.put("City", donor.getCity());
-		obj.put("zipcode", donor.getZipCode());
-		obj.put("Username", donor.getUserName());
-		obj.put("Password", donor.getPassword());
-		obj.put("user_type", "donor");
-		obj.put("activation_id", donor.getActivation_Id());
-		obj.put("verified", donor.getVerified());
-		
-		collection.insert(obj);
-		
+			collection.insert(obj);
+		}
+		catch (MongoException.DuplicateKey e) {
+            System.out.println("Username already in use");
+		}
 	}
 	
 	//To verify activation key
