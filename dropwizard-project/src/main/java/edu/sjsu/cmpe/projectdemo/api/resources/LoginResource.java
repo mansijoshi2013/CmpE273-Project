@@ -50,6 +50,7 @@ public class LoginResource
 		//URI uri=new URI("http://localhost:15000/portal/login/donor/home");
 		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics/appointments/");
 		db=new DatabaseConnection();
+		
 		User user= db.verifyLogin(Username,Password);
 		if(user.getUser_Type().equals("patient"))
 		{

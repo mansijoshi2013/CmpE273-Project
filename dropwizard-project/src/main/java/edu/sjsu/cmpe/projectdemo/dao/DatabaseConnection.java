@@ -13,13 +13,14 @@ import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 
 
+
 import edu.sjsu.cmpe.projectdemo.domain.Clinic;
 
 
 import edu.sjsu.cmpe.projectdemo.domain.AllCamps;
 import edu.sjsu.cmpe.projectdemo.domain.BloodDonationCamps;
-
 import edu.sjsu.cmpe.projectdemo.domain.Donor;
+import edu.sjsu.cmpe.projectdemo.domain.PasswordEncryption;
 import edu.sjsu.cmpe.projectdemo.domain.Patient;
 import edu.sjsu.cmpe.projectdemo.domain.User;
 
@@ -40,27 +41,37 @@ public class DatabaseConnection {
 	public User verifyLogin(String Username,String Password)
 	{
 		DBCollection collection=portalDatabase.getCollection("users");
-		DBObject query=new BasicDBObject("Username",Username).append("Password",Password);
+		DBObject query=new BasicDBObject("Username",Username);
 		DBObject obj=collection.findOne(query);
 		if(obj!=null)
 		{
-			String user_type=(String)obj.get("user_type");
-			if(user_type.equals("donor"))
+			String hashedAndSalted=obj.get("Password").toString();
+			String salt=hashedAndSalted.split(",")[1];
+			if (hashedAndSalted.equals(PasswordEncryption.makePasswordHash(Password, salt)))
 			{
-				Donor donor=new Donor();
-				donor.setName((String)obj.get("name"));
-				donor.setUser_Type((String)obj.get("user_type"));
-				return donor;
-				
+				String user_type=(String)obj.get("user_type");
+				if(user_type.equals("donor"))
+				{
+					Donor donor=new Donor();
+					donor.setName((String)obj.get("name"));
+					donor.setUser_Type((String)obj.get("user_type"));
+					return donor;
+					
+				}
+				else 
+				{
+					Patient patient=new Patient();
+					patient.setUser_Type((String)obj.get("user_type"));
+					patient.setName((String)obj.get("name"));
+					return patient;
+				}
 			}
-			else 
+			else
 			{
-				Patient patient=new Patient();
-				patient.setUser_Type((String)obj.get("user_type"));
-				patient.setName((String)obj.get("name"));
-				return patient;
+				Donor nullDonor=new Donor();
+				nullDonor.setUser_Type("NotFound");;
+				return nullDonor;
 			}
-				
 		}
 		else
 		{
@@ -69,6 +80,7 @@ public class DatabaseConnection {
 			return nullDonor;
 			
 		}
+		
 	}
 	
 	//To Register a User

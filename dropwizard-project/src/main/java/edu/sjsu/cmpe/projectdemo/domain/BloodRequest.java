@@ -1,5 +1,7 @@
 package edu.sjsu.cmpe.projectdemo.domain;
 
+import org.joda.time.DateTime;
+
 public class BloodRequest {
 
 	private String bloodGroup;
@@ -9,6 +11,14 @@ public class BloodRequest {
 	private String state;
 	private int zipCode;
 	private long phoneNumber;
+	private DateTime timeOfRequest;
+    
+    public DateTime getTimeOfRequest() {
+            return timeOfRequest;
+    }
+    public void setTimeOfRequest(DateTime timeOfRequest) {
+            this.timeOfRequest = timeOfRequest;
+    }
 	public String getBloodGroup() {
 		return bloodGroup;
 	}

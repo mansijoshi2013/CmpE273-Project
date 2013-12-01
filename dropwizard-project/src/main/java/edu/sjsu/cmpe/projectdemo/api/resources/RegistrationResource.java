@@ -4,6 +4,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 
+import java.security.SecureRandom;
+import java.util.Random;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -17,12 +20,14 @@ import org.joda.time.DateTime;
 import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
 import edu.sjsu.cmpe.projectdemo.domain.Donor;
 import edu.sjsu.cmpe.projectdemo.domain.Email;
+import edu.sjsu.cmpe.projectdemo.domain.PasswordEncryption;
 import edu.sjsu.cmpe.projectdemo.views.LoginView;
 import edu.sjsu.cmpe.projectdemo.views.RegistrationView;
 
 @Path("/Registration")
 public class RegistrationResource {
 	
+	private Random random = new SecureRandom();
 	public RegistrationResource()
 	{
 	}
@@ -45,6 +50,7 @@ public class RegistrationResource {
 		//Re-enter password can be done as client side validation.
 		URI uri=new URI("http://localhost:15000/portal/verify");
 		
+		
 		//Pass data as donor object into dao 
 		Donor donor=new Donor();
 		donor.setName(Name);
@@ -57,7 +63,8 @@ public class RegistrationResource {
 		donor.setCity(City);
 		donor.setZipCode(Zipcode);
 		donor.setUserName(UserName);
-		donor.setPassword(Password);
+		String passwordHash = PasswordEncryption.makePasswordHash(Password, Integer.toString(random.nextInt()));
+		donor.setPassword(passwordHash);
 		donor.setActivation_Id();
 		donor.setVerified(false);
 		

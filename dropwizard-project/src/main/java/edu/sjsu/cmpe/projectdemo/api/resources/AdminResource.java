@@ -9,6 +9,7 @@ import javax.ws.rs.Produces;
 import com.yammer.dropwizard.jersey.params.LongParam;
 
 import edu.sjsu.cmpe.projectdemo.domain.BloodRequest;
+import edu.sjsu.cmpe.projectdemo.domain.*;
 
 import javax.ws.rs.core.MediaType;
 import javax.jms.Connection;
@@ -40,13 +41,13 @@ public class AdminResource {
 	}
 	
     public void createNewBloodRequest(BloodRequest bloodRequest) throws JMSException {
-    	String user = env("APOLLO_USER", "admin");
-    	String password = env("APOLLO_PASSWORD", "password");
+    	String user = Messaging.env("APOLLO_USER", "admin");
+    	String password = Messaging.env("APOLLO_PASSWORD", "password");
     	//String host = env("APOLLO_HOST", "54.215.210.214");
-    	String host = env("APOLLO_HOST", "54.219.156.168");
-    	int port = Integer.parseInt(env("APOLLO_PORT", "61613"));
+    	String host = Messaging.env("APOLLO_HOST", "54.219.156.168");
+    	int port = Integer.parseInt(Messaging.env("APOLLO_PORT", "61613"));
     	String queue = "/queue/69676.portal.request";
-    	String destination = arg(0, queue);
+    	String destination = Messaging.arg(0, queue);
 
     	StompJmsConnectionFactory factory = new StompJmsConnectionFactory();
     	factory.setBrokerURI("tcp://" + host + ":" + port);
@@ -61,7 +62,7 @@ public class AdminResource {
     	System.out.println("Sending messages to " + queue + "..."); 
     	String data = bloodRequest.getBloodGroup() + ":" + bloodRequest.getHospital()
     			    + ":" + bloodRequest.getAddress() + ":" + bloodRequest.getCity() 
-    			    + ":" + bloodRequest.getState() + ":" + bloodRequest.getZipCode() + ":" + bloodRequest.getPhoneNumber();
+    			    + ":" + bloodRequest.getState() + ":" + bloodRequest.getZipCode() + ":" + bloodRequest.getPhoneNumber() + ":" + bloodRequest.getTimeOfRequest();
     	
     	TextMessage msg = session.createTextMessage(data);
     	msg.setLongProperty("id", System.currentTimeMillis());
@@ -69,16 +70,6 @@ public class AdminResource {
     	connection.close();
     }
     
-    private static String env(String key, String defaultValue) {
-		String rc = System.getenv(key);
-		if( rc== null ) {
-		    return defaultValue;
-		}
-		return rc;
-    }
-
-    private static String arg(int index, String defaultValue) {
-	    return defaultValue;
-    }
+    
 
 }
