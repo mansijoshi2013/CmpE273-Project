@@ -83,14 +83,8 @@ public class DonorHomeResource {
 		//CAMPS
 		System.out.println(userName);
 		db  = new DatabaseConnection();
+		camp = db.getCamps(userName);
 		
-		try{
-			camp = db.getCamps(userName);
-		}
-		catch(Exception e){			
-			e.printStackTrace();
-		}
-				
 		return new DonorHomeView(camp,bloodRequests);
 		
 		}

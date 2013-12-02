@@ -176,39 +176,7 @@ public class DatabaseConnection {
 	
 	}
 	
-	public ArrayList<BloodDonationCamps> getCamps (String userName){
-		BloodDonationCamps camp = new BloodDonationCamps();
-		ArrayList<BloodDonationCamps> camps = new ArrayList<BloodDonationCamps>();
-		DBObject obj;
-		DBCollection usersCollection=portalDatabase.getCollection("users");
-		DBObject query = new BasicDBObject("Username",userName);
-		DBObject obj1=usersCollection.findOne(query);
-		String city = new String();
-		city = (String) obj1.get("City");
-		DBCollection collection=portalDatabase.getCollection("camps");
-		DBObject ref = new BasicDBObject();
-		ref.put("city",Pattern.compile(".*"+city+".*"  , Pattern.CASE_INSENSITIVE));
-		DBCursor cur=collection.find(ref);
-		while(cur.hasNext())		
-		{
-			for (int i = 0; i<cur.count(); i++)
-			{
-				obj=cur.next();
-				camp = new BloodDonationCamps();
-				camp.setCity((String) obj.get("city"));
-				camp.setEventName((String) obj.get("event_name"));
-				camp.setVenue((String) obj.get("venue"));
-				camp.setState((String) obj.get("state"));
-				camp.setZipCode((Integer) obj.get("zip"));
-				camp.setDateOfEvent((String) obj.get("dateOfEvent"));
-				camp.setTimeOfEvent((String) obj.get("timeOfEvent"));
-				camps.add(camp);
-			}
-		}		
-		System.out.println("num camps= " + camps.size());
-		return camps;
-	}
-		
+	
 
 	//To view all clinics
 	public ArrayList<Clinic> getAllClinics()
@@ -279,6 +247,56 @@ public class DatabaseConnection {
 		return bloodRequests;
 	}
 	
+	public ArrayList<BloodDonationCamps> getCamps (String userName){
+		BloodDonationCamps camp = new BloodDonationCamps();
+		ArrayList<BloodDonationCamps> camps = new ArrayList<BloodDonationCamps>();
+		DBObject obj;
+		DBCollection usersCollection=portalDatabase.getCollection("users");
+		DBObject query = new BasicDBObject("Username",userName);
+		DBObject obj1=usersCollection.findOne(query);
+		String city = new String();
+		city = (String) obj1.get("City");
+		DBCollection collection=portalDatabase.getCollection("camps");
+		DBObject ref = new BasicDBObject();
+		ref.put("city",Pattern.compile(".*"+city+".*", Pattern.CASE_INSENSITIVE));
+		DBCursor cur=collection.find(ref);
+		System.out.println(cur);
+		System.out.println("Count = " + cur.count());
+		while(cur.hasNext())		
+		{
+			for (int i = 0; i<cur.count(); i++)
+			{
+				obj=cur.next();
+				camp = new BloodDonationCamps();
+				camp.setCity((String) obj.get("city"));
+				camp.setEventName((String) obj.get("event_name"));
+				camp.setVenue((String) obj.get("venue"));
+				camp.setState((String) obj.get("state"));
+				camp.setZipCode((Integer) obj.get("zipcode"));
+				camp.setDateOfEvent((String) obj.get("dateOfEvent"));
+				camp.setTimeOfEvent((String) obj.get("timeOfEvent"));
+				camps.add(camp);
+			}
+		}		
+		System.out.println("num camps= " + camps.size());
+		return camps;
+	}
+	
+	public void insertCamps(BloodDonationCamps camp)
+	{
+		DBCollection collection=portalDatabase.getCollection("camps");
+		BasicDBObject obj=new BasicDBObject();
+		obj.put("event_name",camp.getEventName());
+		obj.put("venue", camp.getVenue());
+		obj.put("city", camp.getCity());
+		obj.put("state",camp.getState() );
+		obj.put("zipcode", camp.getZipCode());
+		obj.put("dateOfEvent",camp.getDateOfEvent()); 
+		obj.put("timeOfEvent", camp.getTimeOfEvent());
+		
+		collection.insert(obj);
+		System.out.println(collection.getCount());
+	}
 
 		
 

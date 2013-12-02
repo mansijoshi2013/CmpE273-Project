@@ -1,4 +1,4 @@
-<#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.AdminRequestView" -->
+<#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.AdminCampView" -->
 <html>
 <head>
 
@@ -11,19 +11,15 @@
 	<table cellpadding="8" align="center">
 		
     <tr>
-      <td align="right"><b>Blood Group:</b></td>
-      <td align="left"><input type="text" id="bloodGroup" name="BloodGroup" /></td>
+      <td align="right"><b>Event Name:</b></td>
+      <td align="left"><input type="text" id="eventName" name="EventName" /></td>
     </tr>
 
     <tr>
-      <td align="right"><b>Hospital:</b></td>
-      <td align="left"><input type="text" id="hospital" name="Hospital" /></td>
-    </tr>
-    
-    <tr>
       <td align="right"><b>Address:</b></td>
       <td align="left"><input type="text" id="address" name="Address" /></td>
-    </tr>    
+    </tr>
+        
      <tr>
       <td align="right"><b>City:</b></td>
       <td align="left"><input type="text" name="City" /></td>
@@ -40,17 +36,18 @@
     </tr> 
     
     <tr>
-      <td align="right"><b>Time of Request:</b></td>
-      <td align="left"><input type="text" id="timeOfRequest" name="TimeOfRequest" /></td>
-    </tr>
-  
-    <tr>
-      <td align="right"><b>Phone Number</b></td>
-      <td align="left"><input type="text" id="phone" name="PhoneNumber" /></td>
+      <td align="right"><b>Date of Event (mm/dd/yyyy format):</b></td>
+      <td align="left"><input type="text" id="dateOfEvent" name="DateOfEvent" /></td>
     </tr>
     
     <tr>
-         <td align="left"><input type="submit" value="Submit Request"></td>
+      <td align="right"><b>Time of Event (Eg 10 am to 6 pm):</b></td>
+      <td align="left"><input type="text" id="timeOfEvent" name="TimeOfEvent" /></td>
+    </tr>
+
+    
+    <tr>
+         <td align="left"><input type="submit" value="Submit Blood Donation Camp"></td>
     </tr>
     
   </table>
