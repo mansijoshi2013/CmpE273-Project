@@ -48,8 +48,9 @@ public class LoginResource
 	{
 	
 		//URI uri=new URI("http://localhost:15000/portal/login/donor/home");
-		URI uri=new URI("http://localhost:15000/portal/login/donor/home/");
+		URI uri =new URI("http://localhost:15000/portal/login/");
 		URI uriDonor=new URI("http://localhost:15000/portal/login/donor/home");
+		
 		db=new DatabaseConnection();
 		
 		User user= db.verifyLogin(Username,Password);
@@ -57,20 +58,20 @@ public class LoginResource
 		{
 			
 			System.out.println("Its a patient.");
+			return Response.seeOther(uri).build();
+			
 		}
 		else if(user.getUser_Type().equals("donor"))
 		{
-			System.out.println("Its a donor");
-			//return Response.seeOther(uriDonor).build();
+			System.out.println("Its a donor");	
+			return Response.seeOther(uriDonor).build();
 		}
 		else
 		{
-			System.out.println("Username/password not found");
+			System.out.println("Username/password not found");			
+			return Response.seeOther(uri).build();
 		}
-		return Response.seeOther(uri).build();
-		
-		
-	
+		//return Response.seeOther(uri).build();	
 	}
 	
 }
