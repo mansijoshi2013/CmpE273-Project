@@ -13,7 +13,6 @@ public class BloodRequest {
 	private String state;
 	private int zipCode;
 	private long phoneNumber;
-	private Date dateOfRequest;
 	private String timeOfRequest;
 
     
@@ -67,7 +66,6 @@ public class BloodRequest {
 	public void setPhoneNumber(long phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	
 	
 	
 	

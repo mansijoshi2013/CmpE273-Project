@@ -37,13 +37,7 @@
     <tr>
       <td align="right"><b>Zip Code:</b></td>
       <td align="left"><input type="zip" id="zipCode" name="ZipCode" /></td>
-    </tr>      
-
-    
-    <tr>
-      <td align="right"><b>Date Of Request:</b></td>
-      <td align="left"><input type="text" id="dateOfRequest" name="DateOfRequest" /></td>
-    </tr>
+    </tr> 
     
     <tr>
       <td align="right"><b>Time of Request:</b></td>

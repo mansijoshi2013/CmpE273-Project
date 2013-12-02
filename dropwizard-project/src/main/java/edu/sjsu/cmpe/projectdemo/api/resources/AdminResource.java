@@ -43,7 +43,6 @@ public class AdminResource {
 			@FormParam("State") String state,
 			@FormParam("ZipCode") int zipCode,
 			@FormParam("PhoneNumber") Long phoneNumber,
-			@FormParam("DateOfRequest") String dateOfRequest,
 			@FormParam("TimeOfRequest") String timeOfRequest)
 	{
 	
@@ -72,7 +71,7 @@ public class AdminResource {
 	    	String data = bloodGroup + ":" + hospital
     			    + ":" + address + ":" + city 
     			    + ":" + state + ":" + zipCode 
-    			    + ":" + phoneNumber+ ":" + dateOfRequest + ":" + timeOfRequest;
+    			    + ":" + phoneNumber+ ":" + timeOfRequest;
 	    	
 	    	/*
 	    	String data = bloodRequest.getBloodGroup() + ":" + bloodRequest.getHospital()
