@@ -6,14 +6,27 @@ import org.joda.time.DateTime;
 
 public class Appointment {
 
-	private Date appointmentSlot; 
-
+	private String date;
+	private String time;
+	private String clinicName;
 	
-	public void setAppointmentSlot (Date appointment){
-		this.appointmentSlot = appointment;
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String apt_date) {
+		this.date = apt_date;
+	}
+	public String getTime() {
+		return time;
+	}
+	public void setTime(String time) {
+		this.time = time;
+	}
+	public String getClinicName() {
+		return clinicName;
+	}
+	public void setClinicName(String clinicName) {
+		this.clinicName = clinicName;
 	}
 	
-	public Date getAppointmentSlot (){
-		return this.appointmentSlot;
-	}
 }

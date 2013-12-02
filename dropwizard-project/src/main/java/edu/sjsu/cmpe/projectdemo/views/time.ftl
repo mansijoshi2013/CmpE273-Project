@@ -17,11 +17,11 @@ border:0;
 			<h1 align="center">Select Time </h1>
 			<table cellpadding="8" align="center">
 			 <tr>
-			<td align="left"><input type="button" class="availablestyle" value="9:00 am" ></td>
-			<td align="left"><input type="button" class="unavailablestyle" value="11:00 am"></td>
-			<td align="left"><input type="button" class="availablestyle" value="1:00 pm"></td>
-			<td align="left"><input type="button" class="availablestyle" value="3:00 pm"></td>
-			<td align="left"><input type="button" class="unavailablestyle" value="5:00 pm"></td>
+			<td align="left"><input type="submit" class="availablestyle" name="time" value="9:00 am" ></td>
+			<td align="left"><input type="submit" class="availablestyle" name="time" value="11:00 am"></td>
+			<td align="left"><input type="submit" class="availablestyle" name="time" value="1:00 pm"></td>
+			<td align="left"><input type="submit" class="availablestyle" name="time" value="3:00 pm"></td>
+			<td align="left"><input type="submit" class="availablestyle" name="time" value="5:00 pm"></td>
 			 </tr>
 	  </table>
 	</form>
