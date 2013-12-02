@@ -22,7 +22,8 @@ public class TestMongo {
        MongoClient client = new MongoClient(new ServerAddress("54.215.197.26", 27017));
        
        DB database = client.getDB("portal");
-       
+      
+       /*
        BasicDBObject camp = new BasicDBObject();
        DBCollection campsCollection = database.getCollection("camps");
        
@@ -34,16 +35,29 @@ public class TestMongo {
      
 		campsCollection.insert(camp);
 		
-		System.out.println(campsCollection.count());
+		System.out.println(campsCollection.count());*/
 		
-      /*
+      
        Set<String> colls = database.getCollectionNames();
 
        for (String s : colls) {
        System.out.println(s);
        }
-       */
        
+       DBCollection collection = database.getCollection("users");
+//       DBObject query=new BasicDBObject("Username","admin");
+       //DBObject obj=collection.findOne(query);
+       //System.out.println(obj.toString());
+       /*
+       DBCursor cur=collection.find();
+		while(cur.hasNext())		
+		{
+			for (int i = 0; i<cur.count(); i++)
+			{
+				DBObject obj=cur.next();
+				System.out.println(obj.toString());
+			}
+		}*/
        
        //DBCollection usersCollection = database.getCollection("camps");
       // DBObject query=new BasicDBObject("Username","shwetarameshk");
@@ -51,11 +65,11 @@ public class TestMongo {
 		//usersCollection.remove(obj);
 		
 		//System.out.println(obj.toString());
-/*
-       DBCollection usersCollection = database.getCollection("users");
+
+      /* DBCollection usersCollection = database.getCollection("users");
 		BasicDBObject admin = new BasicDBObject();
 		admin.append("name","Admin").append("Username","admin").append("Password","password").append("user_type","admin");
-        */
+        usersCollection.insert(admin);*/
     }
 }
 

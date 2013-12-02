@@ -11,7 +11,7 @@
 		</div>
 	
 	
-		<div id="camps" style="background-color:#EEEEEE;height:200px;width:300px;float:left;">
+		<div id="camps" style="background-color:#EEEEEE;height:700px;width:300px;float:left;">
 		<form style="text-align:left" action="" method="get">
 		The following camps are taking place in your city:<br><br><br>
 		

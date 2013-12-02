@@ -46,10 +46,17 @@ public class DatabaseConnection {
 	public User verifyLogin(String Username,String Password)
 	{
 		DBCollection collection=portalDatabase.getCollection("users");
-		DBObject query=new BasicDBObject("Username",Username).append("verified","true");
+		//DBObject query=new BasicDBObject("Username",Username).append("verified","true");
+		DBObject query=new BasicDBObject("Username",Username);
 		DBObject obj=collection.findOne(query);
 		if(obj!=null)
 		{
+			if (obj.get("user_type").equals("admin"))
+			{
+				User user = new User();
+				user.setUser_Type("admin");
+				return user;
+			}
 			String hashedAndSalted=obj.get("Password").toString();
 			try{
 			String salt=hashedAndSalted.split(",")[1];
@@ -58,7 +65,7 @@ public class DatabaseConnection {
 			if (hashedAndSalted.equals(PasswordEncryption.makePasswordHash(Password, salt)))
 			{
 				String user_type=(String)obj.get("user_type");
-				if(user_type.equals("donor"))
+				if(user_type.equals("donor") && obj.get("verified").equals("true"))
 				{
 					Donor donor=new Donor();
 					donor.setName((String)obj.get("name"));
@@ -66,14 +73,16 @@ public class DatabaseConnection {
 					return donor;
 					
 				}
-				else 
+				else if(user_type.equals("patient"))
 				{
 					Patient patient=new Patient();
 					patient.setUser_Type((String)obj.get("user_type"));
 					patient.setName((String)obj.get("name"));
 					return patient;
 				}
+				
 			}
+			
 			else
 			{
 				Donor nullDonor=new Donor();
@@ -95,6 +104,7 @@ public class DatabaseConnection {
 			return nullDonor;
 			
 		}
+		return null;
 		
 	}
 	
