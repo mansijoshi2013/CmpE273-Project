@@ -45,9 +45,9 @@ public class TestMongo {
        }
        
        DBCollection collection = database.getCollection("users");
-//       DBObject query=new BasicDBObject("Username","admin");
-       //DBObject obj=collection.findOne(query);
-       //System.out.println(obj.toString());
+      DBObject query=new BasicDBObject("Username","shweta");
+       DBObject obj=collection.findOne(query);
+       System.out.println(obj.toString());
        /*
        DBCursor cur=collection.find();
 		while(cur.hasNext())		

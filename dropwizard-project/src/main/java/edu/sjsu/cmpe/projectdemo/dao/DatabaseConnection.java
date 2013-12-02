@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -22,8 +23,10 @@ import com.mongodb.ServerAddress;
 
 
 
-import edu.sjsu.cmpe.projectdemo.domain.BloodRequest;
 
+
+
+import edu.sjsu.cmpe.projectdemo.domain.BloodRequest;
 import edu.sjsu.cmpe.projectdemo.domain.Clinic;
 
 
@@ -173,20 +176,26 @@ public class DatabaseConnection {
 	
 	}
 	
-	public ArrayList<BloodDonationCamps> getCamps (String city){
+	public ArrayList<BloodDonationCamps> getCamps (String userName){
 		BloodDonationCamps camp = new BloodDonationCamps();
 		ArrayList<BloodDonationCamps> camps = new ArrayList<BloodDonationCamps>();
 		DBObject obj;
+		DBCollection usersCollection=portalDatabase.getCollection("users");
+		DBObject query = new BasicDBObject("Username",userName);
+		DBObject obj1=usersCollection.findOne(query);
+		String city = new String();
+		city = (String) obj1.get("City");
 		DBCollection collection=portalDatabase.getCollection("camps");
-		DBObject query = new BasicDBObject("city",city);
-		DBCursor cur=collection.find(query);
+		DBObject ref = new BasicDBObject();
+		ref.put("city",Pattern.compile(".*"+city+".*"  , Pattern.CASE_INSENSITIVE));
+		DBCursor cur=collection.find(ref);
 		while(cur.hasNext())		
 		{
 			for (int i = 0; i<cur.count(); i++)
 			{
 				obj=cur.next();
 				camp = new BloodDonationCamps();
-				camp.setCity(city);
+				camp.setCity((String) obj.get("city"));
 				camp.setEventName((String) obj.get("event_name"));
 				camp.setVenue((String) obj.get("venue"));
 				camp.setState((String) obj.get("state"));

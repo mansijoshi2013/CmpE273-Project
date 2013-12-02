@@ -18,6 +18,7 @@ import javax.jms.TextMessage;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import org.fusesource.stomp.jms.StompJmsConnectionFactory;
@@ -43,7 +44,8 @@ public class DonorHomeResource {
 
 	private DatabaseConnection db;
 	ArrayList<BloodRequest> bloodRequests=new ArrayList<BloodRequest>();
-
+	ArrayList<BloodDonationCamps> camp = new ArrayList<BloodDonationCamps>();
+	
 	/*@GET
 	public View displayCamps (){
 		db  = new DatabaseConnection();
@@ -56,7 +58,7 @@ public class DonorHomeResource {
 	}*/
 	
 	@GET
-	public View getDonorHomepage() 
+	public View getDonorHomepage(@QueryParam("userName") String userName) 
 	{
 		//Consumer code: receive blood Requests in the background
 		int numThreads=1;
@@ -79,11 +81,16 @@ public class DonorHomeResource {
     	
 		
 		//CAMPS
+		System.out.println(userName);
 		db  = new DatabaseConnection();
-		//TODO
-		ArrayList<BloodDonationCamps> camp = new ArrayList<BloodDonationCamps>();
-		camp = db.getCamps("San Jose");
-    		
+		
+		try{
+			camp = db.getCamps(userName);
+		}
+		catch(Exception e){			
+			e.printStackTrace();
+		}
+				
 		return new DonorHomeView(camp,bloodRequests);
 		
 		}

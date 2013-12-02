@@ -24,11 +24,11 @@
 	
 	
 		<div id="camps" style="background-color:#EEEEEE;height:400px;width:300px;float:left;">
-				<form style="text-align:center" action="" method="get">
+		<form style="text-align:left" action="" method="get">
 		The following camps are taking place in your city:<br><br><br>
 		
 		<div id="cl"></div>
-		<script type="text/javascript">
+		<script type="text/javascript">		 
 		<#list 0..camps?size-1 as i>
 		
 			var label=document.createElement("label");
@@ -38,6 +38,20 @@
 			label.appendChild(lb);
 			var description=document.createTextNode("${camps[i].venue?html}");
 			label.appendChild(description);
+			var lb=document.createElement("br");
+			label.appendChild(lb);
+			var description=document.createTextNode("${camps[i].city?html}");
+			label.appendChild(description);
+			var lb=document.createElement("br");
+			label.appendChild(lb);
+			var description=document.createTextNode("${camps[i].dateOfEvent?html}");
+			label.appendChild(description);
+			var lb=document.createElement("br");
+			label.appendChild(lb);
+			var description=document.createTextNode("${camps[i].timeOfEvent?html}");
+			label.appendChild(description);
+			var lb=document.createElement("br");
+			label.appendChild(lb);
 			var lb=document.createElement("br");
 			label.appendChild(lb);
 			document.getElementById('cl').appendChild(label);
