@@ -48,7 +48,7 @@ public class LoginResource
 	{
 	
 		//URI uri=new URI("http://localhost:15000/portal/login/donor/home");
-		URI uri =new URI("http://localhost:15000/portal/login/");
+		URI uri =new URI("http://localhost:15000/portal/login");
 		URI uriDonor=new URI("http://localhost:15000/portal/login/donor/home");
 		
 		db=new DatabaseConnection();
