@@ -48,11 +48,8 @@ public class LoginResource
 	{
 	
 		//URI uri=new URI("http://localhost:15000/portal/login/donor/home");
-<<<<<<< HEAD
 		URI uri=new URI("http://localhost:15000/portal/login/donor/home/");
-=======
 		URI uriDonor=new URI("http://localhost:15000/portal/login/donor/home");
->>>>>>> 17e11841f5356f53b37d0d23fd7935ef7d9af21c
 		db=new DatabaseConnection();
 		
 		User user= db.verifyLogin(Username,Password);
