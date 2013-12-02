@@ -1,5 +1,7 @@
 package edu.sjsu.cmpe.projectdemo.domain;
 
+import java.util.Date;
+
 public class BloodDonationCamps {
 
 	private String eventName;
@@ -7,7 +9,22 @@ public class BloodDonationCamps {
 	private String city;
 	private String state;
 	private int zipCode;
+	private String dateOfEvent;
+	private String timeOfEvent;
 	
+	
+	public String getDateOfEvent() {
+		return dateOfEvent;
+	}
+	public void setDateOfEvent(String dateOfEvent) {
+		this.dateOfEvent = dateOfEvent;
+	}
+	public String getTimeOfEvent() {
+		return timeOfEvent;
+	}
+	public void setTimeOfEvent(String timeOfEvent) {
+		this.timeOfEvent = timeOfEvent;
+	}
 	public String getEventName() {
 		return eventName;
 	}

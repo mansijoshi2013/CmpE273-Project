@@ -2,6 +2,7 @@ package edu.sjsu.cmpe.projectdemo.dao;
 
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.UUID;
 
 import com.mongodb.BasicDBObject;
@@ -12,6 +13,8 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoException;
 import com.mongodb.ServerAddress;
+
+
 
 
 
@@ -157,28 +160,32 @@ public class DatabaseConnection {
 	
 	public ArrayList<BloodDonationCamps> getCamps (String city){
 		BloodDonationCamps camp = new BloodDonationCamps();
+		ArrayList<BloodDonationCamps> camps = new ArrayList<BloodDonationCamps>();
 		DBObject obj;
 		DBCollection collection=portalDatabase.getCollection("camps");
 		DBObject query = new BasicDBObject("city",city);
 		DBCursor cur=collection.find(query);
-		if(cur.hasNext())
+		while(cur.hasNext())		
 		{
-			obj=cur.next();
-			camp.setCity(city);
-			camp.setEventName((String) obj.get("event_name"));
-			camp.setVenue((String) obj.get("venue"));
-			camp.setState((String) obj.get("state"));
-			camp.setZipCode((Integer) obj.get("zip"));
-			
-			AllCamps.allCamps.add(camp);
+			for (int i = 0; i<cur.count(); i++)
+			{
+				obj=cur.next();
+				camp = new BloodDonationCamps();
+				camp.setCity(city);
+				camp.setEventName((String) obj.get("event_name"));
+				camp.setVenue((String) obj.get("venue"));
+				camp.setState((String) obj.get("state"));
+				camp.setZipCode((Integer) obj.get("zip"));
+				camp.setDateOfEvent((String) obj.get("dateOfEvent"));
+				camp.setTimeOfEvent((String) obj.get("timeOfEvent"));
+				camps.add(camp);
+			}
 		}		
-		return AllCamps.allCamps;
+		System.out.println("num camps= " + camps.size());
+		return camps;
 	}
 		
 
-		
-	
-	
 	//To view all clinics
 	public ArrayList<Clinic> getAllClinics()
 	{
