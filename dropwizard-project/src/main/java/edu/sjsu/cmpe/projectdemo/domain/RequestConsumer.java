@@ -14,7 +14,9 @@ import org.fusesource.stomp.jms.StompJmsConnectionFactory;
 import org.fusesource.stomp.jms.StompJmsDestination;
 import org.fusesource.stomp.jms.message.StompJmsMessage;
 
-public class RequestConsumer implements Callable<BloodRequest>
+import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
+
+public class RequestConsumer implements Runnable
 {
 	private String user;
 	private String password;
@@ -54,14 +56,16 @@ public class RequestConsumer implements Callable<BloodRequest>
     	}
 	}
 	
-	@Override
-	public BloodRequest call() 
+
+	public void run() 
 	{
 		while(true)
     	{
-    		try
+			
+			try
     		{
-    			Message msg=consumer.receive();
+    			
+				Message msg=consumer.receive();
     			if(msg instanceof TextMessage)
     			{
     				String body=((TextMessage)msg).getText();
@@ -72,7 +76,7 @@ public class RequestConsumer implements Callable<BloodRequest>
     				System.out.println("Receieved message: "+body);
     				
     				//Parse message
-    				String[] parts=body.split(":",7);
+    				String[] parts=body.split(":",8);
     				bloodRequest=new BloodRequest();
     				bloodRequest.setBloodGroup(parts[0]);
     				bloodRequest.setHospital(parts[1]);
@@ -83,7 +87,10 @@ public class RequestConsumer implements Callable<BloodRequest>
     				bloodRequest.setZipCode(zipCode);
     				long phoneNumber=Long.parseLong(parts[6]);
     				bloodRequest.setPhoneNumber(phoneNumber);
+    				bloodRequest.setTimeOfRequest(parts[7]);
     				
+    				DatabaseConnection db =new DatabaseConnection();
+    				db.insertRequests(bloodRequest);
     				
     				
     			}
@@ -101,13 +108,14 @@ public class RequestConsumer implements Callable<BloodRequest>
     			{
     				System.out.println("Unexpected message type: "+msg.getClass());
     			}
+    			
     		}
     		catch(Exception e)
     		{
     			System.out.println("Exception in consuming message");
     			e.printStackTrace();
     		}
-    		return bloodRequest;
+    	
     		
     	}
     	try {
@@ -116,7 +124,7 @@ public class RequestConsumer implements Callable<BloodRequest>
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	return bloodRequest;
+    	
     	
 	}
 }

@@ -42,6 +42,7 @@ import edu.sjsu.cmpe.projectdemo.domain.BloodRequest;
 public class DonorHomeResource {
 
 	private DatabaseConnection db;
+	ArrayList<BloodRequest> bloodRequests=new ArrayList<BloodRequest>();
 
 	/*@GET
 	public View displayCamps (){
@@ -58,35 +59,24 @@ public class DonorHomeResource {
 	public View getDonorHomepage() 
 	{
 		//Consumer code: receive blood Requests in the background
-		/*int numThreads=1;
+		int numThreads=1;
 		ExecutorService executor=Executors.newFixedThreadPool(numThreads);
-		ArrayList<Future<BloodRequest>> list=new ArrayList<Future<BloodRequest>>();
-		
-		Callable<BloodRequest> callable= new RequestConsumer();
-		//Runnable backgroundTask=new RequestConsumer();
+		Runnable backgroundTask=new RequestConsumer();
 		System.out.println("About to submit background task");
 		try
 		{
-			Future<BloodRequest> future=executor.submit(callable);
-			list.add(future);
-			//for(Future<BloodRequest> fut : list){
-	            try {
-	                System.out.println(future.get());
-	            } 
-	            catch(Exception e)
-	            {
-	            	System.out.println("Exception in DonorHomePage ");
-	            	e.printStackTrace();
-	            }
-	       // }
-			//executor.execute(backgroundTask);
+			executor.execute(backgroundTask);
 		}
 		catch(Exception e)
 		{
 			executor.shutdown();
 			e.printStackTrace();
 		}
-    	*/
+		
+		// fetch blood requests for the day
+		db=new DatabaseConnection();
+		bloodRequests=db.getBloodRequests();
+    	
 		
 		//CAMPS
 		db  = new DatabaseConnection();
@@ -94,7 +84,7 @@ public class DonorHomeResource {
 		ArrayList<BloodDonationCamps> camp = new ArrayList<BloodDonationCamps>();
 		camp = db.getCamps("San Jose");
     		
-		return new DonorHomeView(camp);
+		return new DonorHomeView(camp,bloodRequests);
 		
 		}
 

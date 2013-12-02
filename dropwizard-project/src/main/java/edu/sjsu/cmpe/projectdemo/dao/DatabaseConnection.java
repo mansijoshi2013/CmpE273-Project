@@ -1,7 +1,10 @@
 package edu.sjsu.cmpe.projectdemo.dao;
 
 import java.net.UnknownHostException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.UUID;
 
 import com.mongodb.BasicDBObject;
@@ -16,6 +19,11 @@ import com.mongodb.ServerAddress;
 
 
 
+
+
+
+
+import edu.sjsu.cmpe.projectdemo.domain.BloodRequest;
 import edu.sjsu.cmpe.projectdemo.domain.Clinic;
 
 
@@ -201,6 +209,51 @@ public class DatabaseConnection {
 		}
 		
 		return clinicList;
+	}
+	
+	//To insert blood requests from consumer
+	public void insertRequests(BloodRequest bloodRequest)
+	{
+		DBCollection collection=portalDatabase.getCollection("bloodRequests");
+		BasicDBObject obj=new BasicDBObject();
+		obj.put("bloodGroup",bloodRequest.getBloodGroup() );
+		obj.put("hospital", bloodRequest.getHospital());
+		obj.put("address", bloodRequest.getAddress());
+		obj.put("city", bloodRequest.getCity());
+		obj.put("state",bloodRequest.getState() );
+		obj.put("zipcode", bloodRequest.getZipCode());
+		obj.put("phoneNumber", bloodRequest.getPhoneNumber());
+		obj.put("timeOfRequest", bloodRequest.getTimeOfRequest());
+		
+		collection.insert(obj);
+	}
+	
+	//To retrieve blood requests based on date
+	public ArrayList<BloodRequest> getBloodRequests()
+	{
+		ArrayList<BloodRequest> bloodRequests=new ArrayList<BloodRequest>();
+		DBCollection collection=portalDatabase.getCollection("bloodRequests");
+		DateFormat dateFormat=new SimpleDateFormat("MM/dd/yyyy");
+		Date date=new Date();
+		String todayDate=dateFormat.format(date);
+		DBObject query=new BasicDBObject("timeOfRequest",todayDate);
+		
+		DBCursor cursor=collection.find(query);
+		while(cursor.hasNext())
+		{
+			DBObject obj=cursor.next();
+			BloodRequest req=new BloodRequest();
+			req.setAddress(obj.get("address").toString());
+			req.setBloodGroup(obj.get("bloodGroup").toString());
+			req.setCity(obj.get("city").toString());
+			req.setHospital(obj.get("hospital").toString());
+			req.setPhoneNumber((Long)obj.get("phoneNumber"));
+			req.setState(obj.get("state").toString());
+			req.setTimeOfRequest(obj.get("timeOfRequest").toString());
+			req.setZipCode((Integer)obj.get("zipcode"));
+			bloodRequests.add(req);
+		}
+		return bloodRequests;
 	}
 	
 
