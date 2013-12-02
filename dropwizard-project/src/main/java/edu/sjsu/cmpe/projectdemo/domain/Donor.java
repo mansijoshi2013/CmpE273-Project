@@ -1,5 +1,6 @@
 package edu.sjsu.cmpe.projectdemo.domain;
 
+import java.util.Date;
 import java.util.UUID;
 
 import org.joda.time.DateTime;
@@ -8,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Donor extends User{
 	
 	@JsonProperty("DateOfBirth")
-	private DateTime DateOfBirth;
+	private String DateOfBirth;
 	
 	@JsonProperty("PhoneNumber")
 	private long phoneNumber;
@@ -89,11 +90,11 @@ public class Donor extends User{
 	private Login donorLogin;
 
 	
-	public DateTime getDateOfBirth() {
+	public String getDateOfBirth() {
 		return DateOfBirth;
 	}
 
-    public void setDateOfBirth(DateTime dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
 		DateOfBirth = dateOfBirth;
 	}
 

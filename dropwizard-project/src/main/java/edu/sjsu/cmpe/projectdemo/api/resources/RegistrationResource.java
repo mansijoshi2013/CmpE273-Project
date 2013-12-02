@@ -5,6 +5,7 @@ import java.net.URISyntaxException;
 
 
 import java.security.SecureRandom;
+import java.util.Date;
 import java.util.Random;
 
 import javax.ws.rs.Consumes;
@@ -40,7 +41,7 @@ public class RegistrationResource {
 		
 	@POST
 	public Response registerUser(@FormParam("Name") String Name,
-			
+			@FormParam("DateOfBirth") String DateOfBirth,
 			@FormParam("BloodGroup") String BloodGroup,
 			@FormParam("PhoneNumber") Long PhoneNumber,@FormParam("Email") String Email,
 			@FormParam("Street") String Street,@FormParam("City") String City,
@@ -54,7 +55,7 @@ public class RegistrationResource {
 		//Pass data as donor object into dao 
 		Donor donor=new Donor();
 		donor.setName(Name);
-		
+		donor.setDateOfBirth(DateOfBirth);
 		donor.setBloodGroup(BloodGroup);
 		donor.setPhoneNumber(PhoneNumber);
 		donor.setEmail(Email);
