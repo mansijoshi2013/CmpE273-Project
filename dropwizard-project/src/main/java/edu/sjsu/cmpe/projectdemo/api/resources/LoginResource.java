@@ -48,19 +48,19 @@ public class LoginResource
 	{
 	
 		//URI uri=new URI("http://localhost:15000/portal/login/donor/home");
-		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics/appointments/");
+		URI uriDonor=new URI("http://localhost:15000/portal/login/donor/home");
 		db=new DatabaseConnection();
 		
 		User user= db.verifyLogin(Username,Password);
 		if(user.getUser_Type().equals("patient"))
 		{
-			//return Response.seeOther(uri).build();
+			
 			System.out.println("Its a patient.");
 		}
 		else if(user.getUser_Type().equals("donor"))
 		{
-			//return Response.seeOther(uri).build();
 			System.out.println("Its a donor");
+			//return Response.seeOther(uriDonor).build();
 		}
 		else
 		{
