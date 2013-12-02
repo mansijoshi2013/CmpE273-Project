@@ -14,6 +14,8 @@
 		${requests.bloodGroup}
 		<br>
 		${requests.hospital}
+		<br>
+		${requests.address},${requests.city},${requests.state}
 		
 		</input>
 		</p>
