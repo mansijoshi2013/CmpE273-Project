@@ -13,10 +13,17 @@ public class BloodRequest {
 	private String state;
 	private int zipCode;
 	private long phoneNumber;
-	private Date dateOfRequest;
+	private String dateOfRequest;
 	private String timeOfRequest;
 
     
+    	public String getDateOfRequest() {
+		return dateOfRequest;
+	}
+	public void setDateOfRequest(String dateOfRequest) {
+		this.dateOfRequest = dateOfRequest;
+	}
+	
     public String getTimeOfRequest() {
             return timeOfRequest;
     }
