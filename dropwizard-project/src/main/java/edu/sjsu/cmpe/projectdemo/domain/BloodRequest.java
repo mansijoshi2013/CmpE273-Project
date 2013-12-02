@@ -15,7 +15,7 @@ public class BloodRequest {
 	private long phoneNumber;
 	private String timeOfRequest;
 
-    
+	
     public String getTimeOfRequest() {
             return timeOfRequest;
     }
