@@ -43,7 +43,7 @@ public class DatabaseConnection {
 	public User verifyLogin(String Username,String Password)
 	{
 		DBCollection collection=portalDatabase.getCollection("users");
-		DBObject query=new BasicDBObject("Username",Username);
+		DBObject query=new BasicDBObject("Username",Username).append("verified","true");
 		DBObject obj=collection.findOne(query);
 		if(obj!=null)
 		{
@@ -103,7 +103,7 @@ public class DatabaseConnection {
 		{
 			BasicDBObject obj=new BasicDBObject();
 			obj.put("name",donor.getName());
-		
+			obj.put("DateOfBirth",donor.getDateOfBirth());
 			obj.put("blood group", donor.getBloodGroup());
 			obj.put("phoneNumber", donor.getPhoneNumber());
 			obj.put("email", donor.getEmail());
