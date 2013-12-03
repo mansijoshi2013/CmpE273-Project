@@ -102,10 +102,12 @@ function validateZipCode()
 </script>
 
 </head>
-	<body bgcolor="8A2BE2">
+	
+	<body >
+		<div id="bgNode"class="bgNode" style="height: 505px;">
 		<form id="Regform" action="" onsubmit="return (validateZipCode() && validatePassword() && validateUsername() && isDateSelected() && validateEmail() && validateName() && validatePhone() && validateBloodGroup());" method="post" >
 		<h1 align="center">Blood Donation </h1>
-		<table cellpadding="8" align="center">
+		<table cellpadding="8" style="margin-left: 400px;">
     <tr>
          <td align="right"><b>Name:</b></td>
       <td align="left"><input type="text" id="name" name="Name" /></td>
@@ -173,11 +175,13 @@ function validateZipCode()
     </tr>
     
     <tr>
-         <td align="left"><input type="submit" value="Register"></td>
+         <td align="left"><input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;left: 175px;;
+height: 30px;" type="submit" value="Register"></td>
     </tr>
     
   </table>
 		
 		</form>
+		</div>
 	</body>
 </html>
