@@ -8,7 +8,8 @@
 </head>
 
 	<body bgcolor="EEEEE">
-	<div id="bgNode"class="bgNode" style="height: 505px;">
+	<div id="bgNode"class="bgNode" style="height: 505px;margin-left: -68;
+margin-top: 14;">
 	<form id="RequestForm" action="" method="post" onsubmit="return">
 	<h1 align="center">Blood Request Form</h1>
 	
