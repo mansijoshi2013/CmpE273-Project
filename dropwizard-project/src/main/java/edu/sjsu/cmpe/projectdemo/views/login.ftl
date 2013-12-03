@@ -7,7 +7,7 @@
 	</style>
 	</head>
 	<body>
-	<div id="bgNode"class="bgNode" style="height: 505px; margin-left: -68;
+	<div id="bgNode"class="bgNode" style="height: 505px;
 margin-top: 14;">
 <img src="/assets/banner.png" width="200" height="200" />
 	<div id="BDRP_form_div" class="BDRP_form_div">

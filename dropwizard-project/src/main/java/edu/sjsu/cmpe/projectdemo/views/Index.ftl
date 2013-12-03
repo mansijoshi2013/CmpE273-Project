@@ -34,23 +34,7 @@
         white-space: nowrap;
         line-height: 2.2em;
     }
-    .home_tab_container{
-        visibility: visible;
-        zoom: 1;
-        opacity: 1;
-        left: 440px;
-        top: 200px;
-        width: 525px;
-        min-height: 35px;
-        position: absolute;
-        text-align: center;
-        height: 35px;
-        overflow: visible;
-        white-space: nowrap;
-        display: inherit;
-        margin-top: 41px;
-        
-    }
+
 .home_tab_container_text{
     cursor: pointer;
     color: rgb(142, 21, 145);
@@ -110,7 +94,7 @@
     }
 </style>
 </head>
-<body style="overflow-y: scroll; overflow-x: auto;">
+<body style="overflow-y: scroll; overflow-x: auto;" >
 
     
     <div id="bgNode" style="position: absolute; width: 100%; background-image: none; background-size: auto; background-color: rgb(234, 229, 229); height: 955px; background-position: 50% 0%; background-repeat: repeat repeat;">
@@ -155,11 +139,10 @@
         </div>
         </div>
         
-            <div id="Cntnr3" comp="mobile.core.components.Container" width="385" height="165" x="580" y="60" scale="1" angle="0" styleid="c4" skin="wysiwyg.viewer.skins.area.RectangleArea" class="wysiwyg_viewer_skins_area_RectangleAreac4" style="visibility: visible; left: 580px; top: 60px; width: 385px; min-height: 165px; position: absolute;">
-                <div skinpart="bg" class="wysiwyg_viewer_skins_area_RectangleAreac4-bg">
+            <div width="385" height="165" x="580" y="60" scale="1" angle="0" style="visibility: visible; left: 580px; top: 60px; width: 385px; min-height: 165px; position: absolute;">
+                <div skinpart="bg" >
                 </div>
-                <div skinpart="inlineContent" class="wysiwyg_viewer_skins_area_RectangleAreac4-inlineContent">
-                </div>
+         
             </div>
         </div>
         
@@ -199,12 +182,12 @@
             </div>
        </div>
         
-        <div id="PAGES_CONTAINER" width="980" height="500" x="0" y="230" scale="1" angle="0" style="margin-top: 25px; visibility: visible; width: 980px; min-height: 500px; top: 260px; position: absolute; margin-left: 100px;">
+        <div id="PAGES_CONTAINER" width="980" height="500" x="0" y="230" scale="1" angle="0" style="margin-top: 25px; visibility: visible; width: 980px; min-height: 500px; top: 200px; position: absolute; margin-left: 100px;">
             <div skinpart="screenWidthBackground" class="wysiwyg_viewer_skins_screenwidthcontainer_BlankScreenpc1-screenWidthBackground" style="position: absolute; width: 1280px; height: 500px; left: -150px;">
             </div>
         
         <div style="left: 685px; width: 285px; position: absolute; min-height: 35px; text-align: center;") repeat-x scroll center top rgb(40, 118, 118);">
-            <a class = "BDRP_sidebutton" >
+            <a class = "BDRP_sidebutton" href="http://localhost:15000/portal/login">
             <span class="BDRP_sidebutton_Label" style="line-height: 30px;  text-align:center; color: rgb(255, 255, 255);"> Login </span>
             </a>
         </div>
