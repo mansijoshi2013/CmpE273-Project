@@ -19,7 +19,10 @@ import edu.sjsu.cmpe.projectdemo.domain.Appointment;
 import edu.sjsu.cmpe.projectdemo.views.AppointmentView;
 import edu.sjsu.cmpe.projectdemo.views.TimeConfirm;
 import edu.sjsu.cmpe.projectdemo.views.TimeView;
+
 import javax.ws.rs.QueryParam;
+
+import com.twilio.sdk.TwilioRestException;
 
 @Path("login/donor/clinics/appointments/")
 public class AppointmentResource {
@@ -71,7 +74,14 @@ public class AppointmentResource {
 		appointment.setTime(time);
 		DatabaseConnection db=new DatabaseConnection();
 		db.insertAppointment(appointment);
+		try {
+			TwilioImplementation TI=new TwilioImplementation("+14086368748",clinicname,apt_date,time);
+		} catch (TwilioRestException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return Response.status(401).entity("Your appointment is booked on " + apt_date +"  at "+clinicname +"--"+ time).build();
 		
 	}
 }
+
