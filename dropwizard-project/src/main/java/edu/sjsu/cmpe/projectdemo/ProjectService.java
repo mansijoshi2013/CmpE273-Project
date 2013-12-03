@@ -1,6 +1,7 @@
 package edu.sjsu.cmpe.projectdemo;
 
 import com.yammer.dropwizard.Service;
+import com.yammer.dropwizard.assets.AssetsBundle;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
 import com.yammer.dropwizard.views.ViewBundle;
@@ -18,6 +19,7 @@ public class ProjectService extends Service <ProjectServiceConfiguration>{
 	public void initialize(Bootstrap<ProjectServiceConfiguration> bootstrap) {
 		bootstrap.setName("project-service");
 		bootstrap.addBundle(new ViewBundle());
+		bootstrap.addBundle(new AssetsBundle());
 
 	}
 
