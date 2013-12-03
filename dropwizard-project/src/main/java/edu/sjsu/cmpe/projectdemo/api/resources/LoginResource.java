@@ -76,7 +76,8 @@ public class LoginResource
 		else
 		{
 			System.out.println("Username/password not found");			
-			return Response.seeOther(uri).build();
+			//return Response.seeOther(uri).build();
+			return Response.status(200).entity(new SystemErrorView()).build();
 		}
 		//return Response.seeOther(uri).build();	
 	}
