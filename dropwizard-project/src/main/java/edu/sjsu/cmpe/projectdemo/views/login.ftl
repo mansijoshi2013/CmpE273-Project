@@ -7,9 +7,10 @@
 	</style>
 	</head>
 	<body>
-	<div id="bgNode"class="bgNode">
+	<div id="bgNode"class="bgNode" style="height: 505px;">
 	<div id="BDRP_form_div" class="BDRP_form_div">
 		<form style="text-align:center" action="" method="post">
+		<h1 align="center"> Login Page </h1>
 		Username: <input type="text" placeholder="Username" name="Username" ><br><br>
 		Password: <input type="password" placeholder="Password" name="Password" ><br>
 		<div >
