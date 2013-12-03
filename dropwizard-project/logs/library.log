@@ -1174,15 +1174,11 @@ INFO  [2013-12-03 18:01:19,038] org.eclipse.jetty.server.AbstractConnector: Star
 INFO  [2013-12-03 18:01:19,045] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
 >>>>>>> 63d8a5b8df69cb94ef94c7cf860f4fa5e298d231
 <<<<<<< HEAD
-WARN  [2013-12-03 18:22:44,280] com.yammer.dropwizard.config.ServerFactory: 
-=======
-<<<<<<< HEAD
 WARN  [2013-12-03 18:12:31,775] com.yammer.dropwizard.config.ServerFactory: 
 =======
 WARN  [2013-12-03 18:19:07,916] com.yammer.dropwizard.config.ServerFactory: 
 >>>>>>> 0ba4bbddac168270a5f97f9dfb7bd83518b12948
 >>>>>>> 3335ec1d0a620bb2bdfd24f210246e2485ced94a
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -1192,12 +1188,6 @@ WARN  [2013-12-03 18:19:07,916] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-<<<<<<< HEAD
-INFO  [2013-12-03 18:22:44,735] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
-INFO  [2013-12-03 18:22:44,737] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2013-12-03 18:22:45,140] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
-INFO  [2013-12-03 18:22:45,459] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
-=======
 <<<<<<< HEAD
 INFO  [2013-12-03 18:15:09,081] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-03 18:15:09,083] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
@@ -1216,7 +1206,6 @@ INFO  [2013-12-03 18:19:09,011] com.sun.jersey.server.impl.application.WebApplic
 INFO  [2013-12-03 18:19:09,394] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
 >>>>>>> 0ba4bbddac168270a5f97f9dfb7bd83518b12948
 >>>>>>> 3335ec1d0a620bb2bdfd24f210246e2485ced94a
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
@@ -1245,21 +1234,6 @@ INFO  [2013-12-03 18:19:09,394] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
-<<<<<<< HEAD
-INFO  [2013-12-03 18:22:45,459] com.yammer.dropwizard.config.Environment: tasks = 
-
-    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
-
-INFO  [2013-12-03 18:22:47,876] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 18:22:47,887] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
-INFO  [2013-12-03 20:23:55,905] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:15001
-INFO  [2013-12-03 20:23:56,211] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 20:23:56,212] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
-INFO  [2013-12-03 20:23:56,212] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/nisheethjoshi/CmpE273-Project/CmpE273-Project-Dec2/dropwizard-project/target/classes/}
-INFO  [2013-12-03 20:23:58,291] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/nisheethjoshi/CmpE273-Project/CmpE273-Project-Dec2/dropwizard-project/target/classes/}
-INFO  [2013-12-03 20:23:58,292] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
-WARN  [2013-12-03 20:24:14,983] com.yammer.dropwizard.config.ServerFactory: 
-=======
 <<<<<<< HEAD
 INFO  [2013-12-03 18:15:09,383] com.yammer.dropwizard.config.Environment: tasks = 
 
@@ -2069,7 +2043,6 @@ ERROR [2013-12-03 19:10:06,836] com.yammer.dropwizard.jersey.LoggingExceptionMap
 ! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
 WARN  [2013-12-03 19:13:02,588] com.yammer.dropwizard.config.ServerFactory: 
 >>>>>>> 0ba4bbddac168270a5f97f9dfb7bd83518b12948
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -2079,12 +2052,6 @@ WARN  [2013-12-03 19:13:02,588] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-<<<<<<< HEAD
-INFO  [2013-12-03 20:24:15,366] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
-INFO  [2013-12-03 20:24:15,369] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2013-12-03 20:24:15,833] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
-INFO  [2013-12-03 20:24:16,065] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
-=======
 <<<<<<< HEAD
 INFO  [2013-12-03 19:43:10,329] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-03 19:43:10,331] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
@@ -2096,7 +2063,6 @@ INFO  [2013-12-03 19:13:02,710] org.eclipse.jetty.server.Server: jetty-8.1.10.v2
 INFO  [2013-12-03 19:13:02,885] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
 INFO  [2013-12-03 19:13:03,104] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
 >>>>>>> 0ba4bbddac168270a5f97f9dfb7bd83518b12948
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
@@ -2125,21 +2091,6 @@ INFO  [2013-12-03 19:13:03,104] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
-<<<<<<< HEAD
-INFO  [2013-12-03 20:24:16,065] com.yammer.dropwizard.config.Environment: tasks = 
-
-    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
-
-INFO  [2013-12-03 20:24:17,006] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 20:24:17,013] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
-INFO  [2013-12-03 20:39:29,253] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:15001
-INFO  [2013-12-03 20:39:29,256] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 20:39:29,257] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
-INFO  [2013-12-03 20:39:29,257] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/nisheethjoshi/CmpE273-Project/CmpE273-Project-Dec2/dropwizard-project/target/classes/}
-INFO  [2013-12-03 20:39:31,433] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/nisheethjoshi/CmpE273-Project/CmpE273-Project-Dec2/dropwizard-project/target/classes/}
-INFO  [2013-12-03 20:39:31,434] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
-WARN  [2013-12-03 20:39:47,349] com.yammer.dropwizard.config.ServerFactory: 
-=======
 <<<<<<< HEAD
 INFO  [2013-12-03 19:43:10,577] com.yammer.dropwizard.config.Environment: tasks = 
 
@@ -2161,7 +2112,6 @@ WARN  [2013-12-03 19:52:14,736] com.yammer.dropwizard.config.ServerFactory:
 >>>>>>> 3335ec1d0a620bb2bdfd24f210246e2485ced94a
 WARN  [2013-12-03 20:00:17,714] com.yammer.dropwizard.config.ServerFactory: 
 >>>>>>> 5ecabdf19e9b44b1de29dcaa015a99d898a627fb
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -2171,12 +2121,6 @@ WARN  [2013-12-03 20:00:17,714] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-<<<<<<< HEAD
-INFO  [2013-12-03 20:39:47,748] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
-INFO  [2013-12-03 20:39:47,751] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2013-12-03 20:39:48,200] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
-INFO  [2013-12-03 20:39:48,527] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
-=======
 <<<<<<< HEAD
 INFO  [2013-12-03 19:52:14,830] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-03 19:52:14,832] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
@@ -2188,7 +2132,6 @@ INFO  [2013-12-03 20:00:17,853] org.eclipse.jetty.server.Server: jetty-8.1.10.v2
 INFO  [2013-12-03 20:00:18,042] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
 INFO  [2013-12-03 20:00:18,173] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
 >>>>>>> 5ecabdf19e9b44b1de29dcaa015a99d898a627fb
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
@@ -2211,31 +2154,12 @@ INFO  [2013-12-03 20:00:18,173] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
     POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
     POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
-<<<<<<< HEAD
-    GET     /portal/portal (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
-=======
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
     GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
     POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
     GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
-<<<<<<< HEAD
-INFO  [2013-12-03 20:39:48,527] com.yammer.dropwizard.config.Environment: tasks = 
-
-    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
-
-INFO  [2013-12-03 20:39:49,609] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 20:39:49,616] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
-INFO  [2013-12-03 20:40:41,364] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:15001
-INFO  [2013-12-03 20:40:41,368] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 20:40:41,371] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
-INFO  [2013-12-03 20:40:41,371] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/nisheethjoshi/CmpE273-Project/CmpE273-Project-Dec2/dropwizard-project/target/classes/}
-INFO  [2013-12-03 20:40:43,425] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/nisheethjoshi/CmpE273-Project/CmpE273-Project-Dec2/dropwizard-project/target/classes/}
-INFO  [2013-12-03 20:40:43,425] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
-WARN  [2013-12-03 20:40:49,670] com.yammer.dropwizard.config.ServerFactory: 
-=======
 <<<<<<< HEAD
 INFO  [2013-12-03 19:52:15,071] com.yammer.dropwizard.config.Environment: tasks = 
 
@@ -2553,7 +2477,6 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 !... 37 common frames omitted
 WARN  [2013-12-03 20:10:44,253] com.yammer.dropwizard.config.ServerFactory: 
 >>>>>>> 5ecabdf19e9b44b1de29dcaa015a99d898a627fb
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -2563,14 +2486,6 @@ WARN  [2013-12-03 20:10:44,253] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-<<<<<<< HEAD
-INFO  [2013-12-03 20:40:49,739] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
-INFO  [2013-12-03 20:40:49,741] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2013-12-03 20:40:49,850] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
-INFO  [2013-12-03 20:40:49,944] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
-
-    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
-=======
 <<<<<<< HEAD
 INFO  [2013-12-03 20:22:45,531] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-03 20:22:45,535] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
@@ -2587,7 +2502,6 @@ INFO  [2013-12-03 20:10:44,687] com.yammer.dropwizard.config.Environment: The fo
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
 >>>>>>> 5ecabdf19e9b44b1de29dcaa015a99d898a627fb
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
@@ -2608,31 +2522,12 @@ INFO  [2013-12-03 20:10:44,687] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
     POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
     POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
-<<<<<<< HEAD
-    GET     /portal/portal (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
-=======
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
     GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
     POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
     GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
-<<<<<<< HEAD
-INFO  [2013-12-03 20:40:49,944] com.yammer.dropwizard.config.Environment: tasks = 
-
-    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
-
-INFO  [2013-12-03 20:40:50,329] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 20:40:50,336] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
-INFO  [2013-12-03 20:41:16,165] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:15001
-INFO  [2013-12-03 20:41:16,166] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 20:41:16,169] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
-INFO  [2013-12-03 20:41:16,169] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/nisheethjoshi/CmpE273-Project/CmpE273-Project-Dec2/dropwizard-project/target/classes/}
-INFO  [2013-12-03 20:41:18,223] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/nisheethjoshi/CmpE273-Project/CmpE273-Project-Dec2/dropwizard-project/target/classes/}
-INFO  [2013-12-03 20:41:18,223] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
-WARN  [2013-12-03 20:41:22,750] com.yammer.dropwizard.config.ServerFactory: 
-=======
 <<<<<<< HEAD
 INFO  [2013-12-03 20:22:45,824] com.yammer.dropwizard.config.Environment: tasks = 
 
@@ -2641,7 +2536,6 @@ INFO  [2013-12-03 20:22:45,824] com.yammer.dropwizard.config.Environment: tasks 
 INFO  [2013-12-03 20:22:46,387] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
 INFO  [2013-12-03 20:22:46,390] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
 WARN  [2013-12-03 20:26:59,946] com.yammer.dropwizard.config.ServerFactory: 
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -2651,14 +2545,6 @@ WARN  [2013-12-03 20:26:59,946] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-<<<<<<< HEAD
-INFO  [2013-12-03 20:41:22,822] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
-INFO  [2013-12-03 20:41:22,824] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2013-12-03 20:41:22,931] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
-INFO  [2013-12-03 20:41:23,015] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
-
-    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
-=======
 INFO  [2013-12-03 20:27:00,040] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-03 20:27:00,043] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-03 20:27:00,164] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
@@ -2666,7 +2552,6 @@ INFO  [2013-12-03 20:27:00,275] com.yammer.dropwizard.config.Environment: The fo
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
@@ -2687,31 +2572,12 @@ INFO  [2013-12-03 20:27:00,275] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
     POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
     POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
-<<<<<<< HEAD
-    GET     /portal/index (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
-=======
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
     GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
     POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
     GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
-<<<<<<< HEAD
-INFO  [2013-12-03 20:41:23,015] com.yammer.dropwizard.config.Environment: tasks = 
-
-    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
-
-INFO  [2013-12-03 20:41:23,411] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 20:41:23,418] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
-INFO  [2013-12-03 20:42:08,707] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:15001
-INFO  [2013-12-03 20:42:08,709] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 20:42:08,712] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
-INFO  [2013-12-03 20:42:08,712] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/nisheethjoshi/CmpE273-Project/CmpE273-Project-Dec2/dropwizard-project/target/classes/}
-INFO  [2013-12-03 20:42:10,764] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/nisheethjoshi/CmpE273-Project/CmpE273-Project-Dec2/dropwizard-project/target/classes/}
-INFO  [2013-12-03 20:42:10,765] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
-WARN  [2013-12-03 20:42:14,701] com.yammer.dropwizard.config.ServerFactory: 
-=======
 INFO  [2013-12-03 20:27:00,275] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -2719,7 +2585,6 @@ INFO  [2013-12-03 20:27:00,275] com.yammer.dropwizard.config.Environment: tasks 
 INFO  [2013-12-03 20:27:00,744] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
 INFO  [2013-12-03 20:27:00,748] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
 WARN  [2013-12-03 20:28:49,938] com.yammer.dropwizard.config.ServerFactory: 
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -2729,14 +2594,6 @@ WARN  [2013-12-03 20:28:49,938] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-<<<<<<< HEAD
-INFO  [2013-12-03 20:42:14,773] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
-INFO  [2013-12-03 20:42:14,775] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2013-12-03 20:42:14,873] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
-INFO  [2013-12-03 20:42:14,964] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
-
-    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
-=======
 INFO  [2013-12-03 20:28:50,033] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-03 20:28:50,036] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-03 20:28:50,176] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
@@ -2744,7 +2601,6 @@ INFO  [2013-12-03 20:28:50,324] com.yammer.dropwizard.config.Environment: The fo
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
@@ -2765,24 +2621,12 @@ INFO  [2013-12-03 20:28:50,324] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
     POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
     POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
-<<<<<<< HEAD
-    GET     /portal/index (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
-=======
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
     GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
     POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
     GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
-<<<<<<< HEAD
-INFO  [2013-12-03 20:42:14,964] com.yammer.dropwizard.config.Environment: tasks = 
-
-    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
-
-INFO  [2013-12-03 20:42:15,390] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
-INFO  [2013-12-03 20:42:15,396] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
-=======
 INFO  [2013-12-03 20:28:50,324] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -3097,4 +2941,3 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
 >>>>>>> 5ecabdf19e9b44b1de29dcaa015a99d898a627fb
->>>>>>> 6f68be5504a6a704ef0135f97cec8e6dd8e9ff71
