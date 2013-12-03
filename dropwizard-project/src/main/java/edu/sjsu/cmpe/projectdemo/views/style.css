@@ -29,7 +29,7 @@ background-repeat: repeat repeat;
         zoom: 1;
         opacity: 1;
         left: 440px;
-        top: 200px;
+        top: 135px;
         width: 525px;
         min-height: 35px;
         position: absolute;
@@ -170,6 +170,10 @@ body {
 	font-family: arial;
 	font-size: 1em;
 	//width: 820px;
+}
+.BDRP_body{
+	padding: 0px 70px 10px;
+	width: 820px;
 }
 .BDRP_form_div{
 	//padding: 50px 150px 10px;
