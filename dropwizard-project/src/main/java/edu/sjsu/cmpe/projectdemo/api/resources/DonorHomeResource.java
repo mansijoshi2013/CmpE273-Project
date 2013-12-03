@@ -30,6 +30,7 @@ import com.yammer.dropwizard.views.View;
 import java.util.ArrayList;
 
 import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
+import edu.sjsu.cmpe.projectdemo.domain.Appointment;
 import edu.sjsu.cmpe.projectdemo.domain.BloodDonationCamps;
 import edu.sjsu.cmpe.projectdemo.domain.Clinic;
 import edu.sjsu.cmpe.projectdemo.domain.Messaging;
@@ -45,6 +46,7 @@ public class DonorHomeResource {
 	private DatabaseConnection db;
 	ArrayList<BloodRequest> bloodRequests=new ArrayList<BloodRequest>();
 	ArrayList<BloodDonationCamps> camp = new ArrayList<BloodDonationCamps>();
+	ArrayList<Appointment> appointment=new ArrayList<Appointment>();
 	
 	/*@GET
 	public View displayCamps (){
@@ -85,7 +87,10 @@ public class DonorHomeResource {
 		db  = new DatabaseConnection();
 		camp = db.getCamps(userName);
 		
-		return new DonorHomeView(camp,bloodRequests);
+		db  = new DatabaseConnection();
+		appointment = db.getAppointments(userName);
+		
+		return new DonorHomeView(camp,bloodRequests,appointment);
 		
 		}
 

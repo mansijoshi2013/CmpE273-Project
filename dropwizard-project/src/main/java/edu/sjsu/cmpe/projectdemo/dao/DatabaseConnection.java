@@ -315,6 +315,28 @@ public class DatabaseConnection {
 
 			
 		}
+
+	public ArrayList<Appointment> getAppointments(String userName) {
+
+		ArrayList<Appointment> appointment=new ArrayList<Appointment>();
+		DBCollection collection=portalDatabase.getCollection("appointments");
+		DateFormat dateFormat=new SimpleDateFormat("MM/dd/yyyy");
+		Date date=new Date();
+		String todayDate=dateFormat.format(date);
+		DBObject query=new BasicDBObject("timeOfRequest",todayDate);
+		
+		DBCursor cursor=collection.find(query);
+		while(cursor.hasNext())
+		{
+			DBObject obj=cursor.next();
+			Appointment apt=new Appointment();
+			apt.setClinicName(obj.get("clinicName").toString());
+			apt.setClinicName(obj.get("date").toString());
+			apt.setClinicName(obj.get("time").toString());
+			appointment.add(apt);
+		}
+		return appointment;
+	}
 		
 
 }
