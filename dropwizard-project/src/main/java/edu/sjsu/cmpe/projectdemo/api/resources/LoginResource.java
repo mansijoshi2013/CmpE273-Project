@@ -82,4 +82,11 @@ public class LoginResource
 		//return Response.seeOther(uri).build();	
 	}
 	
+	@Path("/ForgotPassword")
+	@GET
+	public View getForgotPasswordPage()
+	{
+		return new ForgotPasswordView();
+	}
+	
 }

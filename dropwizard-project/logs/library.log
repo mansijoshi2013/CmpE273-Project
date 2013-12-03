@@ -2073,3 +2073,198 @@ INFO  [2013-12-03 19:13:03,104] com.yammer.dropwizard.config.Environment: tasks 
 INFO  [2013-12-03 19:13:03,696] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
 INFO  [2013-12-03 19:13:03,703] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
 >>>>>>> 0ba4bbddac168270a5f97f9dfb7bd83518b12948
+WARN  [2013-12-03 19:52:14,736] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-03 19:52:14,830] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-03 19:52:14,832] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-03 19:52:14,943] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-03 19:52:15,071] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-03 19:52:15,071] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-03 19:52:15,542] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-03 19:52:15,545] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-03 20:22:45,413] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-03 20:22:45,531] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-03 20:22:45,535] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-03 20:22:45,677] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-03 20:22:45,824] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-03 20:22:45,824] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-03 20:22:46,387] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-03 20:22:46,390] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-03 20:26:59,946] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-03 20:27:00,040] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-03 20:27:00,043] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-03 20:27:00,164] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-03 20:27:00,275] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-03 20:27:00,275] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-03 20:27:00,744] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-03 20:27:00,748] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-03 20:28:49,938] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-03 20:28:50,033] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-03 20:28:50,036] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-03 20:28:50,176] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-03 20:28:50,324] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-03 20:28:50,324] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-03 20:28:50,784] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-03 20:28:50,788] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001

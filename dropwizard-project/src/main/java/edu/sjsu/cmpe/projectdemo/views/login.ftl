@@ -21,7 +21,7 @@ height: 30px;" type="submit" value="Submit">
 		</div>
 		
 		<br>
-		<a href="http://google.com"> Forgot Password? </a>
+		<a href="http://localhost:15000/portal/login/ForgotPassword"> Forgot Password? </a>
 		</form>
 	</div>
 	</div>
