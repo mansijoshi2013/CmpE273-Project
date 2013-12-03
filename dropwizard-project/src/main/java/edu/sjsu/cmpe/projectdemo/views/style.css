@@ -102,6 +102,7 @@ background-repeat: repeat repeat;
 	padding: 0.5em;
 	height: 2.313em;
 	width: 143px;
+	border-radius: 2em;
 	}
 
 html, body, div, span, object, iframe,
@@ -165,14 +166,14 @@ html {
 }
 body {
 	margin: 0 auto;
-	padding: 0px 70px 10px;
+	//padding: 0px 70px 10px;
 	font-family: arial;
 	font-size: 1em;
-	width: 820px;
+	//width: 820px;
 }
 .BDRP_form_div{
-	padding: 50px 150px 10px;
-	margin: 70px;
+	//padding: 50px 150px 10px;
+	//margin: 70px;
 }
 h1 {
 	margin: 0px 0px 0px 20px;	

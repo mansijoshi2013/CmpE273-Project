@@ -35,7 +35,7 @@ public class ProjectService extends Service <ProjectServiceConfiguration>{
 		environment.addResource(DonorHomeResource.class);
 		environment.addResource(AdminResource.class);
 		
-		//environment.addResource(PortalResource.class);
+		environment.addResource(IndexResource.class);
 		//environment.addResource(SurveyResource.class);
 	        environment.addResource(DonorDonateBloodResource.class);
 	        environment.addResource(SearchDonorResource.class);
