@@ -8,7 +8,7 @@
 </head>
 	
 	<body bgcolor="EEEEE">
-	<div id="bgNode"class="bgNode" style="height: 505px;margin-left: -68;
+	<div id="bgNode"class="bgNode" style="height: 505px; margin-left: -68;
 margin-top: 14;">
 	<form id="AdminHome" action="" method="post" >
 	 <table style="margin: 200px;">
