@@ -178,7 +178,10 @@ function validateZipCode()
          <td align="left"><input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;left: 175px;;
 height: 30px;" type="submit" value="Register"></td>
     </tr>
-    
+    <tr>
+         <td align="left"><input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;left: 175px;;
+height: 30px;" onclick="history.back();" type="button" value="Back"></td>
+    </tr>
   </table>
 		
 		</form>

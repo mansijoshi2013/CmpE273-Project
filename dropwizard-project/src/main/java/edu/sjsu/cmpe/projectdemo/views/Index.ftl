@@ -3,8 +3,7 @@
                 <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 <meta charset="utf-8">
 <title>IMAGINARIUM BDRP</title>
-<meta name="keywords" content="Marina Magdalena, SEED, arts, community, creative, culture, development, drama, educational, emotional, imaginarium, keighley, projects, skipton, social">
-<meta name="description" content="At imaginarium we believe in firing up imaginations and creatively connecting people to help build a society that cares. ">
+
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 
 
@@ -53,26 +52,7 @@
         position: relative;
     
     }
-    .BDRP_sidebutton{
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        border-radius: 2px;
-        transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
-        -webkit-transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
-        box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px 0px;
-        border: 2px solid rgb(255, 255, 255);
-        border-image-source: initial;
-        border-image-slice: initial;
-        border-image-width: initial;
-        border-image-outset: initial;
-        border-image-repeat: initial;
-        background: url(http://static.parastorage.com/services/skins/2.639.8/images/wysiwyg/core/themes/base/shiny2button_bg.png) 50% 0% repeat-x rgb(40, 118, 118);
-        cursor: pointer;
-    }
-    
+
     .BDRP_sidebutton:hover{
         border-color: rgb(255, 255, 255);
         background-color: rgb(62, 62, 62);
@@ -111,40 +91,35 @@
         </div>
      
         
-        <div id="SITE_HEADER" width="1080" height="200" x="0" y="0" scale="1" angle="0" styleid="hc3" style="visibility: visible; width: 980px; min-height: 200px; position: absolute;margin-left: 140px;">
-            <div skinpart="screenWidthBackground" class="wysiwyg_viewer_skins_screenwidthcontainer_DefaultScreenhc3-screenWidthBackground" style="position: absolute; width: 1080px; height: 200px; left: -150px; ">
-                <div class="wysiwyg_viewer_skins_screenwidthcontainer_DefaultScreenhc3-c-bg">
-                </div>
+   <div id="SITE_HEADER" width="1080" height="200" x="0" y="0" scale="1" angle="0" styleid="hc3" style="visibility: visible; width: 980px; min-height: 200px; position: absolute;margin-left: 140px;">
+            <div style="position: absolute; width: 1080px; height: 200px; left: -150px; ">
+               
             </div>
         
         <div style="width: 980px; margin-left: 0px;"><div skinpart="bg" class="wysiwyg_viewer_skins_screenwidthcontainer_DefaultScreenhc3-bg">
         </div>
-        <div skinpart="inlineContent" class="wysiwyg_viewer_skins_screenwidthcontainer_DefaultScreenhc3-inlineContent">
-            <div id="WPht6" comp="wysiwyg.viewer.components.WPhoto" skin="wysiwyg.viewer.skins.photo.NoSkinPhoto" styleid="wp2" dataquery="#c1o8z" propertyquery="#WPht6" width="440" height="170" x="555" y="55" scale="1" angle="0" state="" class="wysiwyg_viewer_skins_photo_NoSkinPhotowp2" style="visibility: visible; left: 455px; ; min-width: 440px; min-height: 170px; position: absolute; background-color: rgba(234, 229, 229, 0.61);">
+        <div >
+            <div id="WPht6"  width="440" height="170" x="555" y="55" scale="1" angle="0" state=""  style="visibility: visible; left: 455px; ; min-width: 440px; min-height: 170px; position: absolute; background-color: rgba(234, 229, 229, 0.61);">
                
-                    <div class="header_bg" >
+                    <div class="header_bg">
     
                         <img alt="" src="/assets/background.png" style="margin-top: 0px; width: 440px; height: 170px; background-color: rgba(234, 229, 229, 0.611765);">
                     </div>
                 
             </div>
 
-    <div id="WPht4" width="345" height="155" x="0" y="58" scale="1" angle="0" state=""  style="visibility: visible; left: 0px; top: 8px; min-width: 345px; min-height: 155px; position: absolute;">
+    <div id="WPht4" width="345" height="155" x="0" y="58" scale="1" angle="0" state="" style="visibility: visible; left: 0px; top: 8px; min-width: 345px; min-height: 155px; position: absolute;">
         <a href="#" target="_self" style="cursor: pointer;">
-        <img skinpart="image" class="skins_core_ImageNewSkin-image" alt="" src="/assets/banner.png" style="margin-top: -10px; margin-left: -14px; width: 345px; height: 155px;">
+        <img  alt="" src="/assets/banner.png" style="margin-top: -10px; margin-left: -14px; width: 345px; height: 155px;">
         </a>
-    </div>
-
-
-        </div>
-        </div>
+    	</div>
+		</div>
+		</div>
         
-            <div width="385" height="165" x="580" y="60" scale="1" angle="0" style="visibility: visible; left: 580px; top: 60px; width: 385px; min-height: 165px; position: absolute;">
-                <div skinpart="bg" >
-                </div>
-         
-            </div>
+  		<div width="385" height="165" x="580" y="60" scale="1" angle="0" style="visibility: visible; left: 580px; top: 60px; width: 385px; min-height: 165px; position: absolute;">
         </div>
+</div>
+        
         
         <div class = "home_tab_container" >
        
@@ -193,7 +168,7 @@
         </div>
         
         <div style="left: 685px; width: 285px; position: absolute; min-height: 35px; text-align: center; top: 50px;") repeat-x scroll center top rgb(40, 118, 118);">
-        <a class = "BDRP_sidebutton" >
+        <a class = "BDRP_sidebutton" href="http://localhost:15000/portal/Registration" >
             <span class="BDRP_sidebutton_Label" style="line-height: 30px;  text-align:center; color: rgb(255, 255, 255);"> Register </span>
         </a>
         </div>
