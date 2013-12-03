@@ -1,6 +1,10 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.RegistrationView" -->
 <html>
 <head>
+	<style type="text/css">
+	<#include "style.css">
+	<#include "normalize.css">
+	</style>
 <script>
 function validatePhone()
 {
