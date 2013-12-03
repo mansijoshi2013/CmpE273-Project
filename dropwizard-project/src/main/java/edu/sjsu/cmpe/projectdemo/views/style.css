@@ -1,0 +1,412 @@
+ .bgNode{
+ position: absolute;
+width: 100%;
+background-image: none;
+background-size: auto auto;
+background-color: rgb(234, 229, 229);
+height: 955px;
+background-position: 50% 0%;
+background-repeat: repeat repeat;
+}
+ .home_tab{
+        margin-left: 543px;
+        visibility: visible;
+        width: 600px;
+        min-height: 8px;
+        top: 230px;
+        position: absolute;
+        padding-top: 9px;
+        position: absolute;
+        color: #1F527B;
+        font-size: 1.25em;
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
+        line-height: 2.2em;
+    }
+    .home_tab_container{
+        visibility: visible;
+        zoom: 1;
+        opacity: 1;
+        left: 440px;
+        top: 200px;
+        width: 525px;
+        min-height: 35px;
+        position: absolute;
+        text-align: center;
+        height: 35px;
+        overflow: visible;
+        white-space: nowrap;
+        display: inherit;
+        margin-top: 41px;
+        
+    }
+.home_tab_container_text{
+    cursor: pointer;
+    color: rgb(142, 21, 145);
+    font: normal normal bold 14px/1.2em 'open sans', sans-serif;
+    transition: color 0.4s ease 0s;
+    padding: 0px 40px;
+}
+    .BPDR_sidebutton_label{
+        
+        transition: color 0.4s ease 0s;
+        -webkit-transition: color 0.4s ease 0s;
+        color: rgb(255, 255, 255);
+        white-space: nowrap;
+        margin-top: -2px;
+        display: inline-block;
+        position: relative;
+    
+    }
+    .BDRP_sidebutton{
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        border-radius: 2px;
+        transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+        -webkit-transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px 0px;
+        border: 2px solid rgb(255, 255, 255);
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial;
+        background: url(http://static.parastorage.com/services/skins/2.639.8/images/wysiwyg/core/themes/base/shiny2button_bg.png) 50% 0% repeat-x rgb(40, 118, 118);
+        cursor: pointer;
+    }
+    
+    .BDRP_sidebutton:hover{
+        border-color: rgb(255, 255, 255);
+        background-color: rgb(62, 62, 62);
+        transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    }
+    .header_bg{
+        visibility: visible;
+        //left: 580px;
+        //top: 60px;
+        width: 385px;
+        min-height: 165px;
+        position: absolute;
+        background-color: rgba(234, 229, 229, 0.1);
+    }
+    
+    .twitter_height{
+        max-height: 400;
+    }
+    textarea{
+    margin: 2px 553px 1em;
+	padding: 0.5em;
+	height: 2.313em;
+	width: 143px;
+	}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}                  
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display:block;
+}
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; font-size:100%; outline: 0; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+
+/* END RESET CSS */
+
+/* Site styling */ 
+html {
+	/* always force a scrollbar in non-IE */
+	overflow-y: scroll;
+	background-image: url('../images/main-red-bg.gif');
+	//background-color: #461714;
+}
+body {
+	margin: 0 auto;
+	padding: 0px 70px 10px;
+	font-family: arial;
+	font-size: 1em;
+	width: 820px;
+}
+.BDRP_form_div{
+	padding: 150px 150px 10px;
+	margin: 70px;
+}
+h1 {
+	margin: 0px 0px 0px 20px;	
+	padding: 20px 0px 0px 0px;
+	color: #a81213;
+	font-family: 'LeagueGothicRegular', arial, san-serif;
+	font-size: 4.5em;	
+	font-weight: normal;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+h2, h3 {
+	padding-top: 10px;
+	font-family: 'LeagueGothicRegular', arial, san-serif;	
+	font-size: 2.25em;
+	font-weight: normal;
+	color: #a81213;
+	text-shadow: 1px 1px 2px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1); 
+}
+#content a {
+	color: #a81213; 
+	text-shadow: 1px 1px 2px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1); 
+}
+#content a:hover {
+	text-decoration: none;
+}
+#release-history {
+	font-size: 0.7em;
+	overflow: hidden;
+}
+#release-history p strong {
+	margin-right: 5px;
+	font-family: 'LeagueGothicRegular', arial, san-serif;	
+	font-size: 1.6em;	
+	font-weight: normal;
+	display: block;
+	float: left;
+}
+p {
+	margin-top: 10px;
+	color: #f8f0db;
+	line-height: 1.5em;
+}
+p.copy {
+	margin: 0px 0px 10px;
+	text-align: center;
+}
+pre {
+	margin: 20px 0px 0px;
+	padding: 22px 40px;
+	background-color: #f8f0db;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+pre code span.red {
+	color: #a81213;
+}
+pre code span.grey {
+	color: #7b7976;
+}
+dl {
+	/*margin: 10px 10px 10px 20px;*/
+	color: #f8f0db;
+}
+dt {
+	margin-top: 10px;
+	font-weight: bold;
+}
+dd {
+	margin: 5px 0px 10px 20px;
+}
+div#content {
+	/*padding: 10px 5px 0px 0px;*/
+}
+.content-box {
+	/*padding: 0px 0px 30px;*/
+}
+.divider-top {
+	padding-top: 20px;
+	border-top: 1px solid #70342d;
+}
+.divider-bottom {
+	padding-bottom: 30px;
+	border-bottom: 1px solid #1e0a09;
+}
+#download {
+ 	margin: 20px 0px 30px 300px;
+ 	padding: 2px;
+	background-color: #f8f0db;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	display: block;
+	width: 216px;
+	height: 96px;
+	-webkit-box-shadow: 5px 5px 15px black;
+	-moz-box-shadow: 5px 5px 15px black;
+	box-shadow: 5px 5px 15px black; 
+}
+#download a {
+ 	font-family: 'LeagueGothicRegular', arial, san-serif;	
+ 	font-size: 1.875em;
+ 	background-color: #a81213;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #f8f0db;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#download a:hover {
+	background-color: #000000;
+}
+#download a img {
+	margin: 0px 20px 0px 20px;
+	float: left;
+}
+#download a span.dl {
+	margin-top: 19px;
+	float: left;
+	display: block;
+}
+#download a span.sub {
+	display: block;
+	float: left;
+	font-size: 0.7em;
+	color: #e0ac9e;
+}
+#github img {
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	border: 0;	
+}
+#paypal {
+	margin: 20px 0px 0px 0px;	
+	padding: 22px 40px 22px 330px;
+	/*width: 100%;*/
+	background-color: #f8f0db;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+::-moz-selection {
+    background-color: #a81213;	
+	color: #f8f0db;
+}
+::selection {
+	background-color: #a81213;
+	color: #f8f0db;		
+}
+
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  height: 2.3125em;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out; }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  textarea:focus {
+    -webkit-box-shadow: 0 0 5px #999999;
+    -moz-box-shadow: 0 0 5px #999999;
+    box-shadow: 0 0 5px #999999;
+    border-color: #999999; }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  textarea:focus {
+    background: #fafafa;
+    border-color: #999999;
+    outline: none; }
+  input[type="text"][disabled],
+  input[type="password"][disabled],
+  input[type="date"][disabled],
+  input[type="datetime"][disabled],
+  input[type="datetime-local"][disabled],
+  input[type="month"][disabled],
+  input[type="week"][disabled],
+  input[type="email"][disabled],
+  input[type="number"][disabled],
+  input[type="search"][disabled],
+  input[type="tel"][disabled],
+  input[type="time"][disabled],
+  input[type="url"][disabled],
+  textarea[disabled] {
+    background-color: #dddddd; }
