@@ -109,32 +109,47 @@ public class DatabaseConnection {
 	}
 	
 	//To Register a User
-	public void insertDonor(Donor donor)
+	public int insertDonor(Donor donor)
 	{
 		DBCollection collection=portalDatabase.getCollection("users");
-		try
+		String username=donor.getUserName();
+		DBObject query=new BasicDBObject("Username",username);
+		DBObject donorObj=collection.findOne(query);
+		if(donorObj==null)
 		{
-			BasicDBObject obj=new BasicDBObject();
-			obj.put("name",donor.getName());
-			obj.put("DateOfBirth",donor.getDateOfBirth());
-			obj.put("blood group", donor.getBloodGroup());
-			obj.put("phoneNumber", donor.getPhoneNumber());
-			obj.put("email", donor.getEmail());
-			obj.put("State", donor.getState());
-			obj.put("Street", donor.getStreet());
-			obj.put("City", donor.getCity());
-			obj.put("zipcode", donor.getZipCode());
-			obj.put("Username", donor.getUserName());
-			obj.put("Password", donor.getPassword());
-			obj.put("user_type", "donor");
-			obj.put("activation_id", donor.getActivation_Id());
-			obj.put("verified", donor.getVerified());
+			try
+			{
+				BasicDBObject obj=new BasicDBObject();
+				obj.put("name",donor.getName());
+				obj.put("DateOfBirth",donor.getDateOfBirth());
+				obj.put("blood group", donor.getBloodGroup());
+				obj.put("phoneNumber", donor.getPhoneNumber());
+				obj.put("_id", donor.getEmail());
+				obj.put("State", donor.getState());
+				obj.put("Street", donor.getStreet());
+				obj.put("City", donor.getCity());
+				obj.put("zipcode", donor.getZipCode());
+				obj.put("Username", donor.getUserName());
+				obj.put("Password", donor.getPassword());
+				obj.put("user_type", "donor");
+				obj.put("activation_id", donor.getActivation_Id());
+				obj.put("verified", donor.getVerified());
 		
-			collection.insert(obj);
+				collection.insert(obj);
+				return 1;
+			}
+			
+			catch (MongoException.DuplicateKey e) {
+            System.out.println("Email already in use");
+            return 3;
+			}
 		}
-		catch (MongoException.DuplicateKey e) {
-            System.out.println("Username already in use");
+		else
+		{
+			System.out.println("Username already in use");
+			return 2;
 		}
+		
 	}
 	
 	//To verify activation key

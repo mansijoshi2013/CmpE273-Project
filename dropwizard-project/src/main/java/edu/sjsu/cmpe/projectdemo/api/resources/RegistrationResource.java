@@ -70,11 +70,21 @@ public class RegistrationResource {
 		donor.setVerified(false);
 		
 		DatabaseConnection db=new DatabaseConnection();
-		db.insertDonor(donor);
+		int retValue=db.insertDonor(donor);
 		
-		
-		new Email().sendEmail(Email, donor.getActivation_Id());
-		return Response.seeOther(uri).build();
+		if(retValue==1)
+		{
+			new Email().sendEmail(Email, donor.getActivation_Id());
+			return Response.seeOther(uri).build();
+		}
+		else if(retValue==2)
+		{
+			return Response.status(400).entity("Username already in use").build();
+		}
+		else
+		{
+			return Response.status(400).entity("Email already in use").build();
+		}
 			
 			
 		
