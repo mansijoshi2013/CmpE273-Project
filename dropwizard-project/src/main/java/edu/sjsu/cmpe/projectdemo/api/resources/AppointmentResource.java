@@ -71,6 +71,7 @@ public class AppointmentResource {
 		Appointment appointment=new Appointment();
 		appointment.setClinicName(clinicname);
 		appointment.setDate(apt_date);
+		URI uri=new URI("http://localhost:15000/portal/login/donor/home/");
 		appointment.setTime(time);
 		DatabaseConnection db=new DatabaseConnection();
 		db.insertAppointment(appointment);
@@ -80,7 +81,7 @@ public class AppointmentResource {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return Response.status(401).entity("Your appointment is booked on " + apt_date +"  at "+clinicname +"--"+ time).build();
+		return Response.seeOther(uri).build();
 		
 	}
 }
