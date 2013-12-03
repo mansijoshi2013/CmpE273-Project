@@ -8,6 +8,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 
 import com.yammer.dropwizard.views.View;
 
@@ -20,6 +21,7 @@ import edu.sjsu.cmpe.projectdemo.domain.Login;
 import edu.sjsu.cmpe.projectdemo.domain.User;
 import edu.sjsu.cmpe.projectdemo.views.*;
 import edu.sjsu.cmpe.projectdemo.dto.DonorDto;
+import edu.sjsu.cmpe.projectdemo.domain.Email;
 
 
 
@@ -87,6 +89,23 @@ public class LoginResource
 	public View getForgotPasswordPage()
 	{
 		return new ForgotPasswordView();
+	}
+	
+	@Path("/ForgotPassword")
+	@POST
+	public void sendEmailForgotPassword(@FormParam("Email") String Email)
+	{
+		DatabaseConnection db=new DatabaseConnection();
+		String msgBody="Click on the link to reset your password: \n "+ "http://localhost:15000/portal/login/ResetPassword?email="+Email;
+		String subjectMsg="Reset your password";
+		new Email().sendEmail(Email, msgBody, subjectMsg);
+	}
+	
+	@Path("/ResetPassword")
+	@GET
+	public void getPasswordResetView(@QueryParam("email") String email)
+	{
+		
 	}
 	
 }

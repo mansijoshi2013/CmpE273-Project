@@ -74,7 +74,10 @@ public class RegistrationResource {
 		
 		if(retValue==1)
 		{
-			new Email().sendEmail(Email, donor.getActivation_Id());
+			String msgBody="Click on the link below to activate your account \n" +"http://localhost:15000/portal/verify/activate?activationLink="+donor.getActivation_Id();
+			String subjectMsg="Activate your account";
+			//new Email().sendEmail(Email, donor.getActivation_Id());
+			new Email().sendEmail(Email, msgBody,subjectMsg);
 			return Response.seeOther(uri).build();
 		}
 		else if(retValue==2)

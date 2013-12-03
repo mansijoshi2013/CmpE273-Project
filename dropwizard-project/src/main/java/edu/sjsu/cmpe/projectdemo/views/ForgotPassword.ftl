@@ -20,7 +20,7 @@ function validateEmail()
 
 <body>
 <form id="myForm" style="text-align:center" action="" onsubmit="return validateEmail();" method="post">
-Please enter your email id:
+Please enter your email:
 <input type="text" id="email"name="Email" />
 <br>
 <br>

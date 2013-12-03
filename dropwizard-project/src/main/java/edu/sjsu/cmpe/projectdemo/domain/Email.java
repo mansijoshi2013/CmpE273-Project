@@ -14,7 +14,7 @@ import com.sun.mail.smtp.SMTPTransport;
 
 public class Email
 {
-	public void sendEmail(String email,UUID activation_id)
+	public void sendEmail(String email,String msgBody,String subjectMsg)
 	{
 		Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
 		final String SSL_FACTORY="javax.net.ssl.SSLSocketFactory";
@@ -36,7 +36,7 @@ public class Email
 		});
 		session.setDebug(true);
 		
-		String msgBody="Click on the link below to activate your account \n" +"http://localhost:15000/portal/verify/activate?activationLink="+activation_id;
+		//String msgBody="Click on the link below to activate your account \n" +"http://localhost:15000/portal/verify/activate?activationLink="+activation_id;
 		try
 		{
 			
@@ -44,7 +44,8 @@ public class Email
 			final MimeMessage msg=new MimeMessage(session);
 			msg.setFrom(new InternetAddress("project.cmpe273@gmail.com"));
 			msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipient,false));
-			msg.setSubject("Activate your account");
+			//msg.setSubject("Activate your account");
+			msg.setSubject(subjectMsg);
 			msg.setText(msgBody);
 			SMTPTransport t=(SMTPTransport)session.getTransport("smtp");
 			t.connect("smtp.gmail.com","project.cmpe273" ,"sjsucmpe273");
