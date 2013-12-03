@@ -260,8 +260,6 @@ public class DatabaseConnection {
 		DBObject ref = new BasicDBObject();
 		ref.put("city",Pattern.compile(".*"+city+".*", Pattern.CASE_INSENSITIVE));
 		DBCursor cur=collection.find(ref);
-		System.out.println(cur);
-		System.out.println("Count = " + cur.count());
 		while(cur.hasNext())		
 		{
 			for (int i = 0; i<cur.count(); i++)
@@ -278,7 +276,7 @@ public class DatabaseConnection {
 				camps.add(camp);
 			}
 		}		
-		System.out.println("num camps= " + camps.size());
+		
 		return camps;
 	}
 	
