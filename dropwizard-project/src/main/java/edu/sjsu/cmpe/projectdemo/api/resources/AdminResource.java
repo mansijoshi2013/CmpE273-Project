@@ -68,14 +68,14 @@ public class AdminResource {
 	
 	@Path("/bloodRequest")
 	@POST	
-	public void createRequest (@FormParam("BloodGroup") String bloodGroup,
+	public Response createRequest (@FormParam("BloodGroup") String bloodGroup,
 			@FormParam("Hospital") String hospital,
 			@FormParam("Address") String address,
 			@FormParam("City") String city,
 			@FormParam("State") String state,
 			@FormParam("ZipCode") int zipCode,
 			@FormParam("PhoneNumber") Long phoneNumber,
-			@FormParam("TimeOfRequest") String timeOfRequest)
+			@FormParam("TimeOfRequest") String timeOfRequest) throws URISyntaxException
 	{
 	
 		//BloodRequest bloodRequest = new BloodRequest();
@@ -112,7 +112,8 @@ public class AdminResource {
 		catch (JMSException e) {
 			e.printStackTrace();
 		}
-		
+		URI uri =new URI("http://localhost:15000/portal/login/admin");
+		return Response.seeOther(uri).build();
 	}
 
 	@Path("/bloodCamp")
@@ -124,14 +125,14 @@ public class AdminResource {
 	
 	@Path("/bloodCamp")
 	@POST
-	public void createBloodDrive (@FormParam("EventName") String eventName,
+	public Response createBloodDrive (@FormParam("EventName") String eventName,
 			@FormParam("Address") String address,
 			@FormParam("City") String city,
 			@FormParam("State") String state,
 			@FormParam("ZipCode") int zipCode,
 			@FormParam("DateOfEvent") String dateOfEvent,
 			@FormParam("TimeOfEvent") String timeOfEvent
-			)
+			) throws URISyntaxException
 	{
 		BloodDonationCamps camp = new BloodDonationCamps();
 		camp.setCity(city);
@@ -144,6 +145,9 @@ public class AdminResource {
 		
 		DatabaseConnection db = new DatabaseConnection();
 		db.insertCamps(camp);
-		
+	
+		URI uri =new URI("http://localhost:15000/portal/login/admin");
+		return Response.seeOther(uri).build();
 	}
+	
 }

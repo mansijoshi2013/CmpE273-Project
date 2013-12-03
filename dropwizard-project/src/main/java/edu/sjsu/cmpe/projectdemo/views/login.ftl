@@ -19,6 +19,9 @@ margin-top: 14;">
 		<input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;margin-left: 80;
 height: 30px;" type="submit" value="Submit">
 		</div>
+		
+		<br>
+		<a href="http://localhost:15000/portal/login/ForgotPassword"> Forgot Password? </a>
 		</form>
 	</div>
 	</div>

@@ -50,8 +50,9 @@ public class ClinicResource
 	}
 	
 	@POST
-	public Response showAppointments () throws URISyntaxException{
-		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics/appointments/");
+	public Response showAppointments (@FormParam("checkedValue")String clinicName) throws URISyntaxException{
+		clinicName=clinicName.replace(" ","%20");
+		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics/appointments/?clinicName="+clinicName);
 		return Response.seeOther(uri).build();
 	}
 }
