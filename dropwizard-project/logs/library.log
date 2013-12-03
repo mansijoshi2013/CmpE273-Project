@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+WARN  [2013-12-03 17:33:40,064] com.yammer.dropwizard.config.ServerFactory: 
+=======
 WARN  [2013-12-03 08:17:31,839] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> fdebacf118f580bb2f4e83dff467394a7afb9ef8
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -8,10 +12,17 @@ WARN  [2013-12-03 08:17:31,839] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
+INFO  [2013-12-03 17:33:40,196] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-03 17:33:40,199] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-03 17:33:40,376] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-03 17:33:40,498] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+=======
 INFO  [2013-12-03 08:17:32,978] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-03 08:17:33,075] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-03 08:17:34,201] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
 INFO  [2013-12-03 08:17:34,913] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+>>>>>>> fdebacf118f580bb2f4e83dff467394a7afb9ef8
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
@@ -38,6 +49,662 @@ INFO  [2013-12-03 08:17:34,913] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
+INFO  [2013-12-03 17:33:40,498] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-03 17:33:41,029] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-03 17:33:41,033] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+ERROR [2013-12-03 17:33:54,098] freemarker.runtime: Template processing error: "Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css"
+! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+WARN  [2013-12-03 17:33:54,107] org.eclipse.jetty.servlet.ServletHandler: 
+! javax.servlet.ServletException: com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:423) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+!... 30 common frames omitted
+Caused by: ! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+!... 37 common frames omitted
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+WARN  [2013-12-03 17:33:54,109] org.eclipse.jetty.servlet.ServletHandler: /portal/login
+! com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+!... 37 common frames omitted
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+ERROR [2013-12-03 17:34:17,103] freemarker.runtime: Template processing error: "Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css"
+! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+WARN  [2013-12-03 17:34:17,106] org.eclipse.jetty.servlet.ServletHandler: 
+! javax.servlet.ServletException: com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:423) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+!... 30 common frames omitted
+Caused by: ! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+!... 37 common frames omitted
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+WARN  [2013-12-03 17:34:17,108] org.eclipse.jetty.servlet.ServletHandler: /portal/login/donor/home
+! com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+!... 37 common frames omitted
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+ERROR [2013-12-03 17:34:21,450] freemarker.runtime: Template processing error: "Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css"
+! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+WARN  [2013-12-03 17:34:21,458] org.eclipse.jetty.servlet.ServletHandler: 
+! javax.servlet.ServletException: com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:423) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+!... 30 common frames omitted
+Caused by: ! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+!... 37 common frames omitted
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+WARN  [2013-12-03 17:34:21,464] org.eclipse.jetty.servlet.ServletHandler: /portal/login/donor/home
+! com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+!... 37 common frames omitted
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+ERROR [2013-12-03 17:44:07,521] freemarker.runtime: Template processing error: "Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css"
+! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+WARN  [2013-12-03 17:44:07,524] org.eclipse.jetty.servlet.ServletHandler: 
+! javax.servlet.ServletException: com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:423) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+!... 30 common frames omitted
+Caused by: ! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+!... 37 common frames omitted
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+WARN  [2013-12-03 17:44:07,525] org.eclipse.jetty.servlet.ServletHandler: /portal/login/donor/home
+! com.sun.jersey.api.container.ContainerException: freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+Caused by: ! freemarker.template.TemplateException: Error reading included file edu/sjsu/cmpe/projectdemo/views/style.css
+! at freemarker.core.Include.accept(Include.java:167) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
+! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+!... 37 common frames omitted
+Caused by: ! java.io.FileNotFoundException: Template edu/sjsu/cmpe/projectdemo/views/style.css not found.
+! at freemarker.template.Configuration.getTemplate(Configuration.java:580) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Environment.getTemplateForInclusion(Environment.java:1490) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.Include.accept(Include.java:157) ~[freemarker-2.3.19.jar:2.3.19]
+!... 43 common frames omitted
+=======
 INFO  [2013-12-03 08:17:34,913] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -259,7 +926,12 @@ INFO  [2013-12-03 08:50:26,135] com.yammer.dropwizard.config.Environment: tasks 
 
 INFO  [2013-12-03 08:50:26,533] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
 INFO  [2013-12-03 08:50:26,541] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+<<<<<<< HEAD
 WARN  [2013-12-03 17:40:20,258] com.yammer.dropwizard.config.ServerFactory: 
+=======
+>>>>>>> fdebacf118f580bb2f4e83dff467394a7afb9ef8
+WARN  [2013-12-03 17:51:54,307] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 63d8a5b8df69cb94ef94c7cf860f4fa5e298d231
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -269,10 +941,17 @@ WARN  [2013-12-03 17:40:20,258] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
 INFO  [2013-12-03 17:40:20,515] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-03 17:40:20,534] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-03 17:40:20,848] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
 INFO  [2013-12-03 17:40:21,065] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+=======
+INFO  [2013-12-03 17:51:54,432] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-03 17:51:54,432] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-03 17:51:54,604] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-03 17:51:54,744] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+>>>>>>> 63d8a5b8df69cb94ef94c7cf860f4fa5e298d231
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
@@ -301,6 +980,7 @@ INFO  [2013-12-03 17:40:21,065] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
 INFO  [2013-12-03 17:40:21,066] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -308,6 +988,15 @@ INFO  [2013-12-03 17:40:21,066] com.yammer.dropwizard.config.Environment: tasks 
 INFO  [2013-12-03 17:40:21,800] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
 INFO  [2013-12-03 17:40:21,803] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
 WARN  [2013-12-03 18:03:21,129] com.yammer.dropwizard.config.ServerFactory: 
+=======
+INFO  [2013-12-03 17:51:54,744] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-03 17:51:55,259] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-03 17:51:55,275] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-03 17:58:22,362] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 63d8a5b8df69cb94ef94c7cf860f4fa5e298d231
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -317,10 +1006,17 @@ WARN  [2013-12-03 18:03:21,129] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
 INFO  [2013-12-03 18:03:21,221] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-03 18:03:21,223] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-03 18:03:21,352] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
 INFO  [2013-12-03 18:03:21,470] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+=======
+INFO  [2013-12-03 17:58:22,489] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-03 17:58:22,493] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-03 17:58:22,655] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-03 17:58:22,769] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+>>>>>>> 63d8a5b8df69cb94ef94c7cf860f4fa5e298d231
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
@@ -349,6 +1045,7 @@ INFO  [2013-12-03 18:03:21,470] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
 INFO  [2013-12-03 18:03:21,470] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -356,6 +1053,15 @@ INFO  [2013-12-03 18:03:21,470] com.yammer.dropwizard.config.Environment: tasks 
 INFO  [2013-12-03 18:03:21,962] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
 INFO  [2013-12-03 18:03:21,965] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
 WARN  [2013-12-03 18:03:55,469] com.yammer.dropwizard.config.ServerFactory: 
+=======
+INFO  [2013-12-03 17:58:22,770] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-03 17:58:23,282] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-03 17:58:23,287] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-03 18:01:17,447] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 63d8a5b8df69cb94ef94c7cf860f4fa5e298d231
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -365,10 +1071,17 @@ WARN  [2013-12-03 18:03:55,469] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
 INFO  [2013-12-03 18:03:55,563] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-03 18:03:55,565] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-03 18:03:55,690] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
 INFO  [2013-12-03 18:03:55,787] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+=======
+INFO  [2013-12-03 18:01:17,610] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-03 18:01:17,616] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-03 18:01:17,807] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-03 18:01:18,254] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+>>>>>>> 63d8a5b8df69cb94ef94c7cf860f4fa5e298d231
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
@@ -397,6 +1110,7 @@ INFO  [2013-12-03 18:03:55,787] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
 INFO  [2013-12-03 18:03:55,787] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -451,3 +1165,11 @@ INFO  [2013-12-03 18:04:22,065] com.yammer.dropwizard.config.Environment: tasks 
 
 INFO  [2013-12-03 18:04:22,540] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
 INFO  [2013-12-03 18:04:22,543] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+=======
+INFO  [2013-12-03 18:01:18,255] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-03 18:01:19,038] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-03 18:01:19,045] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+>>>>>>> 63d8a5b8df69cb94ef94c7cf860f4fa5e298d231
