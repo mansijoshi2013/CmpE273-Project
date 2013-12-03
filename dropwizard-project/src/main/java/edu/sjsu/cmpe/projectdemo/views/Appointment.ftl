@@ -16,8 +16,8 @@
     <tr>
    
         		   <td align="right"><b>Select Date:</b></td>
-     	 			<td align="left"><input type="date" min="2013-11-30" name="date"/></td>
-     	 			<td align="left"><input type="button" onClick ="nextPage()" value="Continue"></td>
+     	 			<td align="left"><input type="date" min="2013-12-03" name="date"/></td>
+     	 			<td align="left"><input type="submit" onClick ="nextPage()" value="Continue"></td>
     			</tr>
    
 	  </table>

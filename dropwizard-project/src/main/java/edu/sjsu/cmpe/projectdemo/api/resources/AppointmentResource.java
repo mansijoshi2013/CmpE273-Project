@@ -19,13 +19,14 @@ import edu.sjsu.cmpe.projectdemo.domain.Appointment;
 import edu.sjsu.cmpe.projectdemo.views.AppointmentView;
 import edu.sjsu.cmpe.projectdemo.views.TimeConfirm;
 import edu.sjsu.cmpe.projectdemo.views.TimeView;
-
+import javax.ws.rs.QueryParam;
 
 @Path("login/donor/clinics/appointments/")
 public class AppointmentResource {
 
 	static String apt_date;
 	static String time;
+	static String clinicname;
 	AllAppointments appointments;
 	
 	public AppointmentResource()	{
@@ -33,8 +34,9 @@ public class AppointmentResource {
 	}
 		
 	@GET
-	public AppointmentView getAppointments()
+	public AppointmentView getAppointments(@QueryParam("clinicName") String clinicName)
 	{
+		clinicname=""+clinicName;
 		return new AppointmentView();
 	}
 	
@@ -64,12 +66,12 @@ public class AppointmentResource {
 	@Path("time")
 	public Response makeAppointment(@FormParam("time") String time) throws URISyntaxException{
 		Appointment appointment=new Appointment();
-		appointment.setClinicName("Apollo");
+		appointment.setClinicName(clinicname);
 		appointment.setDate(apt_date);
 		appointment.setTime(time);
 		DatabaseConnection db=new DatabaseConnection();
 		db.insertAppointment(appointment);
-		return Response.status(401).entity("Your appointment is booked on " + apt_date +"  at "+ time).build();
+		return Response.status(401).entity("Your appointment is booked on " + apt_date +"  at "+clinicname +"--"+ time).build();
 		
 	}
 }

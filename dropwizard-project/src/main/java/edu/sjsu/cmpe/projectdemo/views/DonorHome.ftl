@@ -8,7 +8,7 @@
 </head>
 
 	<body>
-	<div id="container" style="width:800px">
+	<div id="container" style="width:1200px">
 		<div id="requests" style="background-color:#FFD700;height:400px;width:300px;float:left;">
 		Blood Requests for the Day! <br> <br>
 		<#list bloodRequests as requests>
@@ -65,9 +65,22 @@
 		</div>
 		
 		
-		<div id="appointments" style="background-color:#FFD700;height:400px;width:200px;float:left;">
+		<div id="apt" style="background-color:#FFD700;height:400px;width:200px;float:left;">
+		Your Appointments! <br> <br>
+		<#list appointment as apt>
+		<p>
+		<br>
+		${apt.clinicName}
+		<br>
+		${apt.time}
+		<br>
+		${apt.date}
+		
+		</input>
+		</p>
+	    </#list> 
 		
 		</div>
-	</div2
+	</div>
 	</body>
 </html>
