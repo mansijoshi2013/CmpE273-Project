@@ -17,15 +17,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoException;
 import com.mongodb.ServerAddress;
 
-
-
-
-
-
-
-
-
-
+import edu.sjsu.cmpe.projectdemo.domain.Appointment;
 import edu.sjsu.cmpe.projectdemo.domain.BloodRequest;
 import edu.sjsu.cmpe.projectdemo.domain.Clinic;
 
@@ -295,7 +287,34 @@ public class DatabaseConnection {
 		collection.insert(obj);
 		System.out.println(collection.getCount());
 	}
+	//to insert appointments into db
+		public void insertAppointment(Appointment appointment) {
+			DBCollection collection=portalDatabase.getCollection("appointment");
+			BasicDBObject object=new BasicDBObject();
+			object.put("clinicName",appointment.getClinicName());
+			object.put("date", appointment.getDate());
+			object.put("time", appointment.getTime());
+			
+			collection.insert(object);
+			
+		}
+	public Appointment getAllAppointmentsByDate(Date date){
+			Appointment appointment = new Appointment();
+			DBObject obj;
+			DBCollection collection=portalDatabase.getCollection("appointment");
+			DBObject query = new BasicDBObject("Date",date);
+			DBCursor cur=collection.find(query);
+			if(cur.hasNext())
+			{
+				obj=cur.next();
+				appointment.setClinicName((String) obj.get("clinicName"));
+				appointment.setTime((String) obj.get("time"));
+			}
+			return appointment;
+		
 
+			
+		}
 		
 
 }

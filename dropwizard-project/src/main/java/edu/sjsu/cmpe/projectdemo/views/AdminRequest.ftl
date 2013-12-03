@@ -1,14 +1,19 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.AdminRequestView" -->
 <html>
 <head>
-
+	<style type="text/css">
+	<#include "style.css">
+	<#include "normalize.css">
+	</style>
 </head>
 
 	<body bgcolor="EEEEE">
+	<div id="bgNode"class="bgNode" style="height: 505px;margin-left: -68;
+margin-top: 14;">
 	<form id="RequestForm" action="" method="post" onsubmit="return">
 	<h1 align="center">Blood Request Form</h1>
 	
-	<table cellpadding="8" align="center">
+	<table cellpadding="8" style="margin-left: 469px;">
 		
     <tr>
       <td align="right"><b>Blood Group:</b></td>
@@ -50,11 +55,13 @@
     </tr>
     
     <tr>
-         <td align="left"><input type="submit" value="Submit Request"></td>
+         <td align="left"><input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;left: 175px;;
+height: 30px;" type="submit" value="Submit Request"></td>
     </tr>
     
   </table>
 		
 		</form>
+		</div>
 	</body>
 </html>

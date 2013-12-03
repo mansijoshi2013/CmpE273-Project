@@ -61,7 +61,7 @@ public class DonorHomeResource {
 	public View getDonorHomepage(@QueryParam("userName") String userName) 
 	{
 		//Consumer code: receive blood Requests in the background
-		/*int numThreads=1;
+		int numThreads=1;
 		ExecutorService executor=Executors.newFixedThreadPool(numThreads);
 		Runnable backgroundTask=new RequestConsumer();
 		System.out.println("About to submit background task");
@@ -78,8 +78,7 @@ public class DonorHomeResource {
 		// fetch blood requests for the day
 		db=new DatabaseConnection();
 		bloodRequests=db.getBloodRequests();
-    	
-		*/
+
 		
 		//CAMPS
 		System.out.println(userName);
