@@ -9,7 +9,8 @@
 
 <link href="styles/ticker-style.css" rel="stylesheet" type="text/css" />
 
-<script src="includes/jquery.ticker.js" type="text/javascript"></script>
+
+<script src="/assets/jquery.ticker.js" type="text/javascript"></script>
 <script src="includes/site.js" type="text/javascript"></script>
 	<style type="text/css">
 	<#include "style.css">
@@ -157,7 +158,7 @@
             </div>
        </div>
         
-        <div id="PAGES_CONTAINER" width="980" height="500" x="0" y="230" scale="1" angle="0" style="margin-top: 25px; visibility: visible; width: 980px; min-height: 500px; top: 200px; position: absolute; margin-left: 100px;">
+        <div id="PAGES_CONTAINER" width="980" height="500" x="0" y="230" scale="1" angle="0" style="margin-top: 25px; visibility: visible; width: 980px; min-height: 500px; top: 250px; position: absolute; margin-left: 100px;">
             <div skinpart="screenWidthBackground" class="wysiwyg_viewer_skins_screenwidthcontainer_BlankScreenpc1-screenWidthBackground" style="position: absolute; width: 1280px; height: 500px; left: -150px;">
             </div>
         
