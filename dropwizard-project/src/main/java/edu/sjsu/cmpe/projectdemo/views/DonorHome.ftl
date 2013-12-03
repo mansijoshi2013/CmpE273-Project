@@ -1,6 +1,12 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.DonorHomeView" -->
 <html>
 <head>
+<script>
+		function nextPage()
+		{
+			window.location.href="../donor/clinics";
+		}
+	</script>
 	<style type="text/css">
 	<#include "style.css">
 	<#include "normalize.css">
@@ -8,6 +14,7 @@
 </head>
 
 	<body>
+	<input type="submit" onClick ="nextPage()" value="makeAppointment"></td>
 	<div id="container" style="width:1200px">
 		<div id="requests" style="background-color:#FFD700;height:400px;width:300px;float:left;">
 		Blood Requests for the Day! <br> <br>
