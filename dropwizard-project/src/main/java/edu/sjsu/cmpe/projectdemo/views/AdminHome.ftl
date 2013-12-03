@@ -1,7 +1,10 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.AdminHomeView" -->
 <html>
 <head>
-
+	<style type="text/css">
+	<#include "style.css">
+	<#include "normalize.css">
+	</style>
 </head>
 
 	<body bgcolor="EEEEE">
