@@ -18,7 +18,7 @@ import java.sql.SQLException;
 
 public class AppointmentView extends View{
 	
-	  public Date addHours(Date date, int hours)
+	/**  public Date addHours(Date date, int hours)
 	    {
 	        Calendar cal = Calendar.getInstance();
 	        cal.setTime(date);
@@ -38,14 +38,15 @@ public class AppointmentView extends View{
 		  cal.set(year, month, date, hour, 00, 00);
 		  return cal.getTime();
 	  }
-	  
+	  **/
 	public AppointmentView(){
 		super("Appointment.ftl");
 		
 		Appointment[] app = new Appointment[50];		
 		Date appSlot = new Date();
 		int index=0;
-		
+	}
+		/**
 		for (int j = 1; j <= 5; j++){
 			appSlot = setSlot(j);		
 			for (int i = 0; i < 5; i++){
@@ -57,7 +58,7 @@ public class AppointmentView extends View{
 			}	
 		}
 	}
-	
+	**/
 	public ArrayList<Appointment> getAppointments(){
 		return AllAppointments.appointments;
 	}

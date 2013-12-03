@@ -295,7 +295,23 @@ public class DatabaseConnection {
 		collection.insert(obj);
 		System.out.println(collection.getCount());
 	}
+	public Appointment getAllAppointmentsByDate(Date date){
+			Appointment appointment = new Appointment();
+			DBObject obj;
+			DBCollection collection=portalDatabase.getCollection("appointment");
+			DBObject query = new BasicDBObject("Date",date);
+			DBCursor cur=collection.find(query);
+			if(cur.hasNext())
+			{
+				obj=cur.next();
+				appointment.setClinicName((String) obj.get("clinicName"));
+				appointment.setTime((String) obj.get("time"));
+			}
+			return appointment;
+		
 
+			
+		}
 		
 
 }
