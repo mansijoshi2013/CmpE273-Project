@@ -6,8 +6,7 @@
   <artifactId>project</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-
-  <name>project</name>
+ <name>project</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -23,6 +22,12 @@
   </repositories>
 
   <dependencies>
+  	<dependency>
+    	<groupId>com.twilio.sdk</groupId>
+    	<artifactId>twilio-java-sdk</artifactId>
+    	<version>3.4.1</version>
+    	<scope>compile</scope>
+	</dependency>
       <dependency>
       <groupId>org.mongodb</groupId>
       <artifactId>mongo-java-driver</artifactId>
