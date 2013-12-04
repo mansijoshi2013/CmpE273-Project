@@ -20,6 +20,7 @@ import edu.sjsu.cmpe.projectdemo.domain.Donor;
 import edu.sjsu.cmpe.projectdemo.domain.Email;
 import edu.sjsu.cmpe.projectdemo.domain.Patient;
 import edu.sjsu.cmpe.projectdemo.domain.RootPath;
+import edu.sjsu.cmpe.projectdemo.views.DonorEmailSentView;
 import edu.sjsu.cmpe.projectdemo.views.EmailErrorView;
 import edu.sjsu.cmpe.projectdemo.views.EmailSentView;
 import edu.sjsu.cmpe.projectdemo.views.LoginView;
@@ -66,7 +67,7 @@ public class SearchDonorResultResource
 			return new EmailErrorView();
 		}
 		
-		return new EmailSentView();
+		return new DonorEmailSentView();
 		
 	}	
 	
