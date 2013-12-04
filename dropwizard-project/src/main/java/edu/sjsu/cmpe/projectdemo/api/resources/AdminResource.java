@@ -51,6 +51,10 @@ public class AdminResource {
 			URI uri =new URI("http://"+RootPath.rootPath+"/portal/login/admin/bloodRequest");
 			return Response.seeOther(uri).build();
 		}
+		else if(formName.equals("Logout")){
+			URI uri =new URI("http://"+RootPath.rootPath+"/portal/index");
+			return Response.seeOther(uri).build();
+		}
 		else{
 			URI uri =new URI("http://"+RootPath.rootPath+"/portal/login/admin/bloodCamp");
 			return Response.seeOther(uri).build();
