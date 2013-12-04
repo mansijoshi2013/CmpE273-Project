@@ -174,7 +174,7 @@
 	<div id="connectfacebook" class="connect">
             <a id="ContentPlaceHolder1_lnkFacebook" href="http://www.facebook.com/lifestream" target="_blank"> <span class="connectlink"></span> </a>
             <div class="connectpic">
-                <img id="ContentPlaceHolder1_imgFacebook" src="Images/facebook.jpg" alt="Facebook">
+                <img id="ContentPlaceHolder1_imgFacebook" src="/assets/facebook.png" alt="Facebook" style = "height:26px;">
                 &nbsp;<br>
                 &nbsp;<br>
             </div>
