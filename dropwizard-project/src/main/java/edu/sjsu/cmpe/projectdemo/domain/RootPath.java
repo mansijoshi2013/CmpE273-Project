@@ -3,7 +3,6 @@ package edu.sjsu.cmpe.projectdemo.domain;
 public class RootPath {
 
 
-
 //	private static String host = "50.18.202.70:";
 
 	private static String host = "localhost:";
