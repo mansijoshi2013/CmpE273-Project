@@ -79,7 +79,12 @@ public class DonorHomeResource {
 		//CAMPS
 		System.out.println(userName);
 		db  = new DatabaseConnection();
+		try{
 		camp = db.getCamps(userName);
+		}
+		catch(NullPointerException e){
+			return new DonorHomeView(userName,bloodRequests);
+		}
 		
 		db  = new DatabaseConnection();
 		try{

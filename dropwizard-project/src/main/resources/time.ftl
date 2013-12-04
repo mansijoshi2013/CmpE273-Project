@@ -15,12 +15,15 @@ border:0;
 	<body>
 			<form action="" method="post">
 			<h1 align="center">Select Time </h1>
-			<div id="apt" style="background-color:#FFFFFF;height:400px;width:700px;float:center;">
+			
 			<#list appointment as apt>
+			
 		<input type="button" name="time" class="unavailablestyle" value=${apt.time}>
-		
 		</#list> 
-		</div>
+		
+		<#list l as list>
+		<input type="submit" name="time" class="availablestyle" value= ${list}>
+		 </#list>
 	</form>
 	</body>
 </html>
