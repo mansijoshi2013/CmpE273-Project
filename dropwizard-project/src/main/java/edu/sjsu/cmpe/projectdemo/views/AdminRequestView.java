@@ -6,7 +6,7 @@ public class AdminRequestView extends View{
 	
 	public AdminRequestView()
 	{
-		super("AdminRequest.ftl");
+		super("/AdminRequest.ftl");
 
 	}
 

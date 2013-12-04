@@ -7,7 +7,7 @@ public class DonorOnSuccessfulLoginView extends View
 	
 	public DonorOnSuccessfulLoginView()
 	{
-		super("DonorSuccessLogin.ftl");
+		super("/DonorSuccessLogin.ftl");
 		//this.login=login;
 	}
 	

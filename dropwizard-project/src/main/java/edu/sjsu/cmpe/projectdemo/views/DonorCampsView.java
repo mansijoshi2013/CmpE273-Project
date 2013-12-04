@@ -11,7 +11,7 @@ public class DonorCampsView extends View{
 
 	private ArrayList<BloodDonationCamps> camps = AllCamps.allCamps;
 	public DonorCampsView() {
-		super("DonorCamps.ftl");
+		super("/DonorCamps.ftl");
 		//camps = 
 		
 	}

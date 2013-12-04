@@ -7,7 +7,7 @@ public class LoginView extends View
 	
 	public LoginView()
 	{
-		super("login.ftl");
+		super("/login.ftl");
 		//this.login=login;
 	}
 	

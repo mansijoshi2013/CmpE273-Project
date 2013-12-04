@@ -7,7 +7,7 @@ public class EmailErrorView extends View
 	
 	public EmailErrorView()
 	{
-		super("EmailError.ftl");
+		super("/EmailError.ftl");
 		//this.login=login;
 	}
 	
