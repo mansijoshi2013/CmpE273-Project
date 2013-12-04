@@ -8,21 +8,21 @@
 <br>
 <br>
 <div id="dnames" style="background-color:#FFD700;height:200px;width:150px;float:center;">
-		
+                
 
-			
-		<form action="" method="post">
-		
-		<#list donors as donor>
-		<p>
-		<br>
-		${donor.name},	${donor.email}
-		<br>
-		
-		</p>
-	    </#list>
-		</form>
-		</div>
+                        
+                <form action="" method="post">
+                
+                <#list donors as donor>
+                <p>
+                <br>
+                ${donor.name},        ${donor.email}
+                <br>
+                
+                </p>
+         </#list>
+                </form>
+                </div>
 
 <form action="" method="post">
 <p align="center">
@@ -30,12 +30,12 @@
 <br>
 <br>
 <table align="center">
-<tr><td> <b><font size="5" face="Courier New" color="red">Send E-Mail 
+<tr><td> <b><font size="5" face="Courier New" color="red">Send E-Mail
   to Donors </font></b> </td></tr>
 <br>
 <tr></tr>
 <tr><td align="right"> <b>Please enter the donor Mail-Id: </b> </td>
-	<td> <input type="text" name="Email" size="31"></td>
+        <td> <input type="text" name="Email" size="31"></td>
 <td> <input type="Submit" value="Send an Email"></td>
 </tr>
 </table>
