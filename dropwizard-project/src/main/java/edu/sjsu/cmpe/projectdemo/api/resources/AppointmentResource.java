@@ -58,7 +58,7 @@ public class AppointmentResource {
 	public TimeView timeBook(){
 	DatabaseConnection db=new DatabaseConnection();
 	ArrayList<Appointment> appointment=new ArrayList<Appointment>();
-	appointment=db.getTimeByDate(apt_date);
+	appointment=db.getTimeByDate(apt_date,clinicname);
 	return new TimeView(appointment);
 		
 	}
