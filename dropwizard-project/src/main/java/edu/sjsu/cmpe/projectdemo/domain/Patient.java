@@ -5,68 +5,56 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Patient extends User
 {
 	
-	@JsonProperty("hospital_id")
-	private String hospital_id;
-	
-	@JsonProperty("age")
+	private String userName;
 	private int age;
-	
-	@JsonProperty("gender")
 	private String gender;
-	
-	@JsonProperty("name")
 	private String Name;
-	
-	@JsonProperty("blood group")
 	private String bloodGroup;
-	
-	
-
+	private String hospital;
+	private String phoneNumber;
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	public String getName() {
 		return Name;
 	}
-
 	public void setName(String name) {
 		Name = name;
 	}
-
 	public String getBloodGroup() {
 		return bloodGroup;
 	}
-
 	public void setBloodGroup(String bloodGroup) {
 		this.bloodGroup = bloodGroup;
 	}
-
-
-	
-	public void setHospital_Id(String hospital_id)
-	{
-		this.hospital_id=hospital_id;
+	public String getHospital() {
+		return hospital;
 	}
-	public String getHospital_Id()
-	{
-		return this.hospital_id;
+	public void setHospital(String hospital) {
+		this.hospital = hospital;
 	}
-	
-	
-	public int getAge()
-	{
-		return this.age;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
-	public void setAge(int age)
-	{
-		this.age=age;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 	
-	public String getGender()
-	{
-		return this.gender;
-	}
-	public void setGender(String gender)
-	{
-		this.gender=gender;
-	}
 	
 
 }

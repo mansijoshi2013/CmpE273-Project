@@ -409,11 +409,8 @@ public class DatabaseConnection {
 		BasicDBObject ref = new BasicDBObject();
 		ref.put("City", Pattern.compile(".*"+location+".*",Pattern.CASE_INSENSITIVE));		
 		ref.append("blood group",bloodgroup);
-		System.out.println(ref);
-		DBCursor curs = usersCollection.find(ref);
-		System.out.println(curs);
-		System.out.println(curs.count());
 		
+		DBCursor curs = usersCollection.find(ref);
 		while (curs.hasNext()) 
 	    {
 			for (int i = 0 ; i<curs.count(); i++)
@@ -422,12 +419,25 @@ public class DatabaseConnection {
 		    	donor = new Donor();
 		    	donor.setName((String) obj.get("name"));
 		    	donor.setEmail(obj.get( "_id" ).toString());
-		    	System.out.println(donor.getName()+donor.getEmail());
 		    	donors.add(donor);
 			}
 	    }
 		return donors;
 	}
+
+	
+	public Patient getPatientDetails (String userName)
+	{
+		Patient patient = new Patient();
+		DBCollection collection=portalDatabase.getCollection("users");	
+		DBObject query=new BasicDBObject("Username",userName);		
+		DBObject obj=collection.findOne(query);		
+		patient.setName((String) obj.get("name"));
+		patient.setHospital((String) obj.get("hospitalName"));
+		patient.setPhoneNumber((String) obj.get("phoneNumber"));	
+		return patient;
+	}
+
 
 	public ArrayList<Appointment> getTimeByDate(String date) {
 		
@@ -448,5 +458,4 @@ public class DatabaseConnection {
 		return appointment;
 		
 	}
-
 }
