@@ -20,7 +20,7 @@ import edu.sjsu.cmpe.projectdemo.views.SearchDonorResultView;
 //import edu.sjsu.cmpe.projectdemo.views.RegistrationView;
 import edu.sjsu.cmpe.projectdemo.views.SearchDonorView;
 
-@Path("/login/patient/home")
+@Path("/login/patient")
 public class SearchDonorResource
 {
 	public SearchDonorResource(){
@@ -37,11 +37,11 @@ public class SearchDonorResource
 	@POST
 	public Response getDonors(@FormParam("d1") String bloodgroup, @FormParam("d2") String location) throws URISyntaxException
 	{
-			System.out.println("The donors with" +bloodgroup+ "location" +location+ "should be displayed");
+			
 			location=location.replace(" ","%20");
 			bloodgroup=bloodgroup.replace("+","%2b");
 			bloodgroup=bloodgroup.replace("-","%2d");
-			URI uri=new URI("http://"+RootPath.rootPath+"/portal/SearchDonorResult/?location="+location+"&bloodgroup="+bloodgroup);
+			URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/patient/SearchDonorResult?location="+location+"&bloodgroup="+bloodgroup);
 			return Response.seeOther(uri).build();
 			
 	}
