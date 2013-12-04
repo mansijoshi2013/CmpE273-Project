@@ -69,10 +69,12 @@
     <div id="SITE_STRUCTURE" style="visibility: visible; padding-bottom: 0px; width: 980px; min-height: 955px;">
         <div style="margin-top:15px; margin-left: 90px;">
         <ol id="js-news" class="js-hidden">
-            <li class="news-item"><a href="#">Cupertino Blood Drive a big success!</a></li>
-            <li class="news-item"><a href="#">Emma Jackson with her testimony!</a></li>
-            <li class="news-item"><a href="#">San Jose Blood Drive coming up!</a></li>
-            <li class="news-item"><a href="#">One pint of blood can save up to three lives.</a></li>
+
+            <li class="news-item"><a href="http://localhost:15000/portal/index/news">Cupertino Blood Drive a big success!</a></li>
+            <li class="news-item"><a href="http://localhost:15000/portal/index/news">Emma Jackson with her testimony!</a></li>
+            <li class="news-item"><a href="http://localhost:15000/portal/index/news">San Jose Blood Drive coming up!</a></li>
+            <li class="news-item"><a href="http://localhost:15000/portal/index/news">One pint of blood can save up to three lives.</a></li>
+
         </ol>
         </div>
      
@@ -128,7 +130,7 @@
             <div style="visibility: visible; position: relative; -webkit-transition: 0.4s; transition: 0.4s; display: inline-block;" container="menu" listposition="center" state="">
                 <div >
                     <div skinpart="bg" style="padding: 0px 3px; display: inline-block;">
-                        <p skinpart="label" class="home_tab_container_text" style="line-height: 35px; width: auto;">NEWS</p>
+                        <a href="http://localhost:15000/portal/index/news" skinpart="label" class="home_tab_container_text" style="line-height: 35px; width: auto;">NEWS</a>
                     </div>
                 </div>
             </div>
@@ -174,7 +176,7 @@
 	<div id="connectfacebook" class="connect">
             <a id="ContentPlaceHolder1_lnkFacebook" href="http://www.facebook.com/lifestream" target="_blank"> <span class="connectlink"></span> </a>
             <div class="connectpic">
-                <img id="ContentPlaceHolder1_imgFacebook" src="Images/facebook.jpg" alt="Facebook">
+                <img id="ContentPlaceHolder1_imgFacebook" src="/assets/facebook.png" alt="Facebook" style = "height:26px;">
                 &nbsp;<br>
                 &nbsp;<br>
             </div>

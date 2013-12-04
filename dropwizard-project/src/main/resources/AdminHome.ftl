@@ -49,7 +49,10 @@ height: 30px;" type="submit" name="FormName" value="Create Blood Request" onClic
         	<td align="left"><input class="BDRP_sidebutton" style = "position:relative; width: 300px; margin-top: 15px;margin-left: 80;
 height: 30px;" type="submit" name="FormName" value="Create Blood Donation Camp" onClick="camp"></td>
     	</tr>
-    
+   		 <tr>
+        	<td align="left"><input class="BDRP_sidebutton" style = "position:relative; width: 300px; margin-top: 15px;margin-left: 80;
+height: 30px;" type="submit" name="FormName" value="Logout" onClick="index"></td>
+    	</tr>
  	 </table>
  	 </form>
  	</div>
