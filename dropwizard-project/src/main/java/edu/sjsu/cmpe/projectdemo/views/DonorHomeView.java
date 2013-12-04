@@ -36,7 +36,7 @@ public class DonorHomeView extends View
 	}
 	public ArrayList<Appointment> getAppointments()
 	{
-		return this.appointment;
+		return appointment;
 	}
 	public String getuserName(){
 		return this.userName;

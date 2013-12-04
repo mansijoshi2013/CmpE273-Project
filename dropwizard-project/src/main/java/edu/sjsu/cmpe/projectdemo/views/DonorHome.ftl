@@ -51,10 +51,10 @@
 		</div>
 		
 		
-		<div id="apt" style="background-color:#FFD700;height:400px;width:200px;float:left;">
+		<div id="apt" style="background-color:#CCCCFF;height:400px;width:400px;float:left;">
 		<form action="" method="post">
-		
-		<input type="submit" name="username" value="shweta" >
+		<input type="submit" name="username" value="Book an Appointment now!!" style="width: 400px;height=500px;float: center;">
+		<br>
 		Your Appointments! <br> <br>
 		<#list appointment as apt>
 		<p>

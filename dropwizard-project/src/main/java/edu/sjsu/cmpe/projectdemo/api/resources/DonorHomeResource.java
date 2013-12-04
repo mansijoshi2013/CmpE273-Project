@@ -48,7 +48,7 @@ public class DonorHomeResource {
 	ArrayList<BloodRequest> bloodRequests=new ArrayList<BloodRequest>();
 	ArrayList<BloodDonationCamps> camp = new ArrayList<BloodDonationCamps>();
 	ArrayList<Appointment> appointment=new ArrayList<Appointment>();
-	String userName;
+	static String userName;
 	
 	/*@GET
 	public View displayCamps (){
@@ -97,8 +97,8 @@ public class DonorHomeResource {
 		
 		}
 	@POST
-	public Response viewClinics(@FormParam("username") String Username) throws URISyntaxException{
-		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics?username="+Username);
+	public Response viewClinics() throws URISyntaxException{
+		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics?username="+userName);
 		return Response.seeOther(uri).build();
 		
 		
