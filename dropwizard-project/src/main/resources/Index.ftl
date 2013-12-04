@@ -69,10 +69,10 @@
     <div id="SITE_STRUCTURE" style="visibility: visible; padding-bottom: 0px; width: 980px; min-height: 955px;">
         <div style="margin-top:15px; margin-left: 90px;">
         <ol id="js-news" class="js-hidden">
-            <li class="news-item"><a href="#">This is the 1st latest news item.</a></li>
-            <li class="news-item"><a href="#">This is the 2nd latest news item.</a></li>
-            <li class="news-item"><a href="#">This is the 3rd latest news item.</a></li>
-            <li class="news-item"><a href="#">This is the 4th latest news item.</a></li>
+            <li class="news-item"><a href="#">Cupertino Blood Drive a big success!</a></li>
+            <li class="news-item"><a href="#">Emma Jackson with her testimony!</a></li>
+            <li class="news-item"><a href="#">San Jose Blood Drive coming up!</a></li>
+            <li class="news-item"><a href="#">One pint of blood can save up to three lives.</a></li>
         </ol>
         </div>
      
