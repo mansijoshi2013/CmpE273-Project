@@ -7,7 +7,7 @@ public class IndexView extends View
 	
 	public IndexView()
 	{
-		super("/index.ftl");
+		super("/Index.ftl");
 		//this.login=login;
 	}
 	
