@@ -27,7 +27,7 @@
 
     <div id="WPht4" width="345" height="155" x="0" y="58" scale="1" angle="0" state="" style="visibility: visible; left: 0px; top: 8px; min-width: 345px; min-height: 155px; position: absolute;">
         <a href="#" target="_self" style="cursor: pointer;">
-        <img  alt="" src="/assets/banner.png" style="margin-top: -10px; margin-left: -14px; width: 345px; height: 155px;">
+        <img  alt="" src="/assets/banner1.png" style="margin-top: -10px; margin-left: -14px; width: 345px; height: 175px;">
         </a>
     </div>
 	</div>
