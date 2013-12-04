@@ -394,7 +394,9 @@ public class DatabaseConnection {
 		DBCollection usersCollection=portalDatabase.getCollection("users");
 		
 		BasicDBObject ref = new BasicDBObject();
-		ref.put("City", Pattern.compile(".*"+location+".*",Pattern.CASE_INSENSITIVE));
+		//ref.put("City", Pattern.compile(".*"+location+".*",Pattern.CASE_INSENSITIVE));
+		//ref.append("City","San Jose");
+		ref.append("name","Tejasvi");
 		ref.append("blood group",bloodgroup);
 		System.out.println(ref);
 		DBCursor curs = usersCollection.find(ref);
@@ -409,6 +411,7 @@ public class DatabaseConnection {
 		    	donor = new Donor();
 		    	donor.setName((String) obj.get("name"));
 		    	donor.setEmail((String) obj.get("email"));
+		    	System.out.println(donor.getName()+donor.getEmail());
 		    	donors.add(donor);
 			}
 	    }
