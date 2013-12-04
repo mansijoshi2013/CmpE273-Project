@@ -74,7 +74,7 @@ public class AppointmentResource {
 		appointment.setUserName(userName);
 		appointment.setClinicName(clinicname);
 		appointment.setDate(apt_date);
-		URI uri=new URI("http://localhost:15000/portal/login/donor/home?username="+userName);
+		URI uri=new URI("http://localhost:15000/portal/login/donor/home?userName="+userName);
 		appointment.setTime(time);
 		DatabaseConnection db=new DatabaseConnection();
 		Long number=db.getNumber(userName);
@@ -82,7 +82,7 @@ public class AppointmentResource {
 		num="+1"+num;
 		db.insertAppointment(appointment);
 		try {
-			TwilioImplementation TI=new TwilioImplementation(num,clinicname,apt_date,time);
+			TwilioImplementation TI=new TwilioImplementation("+14086368748",clinicname,apt_date,time);
 		} catch (TwilioRestException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

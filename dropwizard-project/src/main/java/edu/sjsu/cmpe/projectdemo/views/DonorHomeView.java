@@ -26,6 +26,16 @@ public class DonorHomeView extends View
 		this.userName=userName;
 	}
 	
+	public DonorHomeView(String userName2, ArrayList<BloodDonationCamps> camp,
+			ArrayList<BloodRequest> bloodRequests2) {
+		super("DonorHome.ftl");
+		this.camps = camp;
+		this.bloodRequests=bloodRequests2;
+		this.userName=userName2;
+	
+		// TODO Auto-generated constructor stub
+	}
+
 	public ArrayList<BloodDonationCamps> getCamps() {
 		return camps;
 	}
@@ -34,7 +44,7 @@ public class DonorHomeView extends View
 	{
 		return this.bloodRequests;
 	}
-	public ArrayList<Appointment> getAppointments()
+	public ArrayList<Appointment> getAppointment()
 	{
 		return appointment;
 	}

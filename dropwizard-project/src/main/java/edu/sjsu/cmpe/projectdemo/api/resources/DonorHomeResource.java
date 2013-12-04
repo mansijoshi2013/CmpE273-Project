@@ -91,7 +91,12 @@ public class DonorHomeResource {
 		camp = db.getCamps(userName);
 		
 		db  = new DatabaseConnection();
+		try{
 		appointment = db.getAppointments(userName);
+		}
+		catch(NullPointerException e){
+			return new DonorHomeView(userName,camp,bloodRequests);
+		}
 		
 		return new DonorHomeView(userName,camp,bloodRequests,appointment);
 		
