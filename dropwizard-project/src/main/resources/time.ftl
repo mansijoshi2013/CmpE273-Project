@@ -15,15 +15,12 @@ border:0;
 	<body>
 			<form action="" method="post">
 			<h1 align="center">Select Time </h1>
-			<table cellpadding="8" align="center">
-			 <tr>
-			<td align="left"><input type="submit" class="availablestyle" name="time" value="9:00 am" ></td>
-			<td align="left"><input type="submit" class="availablestyle" name="time" value="11:00 am"></td>
-			<td align="left"><input type="submit" class="availablestyle" name="time" value="1:00 pm"></td>
-			<td align="left"><input type="submit" class="availablestyle" name="time" value="3:00 pm"></td>
-			<td align="left"><input type="submit" class="availablestyle" name="time "value="5:00 pm"></td>
-			 </tr>
-	  </table>
+			<div id="apt" style="background-color:#FFFFFF;height:400px;width:700px;float:center;">
+			<#list appointment as apt>
+		<input type="button" name="time" class="unavailablestyle" value=${apt.time}>
+		
+		</#list> 
+		</div>
 	</form>
 	</body>
 </html>

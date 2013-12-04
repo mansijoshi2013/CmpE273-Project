@@ -409,11 +409,8 @@ public class DatabaseConnection {
 		BasicDBObject ref = new BasicDBObject();
 		ref.put("City", Pattern.compile(".*"+location+".*",Pattern.CASE_INSENSITIVE));		
 		ref.append("blood group",bloodgroup);
-		System.out.println(ref);
-		DBCursor curs = usersCollection.find(ref);
-		System.out.println(curs);
-		System.out.println(curs.count());
 		
+		DBCursor curs = usersCollection.find(ref);
 		while (curs.hasNext()) 
 	    {
 			for (int i = 0 ; i<curs.count(); i++)
@@ -422,25 +419,43 @@ public class DatabaseConnection {
 		    	donor = new Donor();
 		    	donor.setName((String) obj.get("name"));
 		    	donor.setEmail(obj.get( "_id" ).toString());
-		    	System.out.println(donor.getName()+donor.getEmail());
 		    	donors.add(donor);
 			}
 	    }
 		return donors;
 	}
+
 	
 	public Patient getPatientDetails (String userName)
 	{
 		Patient patient = new Patient();
-		DBCollection collection=portalDatabase.getCollection("users");
-		System.out.println(userName);
-		DBObject query=new BasicDBObject("Username",userName);
-		System.out.println(query);
-		DBObject obj=collection.findOne(query);
-		System.out.println(obj);
+		DBCollection collection=portalDatabase.getCollection("users");	
+		DBObject query=new BasicDBObject("Username",userName);		
+		DBObject obj=collection.findOne(query);		
 		patient.setName((String) obj.get("name"));
 		patient.setHospital((String) obj.get("hospitalName"));
 		patient.setPhoneNumber((String) obj.get("phoneNumber"));	
 		return patient;
+	}
+
+
+	public ArrayList<Appointment> getTimeByDate(String date) {
+		
+		DBCollection collection=portalDatabase.getCollection("appointments");
+		ArrayList<Appointment> appointment=new ArrayList<Appointment>();
+		DBObject query = new BasicDBObject("date",date);
+		DBCursor cur=collection.find(query);
+		while(cur.hasNext())
+		{
+			DBObject obj=cur.next();
+			Appointment apt=new Appointment();
+			apt.setClinicName(obj.get("clinicName").toString());
+			apt.setDate(obj.get("date").toString());
+			apt.setTime(obj.get("time").toString());
+			System.out.print("\ntime is:"+apt.getTime()+"\n");
+			appointment.add(apt);
+		}
+		return appointment;
+		
 	}
 }

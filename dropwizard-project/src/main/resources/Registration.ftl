@@ -3,6 +3,7 @@
 <head>
 	<style type="text/css">
 	<#include "style.css">
+	
 	<#include "normalize.css">
 	</style>
 <script>
@@ -104,8 +105,8 @@ function validateZipCode()
 </head>
 	
 	<body >
-		<div id="bgNode"class="bgNode" style="height: 650px;">
-		<div id="SITE_HEADER" width="1080" height="200" x="0" y="0" scale="1" angle="0" styleid="hc3" style="visibility: visible; width: 980px; min-height: 200px; position: absolute;margin-left: 140px;">
+<div id="bgNode"class="bgNode" style="height: 505px; margin-top: 14;">
+<div id="SITE_HEADER" width="1080" height="200" x="0" y="0" scale="1" angle="0" styleid="hc3" style="visibility: visible; width: 980px; min-height: 200px; position: absolute;margin-left: 140px;">
             <div style="position: absolute; width: 1080px; height: 200px; left: -150px; ">
                
             </div>
@@ -124,8 +125,8 @@ function validateZipCode()
 
     <div id="WPht4" width="345" height="155" x="0" y="58" scale="1" angle="0" state="" style="visibility: visible; left: 0px; top: 8px; min-width: 345px; min-height: 155px; position: absolute;">
         <a href="#" target="_self" style="cursor: pointer;">
-        <img  alt="" src="/assets/banner.png" style="margin-top: -10px; margin-left: -14px; width: 345px; height: 155px;">
-        </a>
+                <img  alt="" src="/assets/banner2.jpg" style="margin-top: -2px;margin-left: -30px;width: 959px;height: 225px;">
+                </a>
     </div>
 	</div>
 </div>
@@ -133,7 +134,8 @@ function validateZipCode()
   		<div width="385" height="165" x="580" y="60" scale="1" angle="0" style="visibility: visible; left: 580px; top: 60px; width: 385px; min-height: 165px; position: absolute;">
         </div>
         </div>
-        <div id = "formArea" style="margin-top: 150px;">
+        
+        <div id = "formArea" style="margin-top: 210px;">
 		<form id="Regform" action="" onsubmit="return (validateZipCode() && validatePassword() && validateUsername() && isDateSelected() && validateEmail() && validateName() && validatePhone() && validateBloodGroup());" method="post" >
 		<h1 align="center">Blood Donation </h1>
 		<table cellpadding="8" style="margin-left: 400px;">

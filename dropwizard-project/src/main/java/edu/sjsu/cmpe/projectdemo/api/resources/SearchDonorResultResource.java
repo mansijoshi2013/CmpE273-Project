@@ -50,6 +50,7 @@ public class SearchDonorResultResource
 	@POST
 	public View sendEmail (@FormParam("Email") String Email) 
 	{
+		System.out.println("email from form is " + Email);
 		DatabaseConnection db = new DatabaseConnection();
 		Patient patient = new Patient();
 		patient = db.getPatientDetails(SearchDonorResultResource.userName);
@@ -62,13 +63,12 @@ public class SearchDonorResultResource
 	
 		try {
 			new Email().sendEmail(Email, msgBody, subjectMsg);
+			return new DonorEmailSentView();
 		}
 		catch (Exception e){
 			return new EmailErrorView();
 		}
-		
-		return new DonorEmailSentView();
-		
+	
 	}	
 	
 }

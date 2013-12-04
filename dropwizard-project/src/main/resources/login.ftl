@@ -46,7 +46,7 @@
 		<form style="text-align:center" action="" method="post">
 		<h1 align="center"> Login Page </h1>
 		Username: <input type="text" placeholder="Username" name="Username" ><br><br>
-		Password: <input type="password" placeholder="Password" name="Password" ><br>
+		Password: <input type="password" placeholder="Password" name="Password" style="width: 30%;"><br>
 		<div >
 		<input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;margin-left: 80;
 height: 30px;" onclick="location.href = 'http://localhost:15000/portal/index';" type="button" value="Back">
