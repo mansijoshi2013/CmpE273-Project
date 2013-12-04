@@ -59,7 +59,7 @@ public class LoginResource
 		URI uri =new URI("http://"+RootPath.rootPath+"/portal/login");
 		URI uriDonor=new URI("http://"+RootPath.rootPath+"/portal/login/donor/home?userName="+Username);
 		URI uriAdmin = new URI ("http://"+RootPath.rootPath+"/portal/login/admin");
-		URI uriPatient = new URI ("http://"+RootPath.rootPath+"/portal/login/patient/");
+		URI uriPatient = new URI ("http://"+RootPath.rootPath+"/portal/login/patient");
 		
 		db=new DatabaseConnection();
 		
