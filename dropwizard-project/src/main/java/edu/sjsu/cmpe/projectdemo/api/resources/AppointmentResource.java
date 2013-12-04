@@ -48,7 +48,7 @@ public class AppointmentResource {
 	@POST
     public Response bookAppointment(@FormParam ("date") String date) throws URISyntaxException{
 		apt_date=date;
-		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics/appointments/time");
+		URI uri=new URI("http://50.18.202.70:15000/portal/login/donor/clinics/appointments/time");
 		return Response.seeOther(uri).build();
     }
 	
@@ -74,7 +74,7 @@ public class AppointmentResource {
 		appointment.setUserName(userName);
 		appointment.setClinicName(clinicname);
 		appointment.setDate(apt_date);
-		URI uri=new URI("http://localhost:15000/portal/login/donor/home?username="+userName);
+		URI uri=new URI("http://50.18.202.70:15000/portal/login/donor/home?username="+userName);
 		appointment.setTime(time);
 		DatabaseConnection db=new DatabaseConnection();
 		Long number=db.getNumber(userName);
