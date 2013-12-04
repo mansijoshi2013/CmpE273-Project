@@ -48,11 +48,11 @@ public class AdminResource {
 	public Response displayForms(@FormParam ("FormName") String formName) throws URISyntaxException
 	{
 		if (formName.equals("Create Blood Request")){
-			URI uri =new URI("http://localhost:15000/portal/login/admin/bloodRequest");
+			URI uri =new URI("http://50.18.202.70:15000/portal/login/admin/bloodRequest");
 			return Response.seeOther(uri).build();
 		}
 		else{
-			URI uri =new URI("http://localhost:15000/portal/login/admin/bloodCamp");
+			URI uri =new URI("http://50.18.202.70:15000/portal/login/admin/bloodCamp");
 			return Response.seeOther(uri).build();
 		}
 
@@ -112,7 +112,7 @@ public class AdminResource {
 		catch (JMSException e) {
 			e.printStackTrace();
 		}
-		URI uri =new URI("http://localhost:15000/portal/login/admin");
+		URI uri =new URI("http://50.18.202.70:15000/portal/login/admin");
 		return Response.seeOther(uri).build();
 	}
 
@@ -146,7 +146,7 @@ public class AdminResource {
 		DatabaseConnection db = new DatabaseConnection();
 		db.insertCamps(camp);
 	
-		URI uri =new URI("http://localhost:15000/portal/login/admin");
+		URI uri =new URI("http://50.18.202.70:15000/portal/login/admin");
 		return Response.seeOther(uri).build();
 	}
 	
