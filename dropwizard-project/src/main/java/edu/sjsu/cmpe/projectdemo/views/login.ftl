@@ -49,7 +49,7 @@
 		Password: <input type="password" placeholder="Password" name="Password" ><br>
 		<div >
 		<input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;margin-left: 80;
-height: 30px;" onclick="history.back();" type="button" value="Back">
+height: 30px;" onclick="location.href = 'http://localhost:15000/portal/index';" type="button" value="Back">
 		<input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;margin-left: 80;
 height: 30px;" type="submit" value="Submit">
 		</div>
