@@ -357,7 +357,7 @@ public class DatabaseConnection {
 		}
 		return appointment;
 	}
-<<<<<<< HEAD
+
 
 	public Long getNumber(String userName) {
 		
@@ -368,7 +368,7 @@ public class DatabaseConnection {
 		num=((Long)obj.get("phoneNumber"));
 			return num;
 		
-=======
+	}
 	
 	//reset password
 	public int resetPswd(String email,String password)
@@ -382,7 +382,7 @@ public class DatabaseConnection {
 			return 1;
 		}
 		return 2;
->>>>>>> d147e89e9154ad3176c352ffb573aa5964f17b72
+
 	}
 		
 
