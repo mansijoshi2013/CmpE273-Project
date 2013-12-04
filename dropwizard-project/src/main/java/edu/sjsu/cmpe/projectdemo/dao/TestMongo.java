@@ -45,13 +45,13 @@ public class TestMongo {
        }
        */
        
-       DBCollection collection = database.getCollection("appointments");
-      DBObject query=new BasicDBObject("event_name" , "SJSU Annual Drive");
+       DBCollection collection = database.getCollection("users");
+      DBObject query=new BasicDBObject("Username" , "jeena_at");
       // DBObject obj=collection.findOne(query);
        //System.out.println(obj.toString());
-       
-      // DBCursor cur=collection.find(query);
-     DBCursor cur=collection.find();
+       //((BasicDBObject) query).append("blood group","B+");
+       DBCursor cur=collection.find(query);
+    // DBCursor cur=collection.find();
 		while(cur.hasNext())		
 		{
 			for (int i = 0; i<cur.count(); i++)

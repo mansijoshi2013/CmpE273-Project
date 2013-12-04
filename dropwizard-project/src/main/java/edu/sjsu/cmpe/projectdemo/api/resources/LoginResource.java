@@ -122,6 +122,7 @@ public class LoginResource
 	{
 		DatabaseConnection db=new DatabaseConnection();
 		String passwordHash = PasswordEncryption.makePasswordHash(Password, Integer.toString(random.nextInt()));
+		System.out.println(passwordHash);
 		int retValue=db.resetPswd(email,passwordHash);
 		if(retValue==1)
 		{

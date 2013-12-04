@@ -61,8 +61,12 @@ public class DatabaseConnection {
 			try{
 			String salt=hashedAndSalted.split(",")[1];
 			
+			System.out.println(hashedAndSalted);
 			
+			System.out.println(hashedAndSalted.equals(PasswordEncryption.makePasswordHash(Password, salt)));
+			System.out.println(PasswordEncryption.makePasswordHash(Password, salt));
 			if (hashedAndSalted.equals(PasswordEncryption.makePasswordHash(Password, salt)))
+			
 			{
 				String user_type=(String)obj.get("user_type");
 				if(user_type.equals("donor") && obj.get("verified").equals("true"))
@@ -367,6 +371,7 @@ public class DatabaseConnection {
 		if(obj!=null)
 		{
 			collection.update(query, new BasicDBObject("$set",new BasicDBObject("Password",password)));
+			System.out.println(password);
 			return 1;
 		}
 		return 2;
