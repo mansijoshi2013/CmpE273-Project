@@ -28,6 +28,7 @@ import org.fusesource.stomp.jms.message.StompJmsMessage;
 import com.yammer.dropwizard.views.View;
 
 import java.util.ArrayList;
+
 import javax.ws.rs.FormParam;
 
 import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
@@ -36,6 +37,7 @@ import edu.sjsu.cmpe.projectdemo.domain.BloodDonationCamps;
 import edu.sjsu.cmpe.projectdemo.domain.Clinic;
 import edu.sjsu.cmpe.projectdemo.domain.Messaging;
 import edu.sjsu.cmpe.projectdemo.domain.RequestConsumer;
+import edu.sjsu.cmpe.projectdemo.domain.RootPath;
 import edu.sjsu.cmpe.projectdemo.views.ClinicView;
 import edu.sjsu.cmpe.projectdemo.views.DonorCampsView;
 import edu.sjsu.cmpe.projectdemo.views.DonorHomeView;
@@ -49,17 +51,6 @@ public class DonorHomeResource {
 	ArrayList<BloodDonationCamps> camp = new ArrayList<BloodDonationCamps>();
 	ArrayList<Appointment> appointment=new ArrayList<Appointment>();
 	static String userName;
-	
-	/*@GET
-	public View displayCamps (){
-		db  = new DatabaseConnection();
-		
-		//TODO 
-		db.getCamps("San Jose");
-		
-		
-		return new DonorCampsView();
-	}*/
 	
 	@GET
 	public View getDonorHomepage(@QueryParam("userName") String userName) 
@@ -91,14 +82,19 @@ public class DonorHomeResource {
 		camp = db.getCamps(userName);
 		
 		db  = new DatabaseConnection();
+		try{
 		appointment = db.getAppointments(userName);
+		}
+		catch(NullPointerException e){
+			return new DonorHomeView(userName,camp,bloodRequests);
+		}
 		
 		return new DonorHomeView(userName,camp,bloodRequests,appointment);
 		
 		}
 	@POST
 	public Response viewClinics() throws URISyntaxException{
-		URI uri=new URI("http://50.18.202.70:15000/portal/login/donor/clinics?username="+userName);
+		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/clinics?username="+userName);
 		return Response.seeOther(uri).build();
 		
 		

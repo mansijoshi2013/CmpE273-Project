@@ -10,6 +10,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
+import edu.sjsu.cmpe.projectdemo.domain.RootPath;
 import edu.sjsu.cmpe.projectdemo.views.LoginView;
 //import edu.sjsu.cmpe.projectdemo.views.RegistrationView;
 import edu.sjsu.cmpe.projectdemo.views.SearchDonorView;
@@ -30,7 +31,7 @@ public SearchDonorView getDonor()
 public Response verifyLogin() throws URISyntaxException
 {
 
-		URI uri=new URI("http://50.18.202.70:15000/portal/SearchDonorResult");
+		URI uri=new URI("http://"+RootPath.rootPath+"/portal/SearchDonorResult");
 		return Response.seeOther(uri).build();
 		
 }

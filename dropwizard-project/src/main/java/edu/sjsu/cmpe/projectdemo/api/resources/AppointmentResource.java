@@ -16,6 +16,7 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
 import edu.sjsu.cmpe.projectdemo.domain.AllAppointments;
 import edu.sjsu.cmpe.projectdemo.domain.Appointment;
+import edu.sjsu.cmpe.projectdemo.domain.RootPath;
 import edu.sjsu.cmpe.projectdemo.views.AppointmentView;
 import edu.sjsu.cmpe.projectdemo.views.TimeConfirm;
 import edu.sjsu.cmpe.projectdemo.views.TimeView;
@@ -48,7 +49,7 @@ public class AppointmentResource {
 	@POST
     public Response bookAppointment(@FormParam ("date") String date) throws URISyntaxException{
 		apt_date=date;
-		URI uri=new URI("http://50.18.202.70:15000/portal/login/donor/clinics/appointments/time");
+		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/clinics/appointments/time");
 		return Response.seeOther(uri).build();
     }
 	
@@ -74,7 +75,11 @@ public class AppointmentResource {
 		appointment.setUserName(userName);
 		appointment.setClinicName(clinicname);
 		appointment.setDate(apt_date);
-		URI uri=new URI("http://50.18.202.70:15000/portal/login/donor/home?username="+userName);
+
+		
+
+		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/home?username="+userName);
+
 		appointment.setTime(time);
 		DatabaseConnection db=new DatabaseConnection();
 		Long number=db.getNumber(userName);
@@ -82,7 +87,7 @@ public class AppointmentResource {
 		num="+1"+num;
 		db.insertAppointment(appointment);
 		try {
-			TwilioImplementation TI=new TwilioImplementation(num,clinicname,apt_date,time);
+			TwilioImplementation TI=new TwilioImplementation("+14086368748",clinicname,apt_date,time);
 		} catch (TwilioRestException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

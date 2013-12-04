@@ -13,6 +13,7 @@ import javax.ws.rs.core.Response;
 import com.yammer.dropwizard.views.View;
 
 import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
+import edu.sjsu.cmpe.projectdemo.domain.RootPath;
 import edu.sjsu.cmpe.projectdemo.views.EmailErrorView;
 import edu.sjsu.cmpe.projectdemo.views.EmailSentView;
 import edu.sjsu.cmpe.projectdemo.views.EmailVerifiedView;
@@ -59,7 +60,7 @@ public class EmailVerifyResource
 	@POST
 	public Response goToLogin() throws URISyntaxException
 	{
-		URI uri=new URI("http://50.18.202.70:15000/portal/login");
+		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login");
 		return Response.seeOther(uri).build();
 	}
 	

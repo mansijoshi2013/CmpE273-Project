@@ -353,8 +353,6 @@ public class DatabaseConnection {
 			apt.setDate(obj.get("date").toString());
 			apt.setTime(obj.get("time").toString());
 			appointment.add(apt);
-			System.out.print("in the database\n\n");
-			
 		}
 		return appointment;
 	}

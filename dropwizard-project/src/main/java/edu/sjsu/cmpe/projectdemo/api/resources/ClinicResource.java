@@ -23,6 +23,7 @@ import com.mongodb.MongoClient;
 import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
 import edu.sjsu.cmpe.projectdemo.domain.AllClinics;
 import edu.sjsu.cmpe.projectdemo.domain.Clinic;
+import edu.sjsu.cmpe.projectdemo.domain.RootPath;
 import edu.sjsu.cmpe.projectdemo.views.*;
 
 import java.net.URI;
@@ -55,7 +56,7 @@ public class ClinicResource
 	@POST
 	public Response showAppointments (@FormParam("checkedValue")String clinicName) throws URISyntaxException{
 		clinicName=clinicName.replace(" ","%20");
-		URI uri=new URI("http://50.18.202.70:15000/portal/login/donor/clinics/appointments/?clinicName="+clinicName+"&username="+username);
+		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/clinics/appointments/?clinicName="+clinicName+"&username="+username);
 		return Response.seeOther(uri).build();
 	}
 }
