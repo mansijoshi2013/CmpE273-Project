@@ -6,7 +6,7 @@ public class SearchDonorView extends View
 {
 	public SearchDonorView()
 	{
-		super("searchdonor.ftl");
+		super("/searchdonor.ftl");
 		
 	}
 
