@@ -385,4 +385,34 @@ public class DatabaseConnection {
 	}
 		
 
+	public ArrayList<Donor> getDonors(String location, String bloodgroup) 
+	{
+	
+		Donor donor = new Donor ();
+		ArrayList<Donor> donors = new ArrayList<Donor>();
+		DBObject obj;
+		DBCollection usersCollection=portalDatabase.getCollection("users");
+		
+		BasicDBObject ref = new BasicDBObject();
+		ref.put("City", Pattern.compile(".*"+location+".*",Pattern.CASE_INSENSITIVE));
+		ref.append("blood group",bloodgroup);
+		System.out.println(ref);
+		DBCursor curs = usersCollection.find(ref);
+		System.out.println(curs);
+		System.out.println(curs.count());
+		
+		while (curs.hasNext()) 
+	    {
+			for (int i = 0 ; i<curs.count(); i++)
+			{
+				obj = curs.next();
+		    	donor = new Donor();
+		    	donor.setName((String) obj.get("name"));
+		    	donor.setEmail((String) obj.get("email"));
+		    	donors.add(donor);
+			}
+	    }
+		return donors;
+	}
+
 }

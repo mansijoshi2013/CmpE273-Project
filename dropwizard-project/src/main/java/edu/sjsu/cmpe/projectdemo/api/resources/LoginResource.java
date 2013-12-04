@@ -59,6 +59,7 @@ public class LoginResource
 		URI uri =new URI("http://"+RootPath.rootPath+"/portal/login");
 		URI uriDonor=new URI("http://"+RootPath.rootPath+"/portal/login/donor/home?userName="+Username);
 		URI uriAdmin = new URI ("http://"+RootPath.rootPath+"/portal/login/admin");
+		URI uriPatient = new URI ("http://"+RootPath.rootPath+"/portal/login/patient/");
 		
 		db=new DatabaseConnection();
 		
@@ -68,7 +69,7 @@ public class LoginResource
 		{
 			
 			System.out.println("Its a patient.");
-			return Response.seeOther(uri).build();
+			return Response.seeOther(uriPatient).build();
 			
 		}
 		else if(user.getUser_Type().equals("donor"))

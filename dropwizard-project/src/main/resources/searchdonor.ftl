@@ -36,13 +36,13 @@
 							<option value="">--Select--</option>
 							<option value="San Jose">San Jose</option>
 							<option value="Santa Clara">Santa Clara</option>
-							<option value="San Fransisco">San Fransisco</option>
+							<option value="San Francisco">San Francisco</option>
 							<option value="San Diego">San Diego</option>
 							<option value="Las Vegas">Las Vegas</option>
 							<option value="Los Angeles">Los Angeles</option>
 							<option value="SunnyVale">SunnyVale</option>
 							<option value="Cupertino">Cupertino</option>
-							<option value="San Antonnio">San Antonnio</option>
+							<option value="San Antonio">San Antonio</option>
 							<option value="Santa Barbara">Santa Barbara</option>
 							<option value="Santa Cruz">Santa Cruz</option>
 							<option value="Fresno">Fresno</option>
