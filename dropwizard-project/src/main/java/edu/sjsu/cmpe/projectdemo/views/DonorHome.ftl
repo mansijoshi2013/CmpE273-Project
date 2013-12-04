@@ -31,35 +31,20 @@
 		The following camps are taking place in your city:<br><br><br>
 		
 		<div id="cl"></div>
-		<script type="text/javascript">		 
-		<#list 0..camps?size-1 as i>
+		<#list camps as camp>
 		
-			var label=document.createElement("label");
-			var description=document.createTextNode("${camps[i].eventName?html}");
-			label.appendChild(description);	
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			var description=document.createTextNode("${camps[i].venue?html}");
-			label.appendChild(description);
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			var description=document.createTextNode("${camps[i].city?html}");
-			label.appendChild(description);
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			var description=document.createTextNode("${camps[i].dateOfEvent?html}");
-			label.appendChild(description);
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			var description=document.createTextNode("${camps[i].timeOfEvent?html}");
-			label.appendChild(description);
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			document.getElementById('cl').appendChild(label);
+		${camp.eventName}
+		<br>
+		${camp.venue}, ${camp.city}
+		<br>
+		${camp.dateOfEvent}
+		<br>
+		${camp.timeOfEvent}
+		<br>
+		<br>
+		
 		</#list>	
-		</script>
+		
 		
 		</form>
 		</div>

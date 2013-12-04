@@ -37,28 +37,31 @@ public class TestMongo {
 		
 		System.out.println(campsCollection.count());*/
 		
-      
+      /*
        Set<String> colls = database.getCollectionNames();
 
        for (String s : colls) {
        System.out.println(s);
        }
+       */
        
-       DBCollection collection = database.getCollection("camps");
-     // DBObject query=new BasicDBObject("Username","shweta");
+       DBCollection collection = database.getCollection("appointments");
+      DBObject query=new BasicDBObject("event_name" , "SJSU Annual Drive");
       // DBObject obj=collection.findOne(query);
        //System.out.println(obj.toString());
        
-       DBCursor cur=collection.find();
+      // DBCursor cur=collection.find(query);
+     DBCursor cur=collection.find();
 		while(cur.hasNext())		
 		{
 			for (int i = 0; i<cur.count(); i++)
 			{
 				DBObject obj=cur.next();
 				System.out.println(obj.toString());
+				//collection.remove(obj);
 			}
 		}
-       
+       System.out.println(cur.count());
 		/*
        DBCollection usersCollection = database.getCollection("camps");
        //DBObject query=new BasicDBObject("$oid","529d0a507939ded9e067c3e5");
