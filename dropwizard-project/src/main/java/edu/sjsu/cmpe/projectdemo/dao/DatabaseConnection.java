@@ -61,10 +61,6 @@ public class DatabaseConnection {
 			try{
 			String salt=hashedAndSalted.split(",")[1];
 			
-			System.out.println(hashedAndSalted);
-			
-			System.out.println(hashedAndSalted.equals(PasswordEncryption.makePasswordHash(Password, salt)));
-			System.out.println(PasswordEncryption.makePasswordHash(Password, salt));
 			if (hashedAndSalted.equals(PasswordEncryption.makePasswordHash(Password, salt)))
 			
 			{
@@ -344,10 +340,8 @@ public class DatabaseConnection {
 
 		ArrayList<Appointment> appointment=new ArrayList<Appointment>();
 		DBCollection collection=portalDatabase.getCollection("appointments");
-		DateFormat dateFormat=new SimpleDateFormat("MM/dd/yyyy");
-		Date date=new Date();
-		String todayDate=dateFormat.format(date);
-		DBObject query=new BasicDBObject("timeOfRequest",todayDate);
+		
+		DBObject query=new BasicDBObject("userName",userName);
 		
 		DBCursor cursor=collection.find(query);
 		while(cursor.hasNext())
@@ -355,11 +349,25 @@ public class DatabaseConnection {
 			DBObject obj=cursor.next();
 			Appointment apt=new Appointment();
 			apt.setClinicName(obj.get("clinicName").toString());
-			apt.setClinicName(obj.get("date").toString());
-			apt.setClinicName(obj.get("time").toString());
+			apt.setDate(obj.get("date").toString());
+			apt.setTime(obj.get("time").toString());
 			appointment.add(apt);
+			System.out.print("in the database\n\n");
+			
 		}
 		return appointment;
+	}
+
+
+	public Long getNumber(String userName) {
+		
+		Long num;
+		DBCollection collection=portalDatabase.getCollection("users");
+		DBObject query=new BasicDBObject("Username",userName);
+		DBObject obj=collection.findOne(query);
+		num=((Long)obj.get("phoneNumber"));
+			return num;
+		
 	}
 	
 	//reset password
@@ -371,10 +379,10 @@ public class DatabaseConnection {
 		if(obj!=null)
 		{
 			collection.update(query, new BasicDBObject("$set",new BasicDBObject("Password",password)));
-			System.out.println(password);
 			return 1;
 		}
 		return 2;
+
 	}
 		
 
