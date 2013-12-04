@@ -4,6 +4,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.ws.rs.FormParam;
@@ -29,7 +30,6 @@ import com.twilio.sdk.TwilioRestException;
 public class AppointmentResource {
 
 	static String apt_date;
-	static String time;
 	static String clinicname;
 	static String userName;
 	AllAppointments appointments;
@@ -52,12 +52,14 @@ public class AppointmentResource {
 		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/clinics/appointments/time");
 		return Response.seeOther(uri).build();
     }
-	
+
 	@GET
 	@Path("time")
-	public TimeView timeBook()
-	{
-		return new TimeView();
+	public TimeView timeBook(){
+	DatabaseConnection db=new DatabaseConnection();
+	ArrayList<Appointment> appointment=new ArrayList<Appointment>();
+	appointment=db.getTimeByDate(apt_date);
+	return new TimeView(appointment);
 		
 	}
 	
@@ -75,25 +77,27 @@ public class AppointmentResource {
 		appointment.setUserName(userName);
 		appointment.setClinicName(clinicname);
 		appointment.setDate(apt_date);
-
-		
-
-		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/home?username="+userName);
-
 		appointment.setTime(time);
+		
+		//get phone number for user
 		DatabaseConnection db=new DatabaseConnection();
 		Long number=db.getNumber(userName);
 		String num=number.toString();
 		num="+1"+num;
+		//insert appointment for user into db
 		db.insertAppointment(appointment);
+		//twilio to send message to user
 		try {
 			TwilioImplementation TI=new TwilioImplementation("+14086368748",clinicname,apt_date,time);
 		} catch (TwilioRestException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
+		//redirects to user home page
+		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/home?username="+userName);
 		return Response.seeOther(uri).build();
-		
 	}
+	
+	
 }
 

@@ -28,7 +28,7 @@ public class DonorHomeView extends View
 	
 	public DonorHomeView(String userName2, ArrayList<BloodDonationCamps> camp,
 			ArrayList<BloodRequest> bloodRequests2) {
-		super("DonorHome.ftl");
+		super("/DonorHome.ftl");
 		this.camps = camp;
 		this.bloodRequests=bloodRequests2;
 		this.userName=userName2;

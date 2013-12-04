@@ -418,4 +418,24 @@ public class DatabaseConnection {
 		return donors;
 	}
 
+	public ArrayList<Appointment> getTimeByDate(String date) {
+		
+		DBCollection collection=portalDatabase.getCollection("appointments");
+		ArrayList<Appointment> appointment=new ArrayList<Appointment>();
+		DBObject query = new BasicDBObject("date",date);
+		DBCursor cur=collection.find(query);
+		while(cur.hasNext())
+		{
+			DBObject obj=cur.next();
+			Appointment apt=new Appointment();
+			apt.setClinicName(obj.get("clinicName").toString());
+			apt.setDate(obj.get("date").toString());
+			apt.setTime(obj.get("time").toString());
+			System.out.print("\ntime is:"+apt.getTime()+"\n");
+			appointment.add(apt);
+		}
+		return appointment;
+		
+	}
+
 }

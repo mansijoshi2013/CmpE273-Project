@@ -55,7 +55,7 @@
 		
 		<div id="apt" style="background-color:#CCCCFF;height:400px;width:400px;float:left;">
 		<form action="" method="post">
-		<input type="submit" name="username" value="Book an Appointment now!!"style=float:down; >
+		<input type="submit" name="username" value="Book an Appointment now!!" >
 		<br>
 		<br>
 		Your Appointments! <br> <br>
