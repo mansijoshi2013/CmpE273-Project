@@ -56,7 +56,7 @@ public class LoginResource
 	{
 	
 		//URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/home");
-		URI uri =new URI("http://"+RootPath.rootPath+"/portal/login");
+		URI errorUri =new URI("http://"+RootPath.rootPath+"/portal/error/login");
 		URI uriDonor=new URI("http://"+RootPath.rootPath+"/portal/login/donor/home?userName="+Username);
 		URI uriAdmin = new URI ("http://"+RootPath.rootPath+"/portal/login/admin");
 		URI uriPatient = new URI ("http://"+RootPath.rootPath+"/portal/login/patient?userName="+Username);
@@ -85,8 +85,8 @@ public class LoginResource
 		else
 		{
 			System.out.println("Username/password not found");			
-			//return Response.seeOther(uri).build();
-			return Response.status(200).entity(new SystemErrorView()).build();
+			return Response.seeOther(errorUri).build();
+			//return Response.status(200).entity(new WrongLoginView()).build();
 		}
 		//return Response.seeOther(uri).build();	
 	}
