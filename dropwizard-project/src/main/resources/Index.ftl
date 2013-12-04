@@ -117,13 +117,6 @@
                 </div>
             </div>
             
-            <div style="visibility: visible; position: relative; -webkit-transition: 0.4s; transition: 0.4s; display: inline-block;" container="menu" listposition="center" state="">
-                <div c>
-                    <div style="padding: 0px 3px; ">
-                        <p skinpart="label" class="home_tab_container_text" style="line-height: 35px; width: auto;">WHAT&nbsp;WE&nbsp;DO</p>
-                    </div>
-                </div>
-            </div>
             
             <div style="visibility: visible; position: relative; -webkit-transition: 0.4s; transition: 0.4s; display: inline-block;" container="menu" listposition="center" state="">
                 <div >
@@ -137,7 +130,8 @@
             <div style="visibility: visible; position: relative; -webkit-transition: 0.4s; transition: 0.4s; display: inline-block;" container="menu" listposition="right" state="">
                 <div >
                     <div skinpart="bg" style="padding: 0px 4px 0px 3px;">
-                        <p skinpart="label" class="home_tab_container_text" style="line-height: 35px; width: auto;">ABOUT&nbsp;US</p>
+                       
+                        <a href="http://localhost:15000/portal/AboutUs"> ABOUT US </a>
                     </div>
                 </div>
             </div>

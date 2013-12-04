@@ -19,9 +19,11 @@ public class IndexResource
 	{
 		return new IndexView();
 	}
-	
 
-	
-	
-	
+	@Path("/AboutUs")
+	@GET
+	public AboutUsView getAboutUs()
+	{
+		return new AboutUsView();
+	}
 }
