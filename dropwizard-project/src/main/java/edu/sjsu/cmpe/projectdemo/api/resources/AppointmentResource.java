@@ -49,7 +49,7 @@ public class AppointmentResource {
 	@POST
     public Response bookAppointment(@FormParam ("date") String date) throws URISyntaxException{
 		apt_date=date;
-		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/clinics/appointments/time");
+		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/clinics/appointments/time/?username="+userName);
 		return Response.seeOther(uri).build();
     }
 
@@ -72,8 +72,9 @@ public class AppointmentResource {
 	}
 	@POST
 	@Path("time")
-	public Response makeAppointment(@FormParam("time") String time) throws URISyntaxException{
+	public Response makeAppointment(@FormParam("time") String time,@QueryParam("username") String username) throws URISyntaxException{
 		Appointment appointment=new Appointment();
+		userName=""+username;
 		appointment.setUserName(userName);
 		appointment.setClinicName(clinicname);
 		appointment.setDate(apt_date);
@@ -94,7 +95,7 @@ public class AppointmentResource {
 			e.printStackTrace();
 		}
 		//redirects to user home page
-		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/home?username="+userName);
+		URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/donor/home?userName="+userName);
 		return Response.seeOther(uri).build();
 	}
 	

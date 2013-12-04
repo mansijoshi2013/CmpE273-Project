@@ -27720,3 +27720,347 @@ ERROR [2013-12-04 21:14:54,637] com.yammer.dropwizard.jersey.LoggingExceptionMap
 ! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+WARN  [2013-12-04 21:23:31,134] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-04 21:23:31,258] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 21:23:31,262] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 21:23:31,464] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 21:23:31,660] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    POST    /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/index (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/login/patient (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/login/patient/login/patient/home/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/login/patient (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/login/patient/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+    POST    /portal/login/patient/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-04 21:23:31,661] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 21:23:32,345] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+WARN  [2013-12-04 21:23:32,348] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:15001
+INFO  [2013-12-04 21:23:32,348] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+ERROR [2013-12-04 21:24:37,326] com.yammer.dropwizard.jersey.LoggingExceptionMapper: Error handling a request: af592b22c479291d
+! java.lang.NullPointerException: null
+! at edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection.getNumber(DatabaseConnection.java:379) ~[classes/:na]
+! at edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource.makeAppointment(AppointmentResource.java:84) ~[classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0-ea]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.8.0-ea]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0-ea]
+! at java.lang.reflect.Method.invoke(Method.java:491) ~[na:1.8.0-ea]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) ~[dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:953) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1014) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+WARN  [2013-12-04 21:36:27,466] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-04 21:36:27,607] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 21:36:27,611] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 21:36:28,047] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 21:36:28,536] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    POST    /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/index (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/login/patient (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/login/patient/login/patient/home/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/login/patient (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/login/patient/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+    POST    /portal/login/patient/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-04 21:36:28,536] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 21:36:29,455] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+WARN  [2013-12-04 21:36:29,458] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:15001
+INFO  [2013-12-04 21:36:29,458] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+ERROR [2013-12-04 21:37:38,043] com.yammer.dropwizard.jersey.LoggingExceptionMapper: Error handling a request: 89ff27ddd1f41b34
+! java.lang.NullPointerException: null
+! at edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection.getNumber(DatabaseConnection.java:379) ~[classes/:na]
+! at edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource.makeAppointment(AppointmentResource.java:85) ~[classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0-ea]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.8.0-ea]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0-ea]
+! at java.lang.reflect.Method.invoke(Method.java:491) ~[na:1.8.0-ea]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) ~[dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:953) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1014) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.8.0-ea]
+WARN  [2013-12-04 21:40:27,634] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-04 21:40:27,755] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 21:40:27,759] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 21:40:27,922] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 21:40:28,064] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    POST    /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/index (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/login/patient (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/login/patient/login/patient/home/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/login/patient (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/login/patient/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+    POST    /portal/login/patient/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-04 21:40:28,064] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 21:40:28,652] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+WARN  [2013-12-04 21:40:28,655] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:15001
+INFO  [2013-12-04 21:40:28,655] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 21:42:24,168] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-04 21:42:24,295] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 21:42:24,299] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 21:42:24,548] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 21:42:24,742] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    POST    /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/index (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/login/patient (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/login/patient/login/patient/home/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/login/patient (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/login/patient/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+    POST    /portal/login/patient/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-04 21:42:24,743] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 21:42:25,390] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+WARN  [2013-12-04 21:42:25,392] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:15001
+INFO  [2013-12-04 21:42:25,393] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
