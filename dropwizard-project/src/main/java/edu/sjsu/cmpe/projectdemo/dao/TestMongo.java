@@ -22,6 +22,13 @@ public class TestMongo {
        MongoClient client = new MongoClient(new ServerAddress("54.215.197.26", 27017));
        
        DB database = client.getDB("portal");
+       
+       DBCollection usersCollection = database.getCollection("users");
+		BasicDBObject patient = new BasicDBObject();
+		patient.append("name","Sheldon Cooper").append("Username","D9NJ1").append("age",30)
+		.append("gender","M").append("blood group","B-").append("user_type","patient");
+		
+		usersCollection.insert(patient);
       
        /*
        BasicDBObject camp = new BasicDBObject();
@@ -44,24 +51,25 @@ public class TestMongo {
        System.out.println(s);
        }
        */
-       
-       DBCollection collection = database.getCollection("appointments");
-    //  DBObject query=new BasicDBObject("userName" , "shweta");
+       /*
+       DBCollection collection = database.getCollection("users");
+     // DBObject query=new BasicDBObject("user_type" , "patient");
+       //DBObject query=new BasicDBObject("" , "patient");
       // DBObject obj=collection.findOne(query);
        //System.out.println(obj.toString());
        //((BasicDBObject) query).append("blood group","B+");
-      // DBCursor cur=collection.find(query);
+       //DBCursor cur=collection.find(query);
      DBCursor cur=collection.find();
 		while(cur.hasNext())		
 		{
 			for (int i = 0; i<cur.count(); i++)
 			{
 				DBObject obj=cur.next();
-				//System.out.println(obj.toString());
-				collection.remove(obj);
+				System.out.println(obj.toString());
+				//collection.remove(obj);
 			}
 		}
-       System.out.println(cur.count());
+       System.out.println(cur.count());*/
 		/*
        DBCollection usersCollection = database.getCollection("camps");
        //DBObject query=new BasicDBObject("$oid","529d0a507939ded9e067c3e5");

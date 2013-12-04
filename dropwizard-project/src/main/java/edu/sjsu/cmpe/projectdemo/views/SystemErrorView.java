@@ -7,7 +7,7 @@ public class SystemErrorView extends View
 	
 	public SystemErrorView()
 	{
-		super("SystemError.ftl");
+		super("/SystemError.ftl");
 		//this.login=login;
 	}
 	
