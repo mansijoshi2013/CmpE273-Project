@@ -35,13 +35,7 @@
         line-height: 2.2em;
     }
 
-.home_tab_container_text{
-    cursor: pointer;
-    color: rgb(142, 21, 145);
-    font: normal normal bold 14px/1.2em 'open sans', sans-serif;
-    transition: color 0.4s ease 0s;
-    padding: 0px 40px;
-}
+
     .BPDR_sidebutton_label{
         
         transition: color 0.4s ease 0s;
@@ -76,7 +70,14 @@
 </style>
 </head>
 <body style="overflow-y: scroll; overflow-x: auto;" >
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=569319583144618";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     
     <div id="bgNode" style="position: absolute; width: 100%; background-image: none; background-size: auto; background-color: rgb(234, 229, 229); height: 955px; background-position: 50% 0%; background-repeat: repeat repeat;">
     </div>
@@ -111,7 +112,7 @@
 
     <div id="WPht4" width="345" height="155" x="0" y="58" scale="1" angle="0" state="" style="visibility: visible; left: 0px; top: 8px; min-width: 345px; min-height: 155px; position: absolute;">
         <a href="#" target="_self" style="cursor: pointer;">
-        <img  alt="" src="/assets/banner.png" style="margin-top: -10px; margin-left: -14px; width: 345px; height: 155px;">
+        <img  alt="" src="/assets/banner2.jpg" style="margin-top: -28px;margin-left: -33px;width: 959px;height: 225px; overlay: 'rgba(255,255,255,0.4)'">
         </a>
     	</div>
 		</div>
@@ -163,13 +164,13 @@
             </div>
         
         <div style="left: 685px; width: 285px; position: absolute; min-height: 35px; text-align: center;") repeat-x scroll center top rgb(40, 118, 118);">
-            <a class = "BDRP_sidebutton" href="http://50.18.202.70:15000/portal/login">
+            <a class = "BDRP_sidebutton" href="http://localhost:15000/portal/login">
             <span class="BDRP_sidebutton_Label" style="line-height: 30px;  text-align:center; color: rgb(255, 255, 255);"> Login </span>
             </a>
         </div>
         
         <div style="left: 685px; width: 285px; position: absolute; min-height: 35px; text-align: center; top: 50px;") repeat-x scroll center top rgb(40, 118, 118);">
-        <a class = "BDRP_sidebutton" href="http://50.18.202.70:15000/portal/Registration" >
+        <a class = "BDRP_sidebutton" href="http://localhost:15000/portal/Registration" >
             <span class="BDRP_sidebutton_Label" style="line-height: 30px;  text-align:center; color: rgb(255, 255, 255);"> Register </span>
         </a>
         </div>
@@ -182,33 +183,32 @@
             </div>
         </a>
         
+        <div  style="margin-top: -365px; margin-left:690px"> 
+      <div class="fb-like" data-href="https://apps.facebook.com/b_d_r_p" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+	
+	<img id="ContentPlaceHolder1_imgConnect" src="/assets/connect_with_lifestream.jpg" alt="Connect With LifeStream" style="width: 300px;">
+	<div id="connectfacebook" class="connect">
+            <a id="ContentPlaceHolder1_lnkFacebook" href="http://www.facebook.com/lifestream" target="_blank"> <span class="connectlink"></span> </a>
+            <div class="connectpic">
+                <img id="ContentPlaceHolder1_imgFacebook" src="Images/facebook.jpg" alt="Facebook">
+                &nbsp;<br>
+                &nbsp;<br>
+            </div>
+            <div>
+                Like Us on Facebook and stay connected to the latest LifeStream events.
+            </div>
+        </div>
+            
       
- 
-    
-        <div id = "twitter_feed"  style="margin-top: -365px; margin-left:690px">
-            <a class="twitter-timeline"  height="400" href="https://twitter.com/mansijoshi_"  data-widget-id="399118887683248128">Tweets by @mansijoshi_</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-                </script>
-                
-
-
         </div>
         </div>
         </div>
+   
     <link rel="stylesheet" type="text/css" href="./IMAGINARIUM SEED_files/preloader.css">
 
-<div id="viewer_preloader">
-    <p>Loading</p>
-    <h2></h2>
-    <div id="preloader"></div>
-</div>
 
+   
 
-
-<script type="text/javascript" src="./IMAGINARIUM SEED_files/mobile_utils.js"></script>
-<script type="text/javascript" src="./IMAGINARIUM SEED_files/preloader.js"></script>
-    
-            <!-- debug mode=nodebug -->
 <!-- anc2 -->
 <script type="text/javascript">
 var anchors = {};

@@ -39,7 +39,7 @@ background-repeat: repeat repeat;
         white-space: nowrap;
         display: inherit;
         margin-top: 41px;
-        
+        color: rgb(255, 255, 255);
     }
 .home_tab_container_text{
     cursor: pointer;
@@ -75,7 +75,7 @@ background-repeat: repeat repeat;
         border-image-width: initial;
         border-image-outset: initial;
         border-image-repeat: initial;
-        background: url(http://static.parastorage.com/services/skins/2.639.8/images/wysiwyg/core/themes/base/shiny2button_bg.png) 50% 0% repeat-x rgb(40, 118, 118);
+        background: rgb(210, 50,68);
         cursor: pointer;
     }
     

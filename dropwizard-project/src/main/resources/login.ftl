@@ -27,8 +27,8 @@
 
     <div id="WPht4" width="345" height="155" x="0" y="58" scale="1" angle="0" state="" style="visibility: visible; left: 0px; top: 8px; min-width: 345px; min-height: 155px; position: absolute;">
         <a href="#" target="_self" style="cursor: pointer;">
-        <img  alt="" src="/assets/banner1.png" style="margin-top: -10px; margin-left: -14px; width: 345px; height: 175px;">
-        </a>
+                <img  alt="" src="/assets/banner2.jpg" style="margin-top: -2px;margin-left: -30px;width: 959px;height: 225px;">
+                </a>
     </div>
 	</div>
 </div>
@@ -49,13 +49,13 @@
 		Password: <input type="password" placeholder="Password" name="Password" ><br>
 		<div >
 		<input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;margin-left: 80;
-height: 30px;" onclick="location.href = 'http://50.18.202.70:15000/portal/index';" type="button" value="Back">
+height: 30px;" onclick="location.href = 'http://localhost:15000/portal/index';" type="button" value="Back">
 		<input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;margin-left: 80;
 height: 30px;" type="submit" value="Submit">
 		</div>
 		
 		<br>
-		<a href="http://50.18.202.70:15000/portal/login/ForgotPassword"> Forgot Password? </a>
+		<a href="http://localhost:15000/portal/login/ForgotPassword"> Forgot Password? </a>
 		</form>
 	</div>
 	</div>
