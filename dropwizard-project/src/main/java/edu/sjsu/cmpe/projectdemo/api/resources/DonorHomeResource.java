@@ -28,6 +28,7 @@ import org.fusesource.stomp.jms.message.StompJmsMessage;
 import com.yammer.dropwizard.views.View;
 
 import java.util.ArrayList;
+import javax.ws.rs.FormParam;
 
 import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
 import edu.sjsu.cmpe.projectdemo.domain.Appointment;
@@ -47,6 +48,7 @@ public class DonorHomeResource {
 	ArrayList<BloodRequest> bloodRequests=new ArrayList<BloodRequest>();
 	ArrayList<BloodDonationCamps> camp = new ArrayList<BloodDonationCamps>();
 	ArrayList<Appointment> appointment=new ArrayList<Appointment>();
+	String userName;
 	
 	/*@GET
 	public View displayCamps (){
@@ -62,6 +64,7 @@ public class DonorHomeResource {
 	@GET
 	public View getDonorHomepage(@QueryParam("userName") String userName) 
 	{
+		this.userName=""+userName;
 		//Consumer code: receive blood Requests in the background
 		int numThreads=1;
 		ExecutorService executor=Executors.newFixedThreadPool(numThreads);
@@ -90,9 +93,16 @@ public class DonorHomeResource {
 		db  = new DatabaseConnection();
 		appointment = db.getAppointments(userName);
 		
-		return new DonorHomeView(camp,bloodRequests,appointment);
+		return new DonorHomeView(userName,camp,bloodRequests,appointment);
 		
 		}
+	@POST
+	public Response viewClinics(@FormParam("username") String Username) throws URISyntaxException{
+		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics?username="+Username);
+		return Response.seeOther(uri).build();
+		
+		
+	}
 
 	
 }
