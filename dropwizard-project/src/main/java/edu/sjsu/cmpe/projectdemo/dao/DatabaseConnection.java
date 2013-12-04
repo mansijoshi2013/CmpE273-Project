@@ -428,5 +428,19 @@ public class DatabaseConnection {
 	    }
 		return donors;
 	}
-
+	
+	public Patient getPatientDetails (String userName)
+	{
+		Patient patient = new Patient();
+		DBCollection collection=portalDatabase.getCollection("users");
+		System.out.println(userName);
+		DBObject query=new BasicDBObject("Username",userName);
+		System.out.println(query);
+		DBObject obj=collection.findOne(query);
+		System.out.println(obj);
+		patient.setName((String) obj.get("name"));
+		patient.setHospital((String) obj.get("hospitalName"));
+		patient.setPhoneNumber((String) obj.get("phoneNumber"));	
+		return patient;
+	}
 }

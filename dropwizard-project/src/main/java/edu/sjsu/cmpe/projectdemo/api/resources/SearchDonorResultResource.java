@@ -18,6 +18,7 @@ import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
 //import edu.sjsu.cmpe.projectdemo.domain.BloodRequest;
 import edu.sjsu.cmpe.projectdemo.domain.Donor;
 import edu.sjsu.cmpe.projectdemo.domain.Email;
+import edu.sjsu.cmpe.projectdemo.domain.Patient;
 import edu.sjsu.cmpe.projectdemo.domain.RootPath;
 import edu.sjsu.cmpe.projectdemo.views.EmailErrorView;
 import edu.sjsu.cmpe.projectdemo.views.EmailSentView;
@@ -29,16 +30,17 @@ import edu.sjsu.cmpe.projectdemo.views.SearchDonorView;
 @Path("/login/patient/SearchDonorResult")
 public class SearchDonorResultResource
 {
-	//private DatabaseConnection db;
-	//private ArrayList<String> donornames=new ArrayList<String>();
+	private static String userName;
 	public SearchDonorResultResource()
 	{
 	}
 	
 	@GET
-	public SearchDonorResultView getDonorResult(@QueryParam("location") String location,@QueryParam("bloodgroup") String bloodgroup)
+	public SearchDonorResultView getDonorResult(@QueryParam("location") String location,
+			@QueryParam("bloodgroup") String bloodgroup,
+			@QueryParam("userName") String userName)
 	{
-	
+		SearchDonorResultResource.userName = userName;	
 		DatabaseConnection db= new DatabaseConnection();
 		ArrayList<Donor> donors = db.getDonors(location,bloodgroup);	
 		return new SearchDonorResultView(donors);
@@ -47,8 +49,14 @@ public class SearchDonorResultResource
 	@POST
 	public View sendEmail (@FormParam("Email") String Email) 
 	{
-		System.out.println("email is " + Email);
-		String msgBody="A patient has requested for blood";
+		DatabaseConnection db = new DatabaseConnection();
+		Patient patient = new Patient();
+		patient = db.getPatientDetails(SearchDonorResultResource.userName);
+		
+		String msgBody="A patient has requested for blood. Name of patient: "+patient.getName() + ""
+						+ ". Hospital: " + patient.getHospital() + ""
+								+ ". Phone Number: " + patient.getPhoneNumber();
+				
 		String subjectMsg="Request for blood donation";
 	
 		try {

@@ -23,13 +23,15 @@ import edu.sjsu.cmpe.projectdemo.views.SearchDonorView;
 @Path("/login/patient")
 public class SearchDonorResource
 {
+	private static String userName = new String();
 	public SearchDonorResource(){
 	}
 	
 	
 	@GET
-	public SearchDonorView getDonor()
+	public SearchDonorView getDonor(@QueryParam("userName") String userName)
 		{
+			SearchDonorResource.userName = userName;
 			return new SearchDonorView();
 		}
 	
@@ -41,7 +43,7 @@ public class SearchDonorResource
 			location=location.replace(" ","%20");
 			bloodgroup=bloodgroup.replace("+","%2b");
 			bloodgroup=bloodgroup.replace("-","%2d");
-			URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/patient/SearchDonorResult?location="+location+"&bloodgroup="+bloodgroup);
+			URI uri=new URI("http://"+RootPath.rootPath+"/portal/login/patient/SearchDonorResult?location="+location+"&bloodgroup="+bloodgroup+"&userName="+SearchDonorResource.userName);
 			return Response.seeOther(uri).build();
 			
 	}
