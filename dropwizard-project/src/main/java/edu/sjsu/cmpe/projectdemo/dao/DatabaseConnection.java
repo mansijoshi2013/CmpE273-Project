@@ -352,6 +352,20 @@ public class DatabaseConnection {
 		}
 		return appointment;
 	}
+	
+	//reset password
+	public int resetPswd(String email,String password)
+	{
+		DBCollection collection=portalDatabase.getCollection("users");
+		DBObject query=new BasicDBObject("_id",email);
+		DBObject obj=collection.findOne(query);
+		if(obj!=null)
+		{
+			collection.update(query, new BasicDBObject("$set",new BasicDBObject("Password",password)));
+			return 1;
+		}
+		return 2;
+	}
 		
 
 }

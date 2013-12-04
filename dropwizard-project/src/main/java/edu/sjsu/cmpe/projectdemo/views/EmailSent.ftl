@@ -3,7 +3,7 @@
 	
 	<body>
 		<form style="text-align:center" action="" method="get">
-		Please check your email for a verification email from us!
+		An email has been sent to your account. Please follow the link.
 		</form>
 	</body>
 </html>

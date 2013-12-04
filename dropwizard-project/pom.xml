@@ -22,16 +22,16 @@
   </repositories>
 
   <dependencies>
-  	<dependency>
-    	<groupId>com.twilio.sdk</groupId>
-    	<artifactId>twilio-java-sdk</artifactId>
-    	<version>3.4.1</version>
-    	<scope>compile</scope>
-	</dependency>
+       <dependency>
+  		<groupId>com.twilio.sdk</groupId>
+  		<artifactId>twilio-java-sdk</artifactId>
+  		<version>3.3.15</version>
+  		<scope>compile</scope>
+  	</dependency>   
       <dependency>
       <groupId>org.mongodb</groupId>
       <artifactId>mongo-java-driver</artifactId>
-      <version>2.10.1</version>     
+      <version>2.10.1</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -40,30 +40,31 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-    	<groupId>com.yammer.dropwizard</groupId>
-    	<artifactId>dropwizard-core</artifactId>
-    	<version>0.6.2</version>
+            <groupId>com.yammer.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+            <version>0.6.2</version>
     </dependency>
     <dependency>
-  		<groupId>javax.mail</groupId>
-		<artifactId>mail</artifactId>
-		<version>1.4</version>
-  	</dependency>
+                  <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>1.4</version>
+          </dependency>
      <dependency>
      <groupId>com.yammer.dropwizard</groupId>
      <artifactId>dropwizard-views</artifactId>
      <version>0.6.2</version>
     </dependency>
     <dependency>
-		<groupId>org.apache.geronimo.specs</groupId>
-		<artifactId>geronimo-jms_1.1_spec</artifactId>
-		<version>1.1</version>
-	</dependency>
-	<dependency>
-		<groupId>org.fusesource.stompjms</groupId>
-		<artifactId>stompjms-client</artifactId>
-		<version>1.13</version>
-	</dependency>
+                <groupId>org.apache.geronimo.specs</groupId>
+                <artifactId>geronimo-jms_1.1_spec</artifactId>
+                <version>1.1</version>
+        </dependency>
+        <dependency>
+                <groupId>org.fusesource.stompjms</groupId>
+                <artifactId>stompjms-client</artifactId>
+                <version>1.13</version>
+        </dependency>
+        
       
   </dependencies>
 
@@ -81,43 +82,43 @@
             </plugin>
             
             <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>1.6</version>
-				<configuration>
-								<includes> <include>**/*.ftl</include></includes>
-				<createDependencyReducedPom>true</createDependencyReducedPom>
-					<filters>
-						<filter>
-							<artifact>*:*</artifact>
-								<excludes>
-									<exclude>META-INF/*.SF</exclude>
-									<exclude>META-INF/*.DSA</exclude>
-									<exclude>META-INF/*.RSA</exclude>
-								</excludes>
-						</filter>
-					</filters>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-				<configuration>
-					<transformers>
-						<transformer
-							implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
-						<transformer
-							implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-				<mainClass>edu.sjsu.cmpe.projectdemo.ProjectService</mainClass>
-						</transformer>
-					</transformers>
-			</configuration>
-			</execution>
-			</executions>
-		</plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-shade-plugin</artifactId>
+                                <version>1.6</version>
+                                <configuration>
+                                                                <includes> <include>**/*.ftl</include></includes>
+                                <createDependencyReducedPom>true</createDependencyReducedPom>
+                                        <filters>
+                                                <filter>
+                                                        <artifact>*:*</artifact>
+                                                                <excludes>
+                                                                        <exclude>META-INF/*.SF</exclude>
+                                                                        <exclude>META-INF/*.DSA</exclude>
+                                                                        <exclude>META-INF/*.RSA</exclude>
+                                                                </excludes>
+                                                </filter>
+                                        </filters>
+                                </configuration>
+                                <executions>
+                                        <execution>
+                                                <phase>package</phase>
+                                                <goals>
+                                                        <goal>shade</goal>
+                                                </goals>
+                                <configuration>
+                                        <transformers>
+                                                <transformer
+                                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+                                                <transformer
+                                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <mainClass>edu.sjsu.cmpe.projectdemo.ProjectService</mainClass>
+                                                </transformer>
+                                        </transformers>
+                        </configuration>
+                        </execution>
+                        </executions>
+                </plugin>
          </plugins>
-  </build> 
+  </build>
   
 </project>
