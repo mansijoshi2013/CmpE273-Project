@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 <meta charset="utf-8">
-<title>IMAGINARIUM BDRP</title>
+<title>GIVE BLOOD GIVE LIFE BDRP</title>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 
@@ -69,10 +69,10 @@
     <div id="SITE_STRUCTURE" style="visibility: visible; padding-bottom: 0px; width: 980px; min-height: 955px;">
         <div style="margin-top:15px; margin-left: 90px;">
         <ol id="js-news" class="js-hidden">
-            <li class="news-item"><a href="#">This is the 1st latest news item.</a></li>
-            <li class="news-item"><a href="#">This is the 2nd latest news item.</a></li>
-            <li class="news-item"><a href="#">This is the 3rd latest news item.</a></li>
-            <li class="news-item"><a href="#">This is the 4th latest news item.</a></li>
+            <li class="news-item"><a href="http://localhost:15000/portal/index/news">Cupertino Blood Drive a big success!</a></li>
+            <li class="news-item"><a href="http://localhost:15000/portal/index/news">Emma Jackson with her testimony!</a></li>
+            <li class="news-item"><a href="http://localhost:15000/portal/index/news">San Jose Blood Drive coming up!</a></li>
+            <li class="news-item"><a href="http://localhost:15000/portal/index/news">One pint of blood can save up to three lives.</a></li>
         </ol>
         </div>
      
@@ -128,7 +128,7 @@
             <div style="visibility: visible; position: relative; -webkit-transition: 0.4s; transition: 0.4s; display: inline-block;" container="menu" listposition="center" state="">
                 <div >
                     <div skinpart="bg" style="padding: 0px 3px; display: inline-block;">
-                        <p skinpart="label" class="home_tab_container_text" style="line-height: 35px; width: auto;">NEWS</p>
+                        <a href="http://localhost:15000/portal/index/news" skinpart="label" class="home_tab_container_text" style="line-height: 35px; width: auto;">NEWS</a>
                     </div>
                 </div>
             </div>
