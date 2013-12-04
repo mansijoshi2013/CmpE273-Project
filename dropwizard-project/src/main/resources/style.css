@@ -43,7 +43,7 @@ background-repeat: repeat repeat;
     }
 .home_tab_container_text{
     cursor: pointer;
-    color: rgb(142, 21, 145);
+    //color: rgb(142, 21, 145);
     font: normal normal bold 14px/1.2em 'open sans', sans-serif;
     transition: color 0.4s ease 0s;
     padding: 0px 40px;

@@ -18,22 +18,6 @@
 	</style>
 
 <style>
-    .home_tab{
-        margin-left: 543px;
-        visibility: visible;
-        width: 600px;
-        min-height: 8px;
-        top: 230px;
-        position: absolute;
-        padding-top: 9px;
-        position: absolute;
-        color: #1F527B;
-        font-size: 1.25em;
-        font-weight: bold;
-        overflow: hidden;
-        white-space: nowrap;
-        line-height: 2.2em;
-    }
 
 
     .BPDR_sidebutton_label{
