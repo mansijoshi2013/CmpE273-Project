@@ -259,14 +259,18 @@ public class DatabaseConnection {
 		ArrayList<BloodDonationCamps> camps = new ArrayList<BloodDonationCamps>();
 		DBObject obj;
 		DBCollection usersCollection=portalDatabase.getCollection("users");
-		DBObject query = new BasicDBObject("Username",userName);
-		DBObject obj1=usersCollection.findOne(query);
+		DBObject userQuery = new BasicDBObject("Username",userName);
+		DBObject userObject=usersCollection.findOne(userQuery);
 		String city = new String();
-		city = (String) obj1.get("City");
+		city = (String) userObject.get("City");
 		DBCollection collection=portalDatabase.getCollection("camps");
-		DBObject ref = new BasicDBObject();
+		BasicDBObject ref = new BasicDBObject();
 		ref.put("city",Pattern.compile(".*"+city+".*", Pattern.CASE_INSENSITIVE));
+		DateFormat dateFormat=new SimpleDateFormat("MM/dd/yyyy");
+		String todayDate=dateFormat.format(new Date());
+		ref.append("dateOfEvent",new BasicDBObject("$gte",todayDate));
 		DBCursor cur=collection.find(ref);
+
 		while(cur.hasNext())		
 		{
 			for (int i = 0; i<cur.count(); i++)
@@ -304,8 +308,9 @@ public class DatabaseConnection {
 	}
 	//to insert appointments into db
 		public void insertAppointment(Appointment appointment) {
-			DBCollection collection=portalDatabase.getCollection("appointment");
+			DBCollection collection=portalDatabase.getCollection("appointments");
 			BasicDBObject object=new BasicDBObject();
+			object.put("userName", appointment.getUserName());
 			object.put("clinicName",appointment.getClinicName());
 			object.put("date", appointment.getDate());
 			object.put("time", appointment.getTime());
@@ -316,7 +321,7 @@ public class DatabaseConnection {
 	public Appointment getAllAppointmentsByDate(Date date){
 			Appointment appointment = new Appointment();
 			DBObject obj;
-			DBCollection collection=portalDatabase.getCollection("appointment");
+			DBCollection collection=portalDatabase.getCollection("appointments");
 			DBObject query = new BasicDBObject("Date",date);
 			DBCursor cur=collection.find(query);
 			if(cur.hasNext())
@@ -351,6 +356,20 @@ public class DatabaseConnection {
 			appointment.add(apt);
 		}
 		return appointment;
+	}
+	
+	//reset password
+	public int resetPswd(String email,String password)
+	{
+		DBCollection collection=portalDatabase.getCollection("users");
+		DBObject query=new BasicDBObject("_id",email);
+		DBObject obj=collection.findOne(query);
+		if(obj!=null)
+		{
+			collection.update(query, new BasicDBObject("$set",new BasicDBObject("Password",password)));
+			return 1;
+		}
+		return 2;
 	}
 		
 

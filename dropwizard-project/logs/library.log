@@ -12595,4 +12595,3 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
->>>>>>> 6a9f409317626cac9b446bf5c25abd4f81370993

@@ -30,6 +30,7 @@ public class AppointmentResource {
 	static String apt_date;
 	static String time;
 	static String clinicname;
+	static String userName;
 	AllAppointments appointments;
 	
 	public AppointmentResource()	{
@@ -37,9 +38,10 @@ public class AppointmentResource {
 	}
 		
 	@GET
-	public AppointmentView getAppointments(@QueryParam("clinicName") String clinicName)
+	public AppointmentView getAppointments(@QueryParam("clinicName") String clinicName,@QueryParam("username") String username)
 	{
 		clinicname=""+clinicName;
+		userName=""+username;
 		return new AppointmentView();
 	}
 	
@@ -69,6 +71,7 @@ public class AppointmentResource {
 	@Path("time")
 	public Response makeAppointment(@FormParam("time") String time) throws URISyntaxException{
 		Appointment appointment=new Appointment();
+		appointment.setUserName(userName);
 		appointment.setClinicName(clinicname);
 		appointment.setDate(apt_date);
 		URI uri=new URI("http://localhost:15000/portal/login/donor/home/");
