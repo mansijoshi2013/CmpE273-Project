@@ -6,7 +6,7 @@ public class AdminHomeView extends View{
 	
 	public AdminHomeView()
 	{
-		super("AdminHome.ftl");
+		super("/AdminHome.ftl");
 
 	}
 

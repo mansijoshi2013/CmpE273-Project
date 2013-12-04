@@ -49,7 +49,7 @@ public class RegistrationResource {
 			@FormParam("UserName") String UserName,@FormParam("Password") String Password) throws URISyntaxException
 	{	
 		//Re-enter password can be done as client side validation.
-		URI uri=new URI("http://localhost:15000/portal/verify");
+		URI uri=new URI("http://50.18.202.70:15000/portal/verify");
 		
 		
 		//Pass data as donor object into dao 
@@ -74,7 +74,7 @@ public class RegistrationResource {
 		
 		if(retValue==1)
 		{
-			String msgBody="Click on the link below to activate your account \n" +"http://localhost:15000/portal/verify/activate?activationLink="+donor.getActivation_Id();
+			String msgBody="Click on the link below to activate your account \n" +"http://50.18.202.70:15000/portal/verify/activate?activationLink="+donor.getActivation_Id();
 			String subjectMsg="Activate your account";
 			//new Email().sendEmail(Email, donor.getActivation_Id());
 			new Email().sendEmail(Email, msgBody,subjectMsg);

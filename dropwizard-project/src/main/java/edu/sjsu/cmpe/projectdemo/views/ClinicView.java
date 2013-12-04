@@ -12,7 +12,7 @@ public class ClinicView extends View
 	public ClinicView(ArrayList<Clinic> clinicList)
 	{
 		//super("/clinicList.ftl");
-		super("clinic.ftl");
+		super("/clinic.ftl");
 		this.clinicList=clinicList;
 		
 	}

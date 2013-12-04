@@ -54,10 +54,10 @@ public class LoginResource
 	public Response verifyLogin(@FormParam("Username") String Username, @FormParam("Password") String Password) throws URISyntaxException
 	{
 	
-		//URI uri=new URI("http://localhost:15000/portal/login/donor/home");
-		URI uri =new URI("http://localhost:15000/portal/login");
-		URI uriDonor=new URI("http://localhost:15000/portal/login/donor/home?userName="+Username);
-		URI uriAdmin = new URI ("http://localhost:15000/portal/login/admin");
+		//URI uri=new URI("http://50.18.202.70:15000/portal/login/donor/home");
+		URI uri =new URI("http://50.18.202.70:15000/portal/login");
+		URI uriDonor=new URI("http://50.18.202.70:15000/portal/login/donor/home?userName="+Username);
+		URI uriAdmin = new URI ("http://50.18.202.70:15000/portal/login/admin");
 		
 		db=new DatabaseConnection();
 		
@@ -100,10 +100,10 @@ public class LoginResource
 	@POST
 	public Response sendEmailForgotPassword(@FormParam("Email") String Email) throws URISyntaxException
 	{
-		String msgBody="Click on the link to reset your password: \n "+ "http://localhost:15000/portal/login/ResetPassword?email="+Email;
+		String msgBody="Click on the link to reset your password: \n "+ "http://50.18.202.70:15000/portal/login/ResetPassword?email="+Email;
 		String subjectMsg="Reset your password";
 		new Email().sendEmail(Email, msgBody, subjectMsg);
-		URI uri=new URI("http://localhost:15000/portal/verify");
+		URI uri=new URI("http://50.18.202.70:15000/portal/verify");
 		return Response.seeOther(uri).build();
 		
 	}
@@ -126,12 +126,12 @@ public class LoginResource
 		int retValue=db.resetPswd(email,passwordHash);
 		if(retValue==1)
 		{
-			URI uri =new URI("http://localhost:15000/portal/login/ResetSuccess");
+			URI uri =new URI("http://50.18.202.70:15000/portal/login/ResetSuccess");
 			return Response.seeOther(uri).build();
 		}
 		else
 		{
-			URI errorURI=new URI("http://localhost:15000/portal/login/ResetError");
+			URI errorURI=new URI("http://50.18.202.70:15000/portal/login/ResetError");
 			return Response.seeOther(errorURI).build();
 		}
 		
@@ -148,7 +148,7 @@ public class LoginResource
 	@POST
 	public Response redirectToLogin() throws URISyntaxException
 	{
-		URI loginURI=new URI("http://localhost:15000/portal/login");
+		URI loginURI=new URI("http://50.18.202.70:15000/portal/login");
 		return Response.seeOther(loginURI).build();
 	}
 	

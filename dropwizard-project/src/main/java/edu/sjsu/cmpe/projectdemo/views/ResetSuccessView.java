@@ -6,6 +6,6 @@ public class ResetSuccessView extends View
 {
 	public ResetSuccessView()
 	{
-		super("ResetSuccess.ftl");
+		super("/ResetSuccess.ftl");
 	}
 }

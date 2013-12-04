@@ -7,7 +7,7 @@ public class EmailSentView extends View
 	
 	public EmailSentView()
 	{
-		super("EmailSent.ftl");
+		super("/EmailSent.ftl");
 		//this.login=login;
 	}
 	

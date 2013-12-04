@@ -6,7 +6,7 @@ public class AdminCampView extends View{
 	
 	public AdminCampView()
 	{
-		super("AdminCamp.ftl");
+		super("/AdminCamp.ftl");
 	}
 
 }

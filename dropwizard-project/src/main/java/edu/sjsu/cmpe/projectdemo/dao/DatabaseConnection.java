@@ -60,9 +60,10 @@ public class DatabaseConnection {
 			String hashedAndSalted=obj.get("Password").toString();
 			try{
 			String salt=hashedAndSalted.split(",")[1];
-			
-			if (hashedAndSalted.equals(PasswordEncryption.makePasswordHash(Password, salt)))
-			
+			String hashedPswd=PasswordEncryption.makePasswordHash(Password, salt);
+	
+			if (hashedAndSalted.equals(hashedPswd))
+
 			{
 				String user_type=(String)obj.get("user_type");
 				if(user_type.equals("donor") && obj.get("verified").equals("true"))
