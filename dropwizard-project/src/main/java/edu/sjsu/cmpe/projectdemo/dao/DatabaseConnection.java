@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
+import org.bson.types.ObjectId;
+
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -47,15 +49,32 @@ public class DatabaseConnection {
 	{
 		DBCollection collection=portalDatabase.getCollection("users");
 		//DBObject query=new BasicDBObject("Username",Username).append("verified","true");
-		DBObject query=new BasicDBObject("Username",Username);
+		BasicDBObject query=new BasicDBObject("Username",Username);		
 		DBObject obj=collection.findOne(query);
 		if(obj!=null)
 		{
+			String user_type=(String)obj.get("user_type");
 			if (obj.get("user_type").equals("admin"))
 			{
 				User user = new User();
 				user.setUser_Type("admin");
 				return user;
+			}
+			else if(obj.get("user_type").equals("patient"))
+			{
+				if (Password.equals(Username))
+				{
+					Patient patient=new Patient();
+					patient.setUser_Type((String)obj.get("user_type"));
+					patient.setName((String)obj.get("name"));
+					return patient;
+				}
+				else{
+					Patient nullPatient=new Patient();
+					nullPatient.setUser_Type("NotFound");;
+					return nullPatient;
+				}
+					
 			}
 			String hashedAndSalted=obj.get("Password").toString();
 			try{
@@ -65,7 +84,7 @@ public class DatabaseConnection {
 			if (hashedAndSalted.equals(hashedPswd))
 
 			{
-				String user_type=(String)obj.get("user_type");
+				
 				if(user_type.equals("donor") && obj.get("verified").equals("true"))
 				{
 					Donor donor=new Donor();
@@ -74,14 +93,7 @@ public class DatabaseConnection {
 					return donor;
 					
 				}
-				else if(user_type.equals("patient"))
-				{
-					Patient patient=new Patient();
-					patient.setUser_Type((String)obj.get("user_type"));
-					patient.setName((String)obj.get("name"));
-					return patient;
-				}
-				
+		
 			}
 			
 			else
@@ -385,6 +397,7 @@ public class DatabaseConnection {
 	}
 		
 
+	//to get donors for patients
 	public ArrayList<Donor> getDonors(String location, String bloodgroup) 
 	{
 	
@@ -394,9 +407,7 @@ public class DatabaseConnection {
 		DBCollection usersCollection=portalDatabase.getCollection("users");
 		
 		BasicDBObject ref = new BasicDBObject();
-		//ref.put("City", Pattern.compile(".*"+location+".*",Pattern.CASE_INSENSITIVE));
-		//ref.append("City","San Jose");
-		ref.append("name","Tejasvi");
+		ref.put("City", Pattern.compile(".*"+location+".*",Pattern.CASE_INSENSITIVE));		
 		ref.append("blood group",bloodgroup);
 		System.out.println(ref);
 		DBCursor curs = usersCollection.find(ref);
@@ -410,12 +421,32 @@ public class DatabaseConnection {
 				obj = curs.next();
 		    	donor = new Donor();
 		    	donor.setName((String) obj.get("name"));
-		    	donor.setEmail((String) obj.get("email"));
+		    	donor.setEmail(obj.get( "_id" ).toString());
 		    	System.out.println(donor.getName()+donor.getEmail());
 		    	donors.add(donor);
 			}
 	    }
 		return donors;
+	}
+
+	public ArrayList<Appointment> getTimeByDate(String date) {
+		
+		DBCollection collection=portalDatabase.getCollection("appointments");
+		ArrayList<Appointment> appointment=new ArrayList<Appointment>();
+		DBObject query = new BasicDBObject("date",date);
+		DBCursor cur=collection.find(query);
+		while(cur.hasNext())
+		{
+			DBObject obj=cur.next();
+			Appointment apt=new Appointment();
+			apt.setClinicName(obj.get("clinicName").toString());
+			apt.setDate(obj.get("date").toString());
+			apt.setTime(obj.get("time").toString());
+			System.out.print("\ntime is:"+apt.getTime()+"\n");
+			appointment.add(apt);
+		}
+		return appointment;
+		
 	}
 
 }

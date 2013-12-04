@@ -3,10 +3,67 @@
 width: 100%;
 background-image: none;
 background-size: auto auto;
-background-color: rgb(234, 229, 229);
+//background-color: rgb(234, 229, 229);
 height: 955px;
 background-position: 50% 0%;
 background-repeat: repeat repeat;
+}
+
+input[type=password]{
+    background: url(/assets/keyIcon.png) 12px 11px no-repeat, linear-gradient(to bottom, #f7f7f8 0%,#ffffff 100%);
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2) inset, 0 -1px 0 rgba(0,0,0,0.05) inset;
+    transition: all 0.2s linear;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    color: #222222;
+    position: relative;
+    height: 36px;
+    width: 100%;
+    padding-left: 30px;
+    
+    &::-webkit-input-placeholder {
+       color: #999999;
+    }
+    
+    &:-moz-placeholder {
+       color: #999999;
+    }
+        
+    &:focus{
+        box-shadow: 0 1px 0 #2392F3 inset, 0 -1px 0 #2392F3 inset, 1px 0 0 #2392F3 inset, -1px 0 0 #2392F3 inset, 0 0 4px rgba(35,146,243,0.5);
+        outline: none;
+        background: url(../img/keyIcon.png) 12px 11px no-repeat, #FFF;
+    }
+}
+input{
+    background:  linear-gradient(to bottom, #f7f7f8 0%,#ffffff 100%);
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2) inset, 0 -1px 0 rgba(0,0,0,0.05) inset;
+    transition: all 0.2s linear;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    color: #222222;
+    position: relative;
+    height: 36px;
+    //width: 300px;
+    padding-left: 30px;
+    
+    &::-webkit-input-placeholder {
+       color: #999999;
+    }
+    
+    &:-moz-placeholder {
+       color: #999999;
+    }
+        
+    &:focus{
+        box-shadow: 0 1px 0 #2392F3 inset, 0 -1px 0 #2392F3 inset, 1px 0 0 #2392F3 inset, -1px 0 0 #2392F3 inset, 0 0 4px rgba(35,146,243,0.5);
+        outline: none;
+        background: url(../img/keyIcon.png) 12px 11px no-repeat, #FFF;
+    }
 }
  .home_tab{
         margin-left: 543px;
@@ -43,7 +100,7 @@ background-repeat: repeat repeat;
     }
 .home_tab_container_text{
     cursor: pointer;
-    color: rgb(142, 21, 145);
+    //color: rgb(142, 21, 145);
     font: normal normal bold 14px/1.2em 'open sans', sans-serif;
     transition: color 0.4s ease 0s;
     padding: 0px 40px;
@@ -77,6 +134,7 @@ background-repeat: repeat repeat;
         border-image-repeat: initial;
         background: rgb(210, 50,68);
         cursor: pointer;
+        color:white;
     }
     
     .BDRP_sidebutton:hover{

@@ -1,7 +1,11 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.ClinicView" -->
 <html>
 <head>
-	
+	<style type="text/css">
+	<#include "style.css">
+	<#include "foundation.css">
+	<#include "normalize.css">
+	</style>
 </head>
 	<body>
 			<form action="" method="post">
