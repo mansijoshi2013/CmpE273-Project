@@ -82,7 +82,7 @@
 					}				
 			</script>
 			
-			<input class="BDRP_sidebutton" style= "position:relative; width:300px;"type="submit" value="Next" onClick = "testRadio()"/>
+			<input class="BDRP_sidebutton" style= "position:relative; width:300px;" type="submit" value="Next" onClick = "testRadio()"/>
 
 	</form>
 	</div>
