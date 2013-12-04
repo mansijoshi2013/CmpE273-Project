@@ -13,11 +13,14 @@ import javax.ws.rs.QueryParam;
 import com.yammer.dropwizard.views.View;
 
 import java.net.*;
+import java.security.SecureRandom;
 import java.sql.SQLException;
+import java.util.Random;
 
 import edu.sjsu.cmpe.projectdemo.dao.DatabaseConnection;
 import edu.sjsu.cmpe.projectdemo.domain.Donor;
 import edu.sjsu.cmpe.projectdemo.domain.Login;
+import edu.sjsu.cmpe.projectdemo.domain.PasswordEncryption;
 import edu.sjsu.cmpe.projectdemo.domain.User;
 import edu.sjsu.cmpe.projectdemo.views.*;
 import edu.sjsu.cmpe.projectdemo.dto.DonorDto;
@@ -28,7 +31,9 @@ import edu.sjsu.cmpe.projectdemo.domain.Email;
 @Path("/login")
 public class LoginResource
 {
+	private Random random = new SecureRandom();
 	DatabaseConnection db;
+	String email;
 	
 	public LoginResource()
 	{
@@ -93,19 +98,64 @@ public class LoginResource
 	
 	@Path("/ForgotPassword")
 	@POST
-	public void sendEmailForgotPassword(@FormParam("Email") String Email)
+	public Response sendEmailForgotPassword(@FormParam("Email") String Email) throws URISyntaxException
 	{
-		DatabaseConnection db=new DatabaseConnection();
 		String msgBody="Click on the link to reset your password: \n "+ "http://localhost:15000/portal/login/ResetPassword?email="+Email;
 		String subjectMsg="Reset your password";
 		new Email().sendEmail(Email, msgBody, subjectMsg);
+		URI uri=new URI("http://localhost:15000/portal/verify");
+		return Response.seeOther(uri).build();
+		
 	}
 	
 	@Path("/ResetPassword")
 	@GET
-	public void getPasswordResetView(@QueryParam("email") String email)
+	public View getPasswordResetView(@QueryParam("email") String email)
 	{
+		this.email=email;
+		return new PasswordResetView();
+	}
+	
+	@Path("/ResetPassword")
+	@POST
+	public Response ResetPassword(@FormParam("Password") String Password,@QueryParam("email") String email) throws URISyntaxException
+	{
+		DatabaseConnection db=new DatabaseConnection();
+		String passwordHash = PasswordEncryption.makePasswordHash(Password, Integer.toString(random.nextInt()));
+		int retValue=db.resetPswd(email,passwordHash);
+		if(retValue==1)
+		{
+			URI uri =new URI("http://localhost:15000/portal/login/ResetSuccess");
+			return Response.seeOther(uri).build();
+		}
+		else
+		{
+			URI errorURI=new URI("http://localhost:15000/portal/login/ResetError");
+			return Response.seeOther(errorURI).build();
+		}
 		
+	}
+	
+	@Path("/ResetSuccess")
+	@GET
+	public View getSuccess()
+	{
+		return new ResetSuccessView();
+	}
+	
+	@Path("/ResetSuccess")
+	@POST
+	public Response redirectToLogin() throws URISyntaxException
+	{
+		URI loginURI=new URI("http://localhost:15000/portal/login");
+		return Response.seeOther(loginURI).build();
+	}
+	
+	@Path("/ResetError")
+	@GET
+	public View getErrorView()
+	{
+		return new SystemErrorView();
 	}
 	
 }

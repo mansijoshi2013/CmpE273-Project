@@ -357,6 +357,7 @@ public class DatabaseConnection {
 		}
 		return appointment;
 	}
+<<<<<<< HEAD
 
 	public Long getNumber(String userName) {
 		
@@ -367,6 +368,21 @@ public class DatabaseConnection {
 		num=((Long)obj.get("phoneNumber"));
 			return num;
 		
+=======
+	
+	//reset password
+	public int resetPswd(String email,String password)
+	{
+		DBCollection collection=portalDatabase.getCollection("users");
+		DBObject query=new BasicDBObject("_id",email);
+		DBObject obj=collection.findOne(query);
+		if(obj!=null)
+		{
+			collection.update(query, new BasicDBObject("$set",new BasicDBObject("Password",password)));
+			return 1;
+		}
+		return 2;
+>>>>>>> d147e89e9154ad3176c352ffb573aa5964f17b72
 	}
 		
 
