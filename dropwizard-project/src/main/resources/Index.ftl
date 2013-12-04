@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
 <meta charset="utf-8">
-<title>IMAGINARIUM BDRP</title>
+<title>GIVE BLOOD GIVE LIFE BDRP</title>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 
