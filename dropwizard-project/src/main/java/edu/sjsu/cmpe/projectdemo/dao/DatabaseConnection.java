@@ -304,8 +304,9 @@ public class DatabaseConnection {
 	}
 	//to insert appointments into db
 		public void insertAppointment(Appointment appointment) {
-			DBCollection collection=portalDatabase.getCollection("appointment");
+			DBCollection collection=portalDatabase.getCollection("appointments");
 			BasicDBObject object=new BasicDBObject();
+			object.put("userName", appointment.getUserName());
 			object.put("clinicName",appointment.getClinicName());
 			object.put("date", appointment.getDate());
 			object.put("time", appointment.getTime());
@@ -316,7 +317,7 @@ public class DatabaseConnection {
 	public Appointment getAllAppointmentsByDate(Date date){
 			Appointment appointment = new Appointment();
 			DBObject obj;
-			DBCollection collection=portalDatabase.getCollection("appointment");
+			DBCollection collection=portalDatabase.getCollection("appointments");
 			DBObject query = new BasicDBObject("Date",date);
 			DBCursor cur=collection.find(query);
 			if(cur.hasNext())

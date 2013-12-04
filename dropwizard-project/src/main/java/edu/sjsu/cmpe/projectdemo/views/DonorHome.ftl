@@ -1,6 +1,7 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.DonorHomeView" -->
 <html>
 <head>
+
 	<style type="text/css">
 	<#include "style.css">
 	<#include "normalize.css">
@@ -51,6 +52,9 @@
 		
 		
 		<div id="apt" style="background-color:#FFD700;height:400px;width:200px;float:left;">
+		<form action="" method="post">
+		
+		<input type="submit" name="username" value="shweta" >
 		Your Appointments! <br> <br>
 		<#list appointment as apt>
 		<p>
@@ -64,7 +68,7 @@
 		</input>
 		</p>
 	    </#list> 
-		
+		</form>
 		</div>
 	</div>
 	</body>
