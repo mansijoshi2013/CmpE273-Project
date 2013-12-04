@@ -331,7 +331,7 @@ public class DatabaseConnection {
 			collection.insert(object);
 			
 		}
-	public Appointment getAllAppointmentsByDate(Date date){
+	public Appointment getAllAppointmentsByDate(Date date,String clinicName){
 			Appointment appointment = new Appointment();
 			DBObject obj;
 			DBCollection collection=portalDatabase.getCollection("appointments");
@@ -439,15 +439,19 @@ public class DatabaseConnection {
 	}
 
 
-	public ArrayList<Appointment> getTimeByDate(String date) {
+	public ArrayList<Appointment> getTimeByDate(String date,String clinicName) {
 		
 		DBCollection collection=portalDatabase.getCollection("appointments");
 		ArrayList<Appointment> appointment=new ArrayList<Appointment>();
 		DBObject query = new BasicDBObject("date",date);
-		DBCursor cur=collection.find(query);
-		while(cur.hasNext())
+		BasicDBObject ref = new BasicDBObject();
+		ref.put("date", date);		
+		ref.append("clinicName",clinicName);
+		DBCursor curs = collection.find(ref);
+		while(curs.hasNext())
 		{
-			DBObject obj=cur.next();
+			
+			DBObject obj=curs.next();
 			Appointment apt=new Appointment();
 			apt.setClinicName(obj.get("clinicName").toString());
 			apt.setDate(obj.get("date").toString());

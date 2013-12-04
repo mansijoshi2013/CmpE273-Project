@@ -4,6 +4,9 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 
+
+import com.yammer.dropwizard.views.View;
+
 import edu.sjsu.cmpe.projectdemo.views.*;
 
 
@@ -19,6 +22,14 @@ public class IndexResource
 	{
 		return new IndexView();
 	}
+
+	@Path("/news")
+	@GET()
+	public View getNews()
+	{
+		return new NewsView();
+	}
+
 
 	@Path("/AboutUs")
 	@GET
