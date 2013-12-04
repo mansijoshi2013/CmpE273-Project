@@ -1,13 +1,24 @@
 package edu.sjsu.cmpe.projectdemo.views;
 
+import java.util.ArrayList;
+
 import com.yammer.dropwizard.views.View;
 
-public class SearchDonorView extends View
+import edu.sjsu.cmpe.projectdemo.domain.Donor;
+
+
+public class SearchDonorResultView extends View
 {
-	public SearchDonorView()
+	private ArrayList<Donor> donors = new ArrayList<Donor>();
+	
+	public SearchDonorResultView(ArrayList<Donor> donors)
 	{
-		super("searchdonor.ftl");
+		super("/searchdonorresult.ftl");
+		this.donors=donors;
 		
 	}
-
+	
+	public ArrayList<Donor> getDonors(){
+		return this.donors;
+	}
 }
