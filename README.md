@@ -1,4 +1,3 @@
-
 CMPE273-project
 ===============
 
@@ -25,21 +24,22 @@ Instructions:
  -An email is sent. Follow the link to reset your password
  -You can now login with your new credentials.
  
-4) Donor Home Page
+5) Donor Home Page
  -You will be able to view the urgent blood requests posted by the admin (Stomp producer-consumer).
  -You will be able to see the blood drives happening around your area.
  -You will be able to see your appointments.
  -Click on 'Book an Appointment Now' to make a new appointment.
  
-5) Make Appointment
+6) Make Appointment
  - Select any one clinic.
  - Choose a date.
  - Select the time.
  - A appointment confirmation is sent to your phone (Twilio). 
 
-6)Patient Home Page
- - 
+7)Patient Home Page
+ - Patient can search for blood donors around his area and required blood type.
+ - The patient can then send an email to the donor.
 
-7)Admin
+8)Admin
  - The admin can post new blood requests.
  - The admin can post new blood drives.
