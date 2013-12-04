@@ -1,12 +1,7 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.DonorHomeView" -->
 <html>
 <head>
-<script>
-		function nextPage()
-		{
-			window.location.href="../donor/clinics";
-		}
-	</script>
+
 	<style type="text/css">
 	<#include "style.css">
 	<#include "normalize.css">
@@ -14,7 +9,6 @@
 </head>
 
 	<body>
-	<input type="submit" onClick ="nextPage()" value="makeAppointment"></td>
 	<div id="container" style="width:1200px">
 		<div id="requests" style="background-color:#FFD700;height:400px;width:300px;float:left;">
 		Blood Requests for the Day! <br> <br>
@@ -38,41 +32,29 @@
 		The following camps are taking place in your city:<br><br><br>
 		
 		<div id="cl"></div>
-		<script type="text/javascript">		 
-		<#list 0..camps?size-1 as i>
+		<#list camps as camp>
 		
-			var label=document.createElement("label");
-			var description=document.createTextNode("${camps[i].eventName?html}");
-			label.appendChild(description);	
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			var description=document.createTextNode("${camps[i].venue?html}");
-			label.appendChild(description);
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			var description=document.createTextNode("${camps[i].city?html}");
-			label.appendChild(description);
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			var description=document.createTextNode("${camps[i].dateOfEvent?html}");
-			label.appendChild(description);
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			var description=document.createTextNode("${camps[i].timeOfEvent?html}");
-			label.appendChild(description);
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			var lb=document.createElement("br");
-			label.appendChild(lb);
-			document.getElementById('cl').appendChild(label);
+		${camp.eventName}
+		<br>
+		${camp.venue}, ${camp.city}
+		<br>
+		${camp.dateOfEvent}
+		<br>
+		${camp.timeOfEvent}
+		<br>
+		<br>
+		
 		</#list>	
-		</script>
+		
 		
 		</form>
 		</div>
 		
 		
 		<div id="apt" style="background-color:#FFD700;height:400px;width:200px;float:left;">
+		<form action="" method="post">
+		
+		<input type="submit" name="username" value="shweta" >
 		Your Appointments! <br> <br>
 		<#list appointment as apt>
 		<p>
@@ -86,7 +68,7 @@
 		</input>
 		</p>
 	    </#list> 
-		
+		</form>
 		</div>
 	</div>
 	</body>

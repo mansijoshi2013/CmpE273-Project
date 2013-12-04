@@ -9,7 +9,14 @@ public class Appointment {
 	private String date;
 	private String time;
 	private String clinicName;
+	private String userName;
 	
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	public String getDate() {
 		return date;
 	}
