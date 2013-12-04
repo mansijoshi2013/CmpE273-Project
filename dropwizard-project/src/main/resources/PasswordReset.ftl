@@ -17,7 +17,7 @@ function validatePassword()
 <body>
 <form id="myForm" style="text-align:center" action="" onsubmit="return validatePassword();" method="post">
 
-Password: <input type="password" id="password"name="password" />
+Password: <input type="password" id="Password" name="Password" />
 <br>
 Re-enter Password: <input type="password" id="repassword"name="repassword" />
 <br>

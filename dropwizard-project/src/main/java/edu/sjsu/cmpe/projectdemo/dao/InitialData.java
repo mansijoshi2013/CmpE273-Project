@@ -17,16 +17,17 @@ public class InitialData {
 	private DBCollection usersCollection;
 	private DBCollection campsCollection;
 	
-	public void createInitialData(){
+	public void main(){
 
 		
 		usersCollection = portalDatabase.getCollection("users");
 		BasicDBObject patient = new BasicDBObject();
-		patient.append("name","Ross Geller").append("hospital_id","D9NJ1").append("age",58)
+		patient.append("name","Sheldon Cooper").append("Username","D9NJ1").append("age",30)
 		.append("gender","M").append("blood group","B-").append("user_type","patient");
 		
 		usersCollection.insert(patient);
 		
+		/*
 		BasicDBObject donor=new BasicDBObject();
 		donor.append("name","Monica Geller").append("DateOfBirth","11/05/1980")
 		.append("gender","F").append("blood group", "B-").append("email","monica_g@gmail.com")
@@ -42,7 +43,7 @@ public class InitialData {
 		.append("city","San Jose").append("state", "CA").append("zip",95112);
 		
 		campsCollection.insert(camp);
-		
+		*/
     }
 
 }
