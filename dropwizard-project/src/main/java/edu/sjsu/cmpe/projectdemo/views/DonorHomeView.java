@@ -36,6 +36,13 @@ public class DonorHomeView extends View
 		// TODO Auto-generated constructor stub
 	}
 
+	public DonorHomeView(String userName2,
+			ArrayList<BloodRequest> bloodRequests2) {
+		super("/DonorHome.ftl");
+		this.bloodRequests=bloodRequests2;
+		this.userName=userName2;
+	}
+
 	public ArrayList<BloodDonationCamps> getCamps() {
 		return camps;
 	}
