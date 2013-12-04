@@ -13,7 +13,7 @@ public class SearchDonorResultView extends View
 	
 	public SearchDonorResultView(ArrayList<Donor> donors)
 	{
-		super("searchdonorresult.ftl");
+		super("/searchdonorresult.ftl");
 		this.donors=donors;
 		
 	}
