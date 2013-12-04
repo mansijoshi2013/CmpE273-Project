@@ -6,6 +6,6 @@ public class EmailVerifiedView extends View
 {
 	public EmailVerifiedView()
 	{
-		super("EmailVerified.ftl");
+		super("/EmailVerified.ftl");
 	}
 }

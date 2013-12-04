@@ -6,7 +6,7 @@ public class RegistrationView extends View{
 	
 	public RegistrationView()
 	{
-		super("Registration.ftl");
+		super("/Registration.ftl");
 
 	}
 

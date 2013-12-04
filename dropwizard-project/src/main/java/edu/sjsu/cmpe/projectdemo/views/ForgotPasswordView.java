@@ -7,7 +7,7 @@ public class ForgotPasswordView extends View
 	
 	public ForgotPasswordView()
 	{
-		super("ForgotPassword.ftl");
+		super("/ForgotPassword.ftl");
 		//this.login=login;
 	}
 	

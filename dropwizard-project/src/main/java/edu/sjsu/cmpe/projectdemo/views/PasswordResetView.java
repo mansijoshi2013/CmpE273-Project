@@ -6,6 +6,6 @@ public class PasswordResetView extends View
 {
 	public PasswordResetView()
 	{
-		super("PasswordReset.ftl");
+		super("/PasswordReset.ftl");
 	}
 }

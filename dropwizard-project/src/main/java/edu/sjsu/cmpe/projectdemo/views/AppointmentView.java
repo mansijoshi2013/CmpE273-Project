@@ -40,7 +40,7 @@ public class AppointmentView extends View{
 	  }
 	  **/
 	public AppointmentView(){
-		super("Appointment.ftl");
+		super("/Appointment.ftl");
 		
 		Appointment[] app = new Appointment[50];		
 		Date appSlot = new Date();

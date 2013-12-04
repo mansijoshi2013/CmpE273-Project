@@ -30,7 +30,7 @@ public SearchDonorView getDonor()
 public Response verifyLogin() throws URISyntaxException
 {
 
-		URI uri=new URI("http://localhost:15000/portal/SearchDonorResult");
+		URI uri=new URI("http://50.18.202.70:15000/portal/SearchDonorResult");
 		return Response.seeOther(uri).build();
 		
 }

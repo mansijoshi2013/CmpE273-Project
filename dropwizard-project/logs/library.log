@@ -12595,7 +12595,12 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
+<<<<<<< HEAD
+>>>>>>> 6a9f409317626cac9b446bf5c25abd4f81370993
+WARN  [2013-12-04 01:19:36,327] com.yammer.dropwizard.config.ServerFactory: 
+=======
 WARN  [2013-12-04 01:06:01,107] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -12605,6 +12610,247 @@ WARN  [2013-12-04 01:06:01,107] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
+INFO  [2013-12-04 01:19:36,425] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 01:19:36,427] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 01:19:36,574] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 01:19:36,715] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/index (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-04 01:19:36,715] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 01:19:37,290] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 01:19:37,294] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 01:23:32,008] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-04 01:23:32,099] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 01:23:32,102] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 01:23:32,215] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 01:23:32,322] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/index (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-04 01:23:32,322] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 01:23:32,826] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 01:23:32,829] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 01:25:20,802] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-04 01:25:20,905] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 01:25:20,907] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 01:25:21,048] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 01:25:21,158] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/index (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-04 01:25:21,159] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 01:25:21,653] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 01:25:21,656] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 01:46:42,170] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-04 01:46:42,264] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 01:46:42,266] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 01:46:42,388] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 01:46:42,510] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
+    GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    POST    /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
+    GET     /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/login/donor/clinics/appointments/time/confirm (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/ (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    POST    /portal/login/donor/clinics/appointments/time (edu.sjsu.cmpe.projectdemo.api.resources.AppointmentResource)
+    GET     /portal/verify (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    POST    /portal/verify/activate (edu.sjsu.cmpe.projectdemo.api.resources.EmailVerifyResource)
+    GET     /portal/login/donor/home (edu.sjsu.cmpe.projectdemo.api.resources.DonorHomeResource)
+    GET     /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodCamp (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    POST    /portal/login/admin/bloodRequest (edu.sjsu.cmpe.projectdemo.api.resources.AdminResource)
+    GET     /portal/index (edu.sjsu.cmpe.projectdemo.api.resources.IndexResource)
+    GET     /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    POST    /portal/donateblood (edu.sjsu.cmpe.projectdemo.api.resources.DonorDonateBloodResource)
+    GET     /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
+    GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
+
+INFO  [2013-12-04 01:46:42,510] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 01:46:43,108] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+WARN  [2013-12-04 01:46:43,113] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:15001
+INFO  [2013-12-04 01:46:43,113] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 01:50:51,069] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-12-04 01:50:51,187] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 01:50:51,190] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 01:50:51,325] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 01:50:52,761] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+=======
 INFO  [2013-12-04 01:06:01,292] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-04 01:06:01,299] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-04 01:06:01,547] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
@@ -12615,6 +12861,7 @@ INFO  [2013-12-04 01:06:02,011] com.yammer.dropwizard.config.Environment: The fo
     GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
     GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
@@ -12642,6 +12889,15 @@ INFO  [2013-12-04 01:06:02,011] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
+INFO  [2013-12-04 01:50:52,771] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 01:51:07,166] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 01:51:07,209] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 02:03:13,954] com.yammer.dropwizard.config.ServerFactory: 
+=======
 INFO  [2013-12-04 01:06:02,011] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -19146,6 +19402,7 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
 WARN  [2013-12-04 02:38:53,078] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -19155,6 +19412,22 @@ WARN  [2013-12-04 02:38:53,078] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
+INFO  [2013-12-04 02:03:14,071] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 02:03:14,075] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 02:03:14,229] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 02:03:14,391] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+=======
 INFO  [2013-12-04 02:38:53,244] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-04 02:38:53,248] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-04 02:38:53,492] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
@@ -19165,6 +19438,7 @@ INFO  [2013-12-04 02:38:53,909] com.yammer.dropwizard.config.Environment: The fo
     GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
     GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
@@ -19192,6 +19466,15 @@ INFO  [2013-12-04 02:38:53,909] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
+INFO  [2013-12-04 02:03:14,391] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 02:03:14,969] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 02:03:14,973] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 02:03:42,969] com.yammer.dropwizard.config.ServerFactory: 
+=======
 INFO  [2013-12-04 02:38:53,909] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -19351,6 +19634,7 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
 WARN  [2013-12-04 02:40:11,834] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -19360,6 +19644,22 @@ WARN  [2013-12-04 02:40:11,834] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
+INFO  [2013-12-04 02:03:43,068] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 02:03:43,070] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 02:03:43,178] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 02:03:43,297] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+=======
 INFO  [2013-12-04 02:40:12,028] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-04 02:40:12,032] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-04 02:40:12,307] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
@@ -19370,6 +19670,7 @@ INFO  [2013-12-04 02:40:12,751] com.yammer.dropwizard.config.Environment: The fo
     GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
     GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
@@ -19397,6 +19698,15 @@ INFO  [2013-12-04 02:40:12,751] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
+INFO  [2013-12-04 02:03:43,298] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 02:03:43,816] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 02:03:43,819] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 02:04:10,415] com.yammer.dropwizard.config.ServerFactory: 
+=======
 INFO  [2013-12-04 02:40:12,751] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -19557,6 +19867,7 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
 WARN  [2013-12-04 02:41:45,030] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -19566,6 +19877,22 @@ WARN  [2013-12-04 02:41:45,030] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
+INFO  [2013-12-04 02:04:10,530] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 02:04:10,533] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 02:04:10,676] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 02:04:12,001] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+=======
 INFO  [2013-12-04 02:41:45,194] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-04 02:41:45,198] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-04 02:41:45,413] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
@@ -19576,6 +19903,7 @@ INFO  [2013-12-04 02:41:45,839] com.yammer.dropwizard.config.Environment: The fo
     GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
     GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
@@ -19603,6 +19931,15 @@ INFO  [2013-12-04 02:41:45,839] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
+INFO  [2013-12-04 02:04:12,012] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 02:04:26,728] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 02:04:26,777] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 02:06:59,083] com.yammer.dropwizard.config.ServerFactory: 
+=======
 INFO  [2013-12-04 02:41:45,839] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -19763,6 +20100,7 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
 WARN  [2013-12-04 02:43:41,742] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -19772,6 +20110,22 @@ WARN  [2013-12-04 02:43:41,742] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
+INFO  [2013-12-04 02:06:59,177] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 02:06:59,180] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 02:06:59,313] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 02:06:59,443] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+=======
 INFO  [2013-12-04 02:43:41,918] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-04 02:43:41,922] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-04 02:43:42,157] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
@@ -19782,6 +20136,7 @@ INFO  [2013-12-04 02:43:42,568] com.yammer.dropwizard.config.Environment: The fo
     GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
     GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
@@ -19809,6 +20164,15 @@ INFO  [2013-12-04 02:43:42,568] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
+INFO  [2013-12-04 02:06:59,444] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 02:06:59,944] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 02:06:59,948] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 02:11:45,059] com.yammer.dropwizard.config.ServerFactory: 
+=======
 INFO  [2013-12-04 02:43:42,568] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -19969,6 +20333,7 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
 WARN  [2013-12-04 02:44:22,040] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -19978,6 +20343,22 @@ WARN  [2013-12-04 02:44:22,040] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
+INFO  [2013-12-04 02:11:45,194] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 02:11:45,198] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 02:11:45,351] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 02:11:46,691] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+=======
 INFO  [2013-12-04 02:44:22,237] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-04 02:44:22,241] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-04 02:44:22,499] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
@@ -19988,6 +20369,7 @@ INFO  [2013-12-04 02:44:22,999] com.yammer.dropwizard.config.Environment: The fo
     GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
     GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
@@ -20015,6 +20397,15 @@ INFO  [2013-12-04 02:44:22,999] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
+INFO  [2013-12-04 02:11:46,709] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 02:12:02,126] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 02:12:02,176] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 02:18:34,584] com.yammer.dropwizard.config.ServerFactory: 
+=======
 INFO  [2013-12-04 02:44:22,999] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -20174,6 +20565,7 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
 WARN  [2013-12-04 02:45:31,286] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -20183,6 +20575,22 @@ WARN  [2013-12-04 02:45:31,286] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
+INFO  [2013-12-04 02:18:34,718] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 02:18:34,721] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 02:18:34,888] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 02:18:36,253] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetError (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    GET     /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+    POST    /portal/login/ResetSuccess (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+=======
 INFO  [2013-12-04 02:45:31,458] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-04 02:45:31,461] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-04 02:45:31,745] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
@@ -20193,6 +20601,7 @@ INFO  [2013-12-04 02:45:32,160] com.yammer.dropwizard.config.Environment: The fo
     GET     /portal/login/ResetPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     POST    /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
     GET     /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     POST    /portal/login/donor/clinics (edu.sjsu.cmpe.projectdemo.api.resources.ClinicResource)
     GET     /portal/Registration (edu.sjsu.cmpe.projectdemo.api.resources.RegistrationResource)
@@ -20220,6 +20629,15 @@ INFO  [2013-12-04 02:45:32,160] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
+INFO  [2013-12-04 02:18:36,264] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 02:18:50,647] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 02:18:50,693] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 02:35:47,381] com.yammer.dropwizard.config.ServerFactory: 
+=======
 INFO  [2013-12-04 02:45:32,161] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -20530,6 +20948,7 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
 WARN  [2013-12-04 01:32:27,949] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -20539,10 +20958,17 @@ WARN  [2013-12-04 01:32:27,949] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
+INFO  [2013-12-04 02:35:47,479] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 02:35:47,481] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 02:35:47,594] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 02:35:47,704] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+=======
 INFO  [2013-12-04 01:32:28,270] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-04 01:32:28,278] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-04 01:32:28,781] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
 INFO  [2013-12-04 01:32:29,042] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
@@ -20580,6 +21006,19 @@ INFO  [2013-12-04 01:32:29,042] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
+INFO  [2013-12-04 02:35:47,704] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 02:35:48,202] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 02:35:48,205] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 02:40:17,918] com.sun.jersey.spi.container.servlet.WebComponent: A servlet request, to the URI http://localhost:15000/portal/verify/activate?activationLink=ff566051-c7c5-4247-a5ee-98f364b65fd5, contains form parameters in the request body but the request body has been consumed by the servlet or a servlet filter accessing the request parameters. Only resource methods using @FormParam will work as expected. Resource methods consuming the request body by other means will not work as expected.
+ERROR [2013-12-04 02:40:31,464] freemarker.runtime: Template processing error: "Expression appointment is undefined on line 59, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl."
+! freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 59, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+! at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125) ~[freemarker-2.3.19.jar:2.3.19]
+! at freemarker.core.IteratorBlock.accept(IteratorBlock.java:100) ~[freemarker-2.3.19.jar:2.3.19]
+=======
 INFO  [2013-12-04 01:32:29,042] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -21280,16 +21719,20 @@ Caused by: ! com.sun.jersey.api.container.ContainerException: freemarker.core.In
 Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 89, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
 ! at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125) ~[freemarker-2.3.19.jar:2.3.19]
 ! at freemarker.core.IteratorBlock.accept(IteratorBlock.java:100) ~[freemarker-2.3.19.jar:2.3.19]
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 ! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
 ! at freemarker.core.MixedContent.accept(MixedContent.java:92) ~[freemarker-2.3.19.jar:2.3.19]
 ! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
 ! at freemarker.core.Environment.process(Environment.java:199) ~[freemarker-2.3.19.jar:2.3.19]
 ! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
+<<<<<<< HEAD
+=======
 !... 37 common frames omitted
 WARN  [2013-12-04 02:52:40,597] org.eclipse.jetty.servlet.ServletHandler: /portal/login/donor/home/
 ! com.sun.jersey.api.container.ContainerException: freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 89, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 ! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
 ! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
 ! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
@@ -21304,6 +21747,33 @@ WARN  [2013-12-04 02:52:40,597] org.eclipse.jetty.servlet.ServletHandler: /porta
 ! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
 ! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+<<<<<<< HEAD
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Unknown Source) ~[na:1.8.0-ea]
+WARN  [2013-12-04 02:40:31,484] org.eclipse.jetty.servlet.ServletHandler: 
+! javax.servlet.ServletException: com.sun.jersey.api.container.ContainerException: freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 59, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+=======
 ! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
@@ -21386,6 +21856,7 @@ ERROR [2013-12-04 02:54:12,140] freemarker.runtime: Template processing error: "
 ! at java.lang.Thread.run(Thread.java:695) [na:1.6.0_65]
 WARN  [2013-12-04 02:54:12,144] org.eclipse.jetty.servlet.ServletHandler: 
 ! javax.servlet.ServletException: com.sun.jersey.api.container.ContainerException: freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 89, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 ! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:423) ~[jersey-servlet-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
@@ -21394,6 +21865,32 @@ WARN  [2013-12-04 02:54:12,144] org.eclipse.jetty.servlet.ServletHandler:
 ! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
 ! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+<<<<<<< HEAD
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Unknown Source) ~[na:1.8.0-ea]
+Caused by: ! com.sun.jersey.api.container.ContainerException: freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 59, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+=======
 ! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
@@ -21418,6 +21915,7 @@ WARN  [2013-12-04 02:54:12,144] org.eclipse.jetty.servlet.ServletHandler:
 ! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at java.lang.Thread.run(Thread.java:695) [na:1.6.0_65]
 Caused by: ! com.sun.jersey.api.container.ContainerException: freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 89, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
 ! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
 ! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
@@ -21427,7 +21925,11 @@ Caused by: ! com.sun.jersey.api.container.ContainerException: freemarker.core.In
 ! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
 !... 30 common frames omitted
+<<<<<<< HEAD
+Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 59, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+=======
 Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 89, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 ! at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125) ~[freemarker-2.3.19.jar:2.3.19]
 ! at freemarker.core.IteratorBlock.accept(IteratorBlock.java:100) ~[freemarker-2.3.19.jar:2.3.19]
 ! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
@@ -21437,8 +21939,13 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
+<<<<<<< HEAD
+WARN  [2013-12-04 02:40:31,484] org.eclipse.jetty.servlet.ServletHandler: /portal/login/donor/home
+! com.sun.jersey.api.container.ContainerException: freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 59, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+=======
 WARN  [2013-12-04 02:54:12,146] org.eclipse.jetty.servlet.ServletHandler: /portal/login/donor/home/
 ! com.sun.jersey.api.container.ContainerException: freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 89, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:58) ~[dropwizard-views-0.6.2.jar:na]
 ! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
 ! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
@@ -21454,6 +21961,32 @@ WARN  [2013-12-04 02:54:12,146] org.eclipse.jetty.servlet.ServletHandler: /porta
 ! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
 ! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+<<<<<<< HEAD
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Unknown Source) ~[na:1.8.0-ea]
+Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 59, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+=======
 ! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
@@ -21628,6 +22161,7 @@ WARN  [2013-12-04 02:54:35,113] org.eclipse.jetty.servlet.ServletHandler: /porta
 ! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
 ! at java.lang.Thread.run(Thread.java:695) [na:1.6.0_65]
 Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment is undefined on line 89, column 24 in edu/sjsu/cmpe/projectdemo/views/DonorHome.ftl.
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
 ! at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125) ~[freemarker-2.3.19.jar:2.3.19]
 ! at freemarker.core.IteratorBlock.accept(IteratorBlock.java:100) ~[freemarker-2.3.19.jar:2.3.19]
 ! at freemarker.core.Environment.visit(Environment.java:221) ~[freemarker-2.3.19.jar:2.3.19]
@@ -21637,7 +22171,12 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at freemarker.template.Template.process(Template.java:259) ~[freemarker-2.3.19.jar:2.3.19]
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
+<<<<<<< HEAD
 WARN  [2013-12-04 03:02:17,307] com.yammer.dropwizard.config.ServerFactory: 
+=======
+<<<<<<< HEAD
+WARN  [2013-12-04 02:55:23,574] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> b737dfcc0d9864928cf8972ea1f9e7b719c2f41b
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -21647,10 +22186,17 @@ WARN  [2013-12-04 03:02:17,307] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
 INFO  [2013-12-04 03:02:17,663] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-04 03:02:17,676] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-04 03:02:18,026] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
 INFO  [2013-12-04 03:02:18,599] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+=======
+INFO  [2013-12-04 02:55:23,704] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 02:55:23,707] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 02:55:23,832] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 02:55:25,085] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+>>>>>>> b737dfcc0d9864928cf8972ea1f9e7b719c2f41b
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
@@ -21688,6 +22234,7 @@ INFO  [2013-12-04 03:02:18,599] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
 INFO  [2013-12-04 03:02:18,599] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -21845,6 +22392,16 @@ Caused by: ! freemarker.core.InvalidReferenceException: Expression appointment i
 ! at com.yammer.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:56) ~[dropwizard-views-0.6.2.jar:na]
 !... 37 common frames omitted
 WARN  [2013-12-04 03:06:35,846] com.yammer.dropwizard.config.ServerFactory: 
+=======
+INFO  [2013-12-04 02:55:25,099] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 02:55:39,431] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 02:55:39,491] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+WARN  [2013-12-04 02:59:39,609] com.sun.jersey.spi.container.servlet.WebComponent: A servlet request, to the URI http://localhost:15000/portal/verify/activate?activationLink=b56bd668-25b1-4957-9e50-3ae04aa05803, contains form parameters in the request body but the request body has been consumed by the servlet or a servlet filter accessing the request parameters. Only resource methods using @FormParam will work as expected. Resource methods consuming the request body by other means will not work as expected.
+WARN  [2013-12-04 03:01:49,019] com.yammer.dropwizard.config.ServerFactory: 
+>>>>>>> b737dfcc0d9864928cf8972ea1f9e7b719c2f41b
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -21854,10 +22411,17 @@ WARN  [2013-12-04 03:06:35,846] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
 INFO  [2013-12-04 03:06:36,157] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
 INFO  [2013-12-04 03:06:36,161] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
 INFO  [2013-12-04 03:06:36,420] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
 INFO  [2013-12-04 03:06:36,853] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+=======
+INFO  [2013-12-04 03:01:49,142] com.yammer.dropwizard.cli.ServerCommand: Starting project-service
+INFO  [2013-12-04 03:01:49,145] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-12-04 03:01:49,274] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-12-04 03:01:50,555] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+>>>>>>> b737dfcc0d9864928cf8972ea1f9e7b719c2f41b
 
     GET     /portal/login (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
     GET     /portal/login/ForgotPassword (edu.sjsu.cmpe.projectdemo.api.resources.LoginResource)
@@ -21895,6 +22459,7 @@ INFO  [2013-12-04 03:06:36,853] com.yammer.dropwizard.config.Environment: The fo
     POST    /portal/SearchDonor (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResource)
     GET     /portal/SearchDonorResult (edu.sjsu.cmpe.projectdemo.api.resources.SearchDonorResultResource)
 
+<<<<<<< HEAD
 INFO  [2013-12-04 03:06:36,854] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
@@ -23460,3 +24025,13 @@ INFO  [2013-12-04 04:35:52,503] com.yammer.dropwizard.config.Environment: tasks 
 INFO  [2013-12-04 04:35:54,432] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
 WARN  [2013-12-04 04:35:54,435] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:15001
 INFO  [2013-12-04 04:35:54,435] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+=======
+INFO  [2013-12-04 03:01:50,571] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2013-12-04 03:02:04,787] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:15000
+INFO  [2013-12-04 03:02:04,839] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:15001
+=======
+>>>>>>> 6222663d45f89962f5bbc631ef380b4db4c09722
+>>>>>>> b737dfcc0d9864928cf8972ea1f9e7b719c2f41b

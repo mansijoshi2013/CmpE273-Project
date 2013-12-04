@@ -103,7 +103,7 @@ public class DonorHomeResource {
 		}
 	@POST
 	public Response viewClinics() throws URISyntaxException{
-		URI uri=new URI("http://localhost:15000/portal/login/donor/clinics?username="+userName);
+		URI uri=new URI("http://50.18.202.70:15000/portal/login/donor/clinics?username="+userName);
 		return Response.seeOther(uri).build();
 		
 		

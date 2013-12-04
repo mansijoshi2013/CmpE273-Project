@@ -59,7 +59,7 @@ public class EmailVerifyResource
 	@POST
 	public Response goToLogin() throws URISyntaxException
 	{
-		URI uri=new URI("http://localhost:15000/portal/login");
+		URI uri=new URI("http://50.18.202.70:15000/portal/login");
 		return Response.seeOther(uri).build();
 	}
 	
