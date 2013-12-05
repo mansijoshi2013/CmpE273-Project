@@ -41,10 +41,10 @@
         <br>
         
 	<div id="container" style="width: 100%;padding: 76px 10px 10px;margin-left: 70px;margin-top: 150px;">
-		<div id="requests" style="background-color:#FFD700;height:400px;width:300px;float:left;">
+		<div id="requests" style="background-color: #EEEEEE;height:400px;width:300px;float:left;">
 		Blood Requests for the Day! <br> <br>
 		<#list bloodRequests as requests>
-		<p>
+		<p style = "color: black;">
 		<br>
 		${requests.bloodGroup}
 		<br>
@@ -82,14 +82,15 @@
 		</div>
 		
 		
-		<div id="apt" style="background-color:#CCCCFF;height:400px;width:400px;float:left;">
+		<div id="apt" style="background-color: #EEEEEE;;height:400px;width:400px;float:left;">
 		<form action="" method="post">
-		<input type="submit" name="username" value="Book an Appointment now!!" >
+		<input type="submit" class="BDRP_sidebutton" style = "position:relative; width: 275px; 
+height: 30px;" name="username" value="Book an Appointment now!!" >
 		<br>
 		<br>
 		Your Appointments! <br> <br>
 		<#list appointment as apt>
-		<p>
+		<p style = "color: black;">
 		<br>
 		${apt.clinicName}
 		<br>
