@@ -89,7 +89,7 @@ public class AppointmentResource {
 		db.insertAppointment(appointment);
 		//twilio to send message to user
 		try {
-			TwilioImplementation TI=new TwilioImplementation("+14086368748",clinicname,apt_date,time);
+			TwilioImplementation TI=new TwilioImplementation(num,clinicname,apt_date,time);
 		} catch (TwilioRestException e) {
 			
 			e.printStackTrace();
