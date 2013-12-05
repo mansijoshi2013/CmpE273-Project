@@ -6,6 +6,28 @@
 	<#include "style.css">
 	<#include "normalize.css">
 	</style>
+	<style>
+	.gradientBoxesWithOuterShadows { 
+height: 200px;
+width: 400px; 
+padding: 20px;
+background-color: white; 
+
+/* outer shadows  (note the rgba is red, green, blue, alpha) */
+-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+
+/* rounded corners */
+-webkit-border-radius: 12px;
+-moz-border-radius: 7px; 
+border-radius: 7px;
+
+/* gradients */
+background: -webkit-gradient(linear, left top, left bottom, 
+color-stop(0%, white), color-stop(15%, white), color-stop(100%, #D7E9F5)); 
+background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+}
+	</style>
 </head>
 
 	<body>
@@ -41,7 +63,7 @@
         <br>
         
 	<div id="container" style="width: 100%;padding: 76px 10px 10px;margin-left: 70px;margin-top: 150px;">
-		<div id="requests" style="background-color: #EEEEEE;height:400px;width:300px;float:left;">
+		<div class ="gradientBoxesWithOuterShadows" id="requests" style="background-color: #EEEEEE;height:400px;width:300px;float:left;">
 		Blood Requests for the Day! <br> <br>
 		<#list bloodRequests as requests>
 		<p style = "color: black;">
@@ -58,7 +80,7 @@
 		</div>
 	
 	
-		<div id="camps" style="background-color:#EEEEEE;height:400px;width:300px;float:left;">
+		<div class ="gradientBoxesWithOuterShadows" id="camps" style="background-color:#EEEEEE;height:400px;width:300px;float:left;">
 		<form style="text-align:left" action="" method="get">
 		The following camps are taking place in your city:<br><br><br>
 		
@@ -82,7 +104,7 @@
 		</div>
 		
 		
-		<div id="apt" style="background-color: #EEEEEE;;height:400px;width:400px;float:left;">
+		<div class ="gradientBoxesWithOuterShadows" id="apt" style="background-color: #EEEEEE;;height:400px;width:400px;float:left;">
 		<form action="" method="post">
 		<input type="submit" class="BDRP_sidebutton" style = "position:relative; width: 275px; 
 height: 30px;" name="username" value="Book an Appointment now!!" >
