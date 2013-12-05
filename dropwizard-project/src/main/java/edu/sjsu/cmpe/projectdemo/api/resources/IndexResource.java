@@ -22,7 +22,7 @@ public class IndexResource
 	{
 		return new IndexView();
 	}
-	
+
 	@Path("/news")
 	@GET()
 	public View getNews()
@@ -30,7 +30,11 @@ public class IndexResource
 		return new NewsView();
 	}
 
-	
-	
-	
+
+	@Path("/AboutUs")
+	@GET
+	public AboutUsView getAboutUs()
+	{
+		return new AboutUsView();
+	}
 }

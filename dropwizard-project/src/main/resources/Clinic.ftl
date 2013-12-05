@@ -1,6 +1,7 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.ClinicView" -->
 <html>
 <head>
+<title> Clinics </title>
 	<style type="text/css">
 	<#include "style.css">
 	<#include "foundation.css">
