@@ -1,6 +1,8 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.AdminHomeView" -->
 <html>
+
 <head>
+<title> Admin Page </title>
 	<style type="text/css">
 	<#include "style.css">
 	<#include "normalize.css">

@@ -1,6 +1,7 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.PasswordResetView" -->
 <html>
 <head>
+<title>Password Reset</title>
 <script>
 function validatePassword()
 {

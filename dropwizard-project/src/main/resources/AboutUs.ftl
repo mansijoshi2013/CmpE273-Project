@@ -1,6 +1,8 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.EmailSentView" -->
 <html>
-	
+	<head>
+	<title> About Us </title>
+	</head>
 	<body>
 		
 		<div id="dnames" style="background-color:#FFD700;height:400px;width:800px;margin:0 auto;">
@@ -25,6 +27,7 @@
 		</table>
 		
 		</div>
+		<a href = "http://localhost:15000/portal/index" > HOME </a>
 		</div>
 	</body>
 </html>

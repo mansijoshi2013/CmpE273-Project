@@ -2,6 +2,7 @@
 
 <html>
 <head>
+<title>Search Donor</title>
 <script>
 function submitter(btn) {
     var Email = btn.parentElement.parentElement.id;

@@ -1,7 +1,7 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.DonorHomeView" -->
 <html>
 <head>
-
+<title> Donor Home </title>
 	<style type="text/css">
 	<#include "style.css">
 	<#include "normalize.css">

@@ -1,5 +1,8 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.EmailSentView" -->
 <html>
+	<head>
+	<title> News </title>
+	</head>
 	
 	<body>
 		
@@ -65,7 +68,7 @@
 		
 		
 		</table>
-		
+		<a href = "http://localhost:15000/portal/index" > HOME </a>
 		</div>
 		
 		
