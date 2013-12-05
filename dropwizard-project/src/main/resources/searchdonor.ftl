@@ -4,7 +4,6 @@
 <head>
 <style type="text/css">
 	<#include "style.css">
-	
 	<#include "normalize.css">
 	</style>
 </head>
