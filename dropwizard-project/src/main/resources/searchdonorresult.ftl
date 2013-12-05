@@ -53,7 +53,7 @@ function submitter(btn) {
 <h1><center>These are the donors present in the selected city<center></h1>
 <br>
 <br>
-<div id="dnames" style="background-color:#FFD700;height:200px;width:800px;margin:0 auto;">
+<div id="dnames" style="height:200px;width:800px;margin:0 auto;">
 
 		
 
