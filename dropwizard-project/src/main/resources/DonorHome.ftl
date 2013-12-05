@@ -74,7 +74,7 @@ background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%);
 		<br>
 		${requests.address},${requests.city},${requests.state}
 		
-		</input>
+		
 		</p>
 	    </#list> 
 		</div>
