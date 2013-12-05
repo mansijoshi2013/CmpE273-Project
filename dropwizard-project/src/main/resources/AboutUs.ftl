@@ -27,7 +27,7 @@
 		</table>
 		
 		</div>
-		<a href = "http://localhost:15000/portal/index" > HOME </a>
+		<a href = "http://50.18.202.70:15000/portal/index" > HOME </a>
 		</div>
 	</body>
 </html>

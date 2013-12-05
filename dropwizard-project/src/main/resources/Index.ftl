@@ -135,13 +135,13 @@
             </div>
         
         <div style="left: 685px; width: 285px; position: absolute; min-height: 35px; text-align: center;") repeat-x scroll center top rgb(40, 118, 118);">
-            <a class = "BDRP_sidebutton" href="http://localhost:15000/portal/login">
+            <a class = "BDRP_sidebutton" href="http://50.18.202.70:15000/portal/login">
             <span class="BDRP_sidebutton_Label" style="line-height: 30px;  text-align:center; color: rgb(255, 255, 255);"> Login </span>
             </a>
         </div>
         
         <div style="left: 685px; width: 285px; position: absolute; min-height: 35px; text-align: center; top: 50px;") repeat-x scroll center top rgb(40, 118, 118);">
-        <a class = "BDRP_sidebutton" href="http://localhost:15000/portal/Registration" >
+        <a class = "BDRP_sidebutton" href="http://50.18.202.70:15000/portal/Registration" >
             <span class="BDRP_sidebutton_Label" style="line-height: 30px;  text-align:center; color: rgb(255, 255, 255);"> Register </span>
         </a>
         </div>

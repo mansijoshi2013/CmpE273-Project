@@ -44,10 +44,10 @@
 		An email has been sent to the selected donor.	
 		
 		</form>
-<<<<<<< HEAD
+
 		</div>
-=======
-		<a href = "http://localhost:15000/portal/index" > HOME </a>
->>>>>>> b84460f4d6b5c01bd2f5fdd250b22e30d2ded7eb
+
+		<a href = "http://50.18.202.70:15000/portal/index" > HOME </a>
+
 	</body>
 </html>

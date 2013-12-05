@@ -45,13 +45,13 @@
 		Password: <input type="password" placeholder="Password" name="Password" style="width: 30%;"><br>
 		<div >
 		<input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;margin-left: 80;
-height: 30px;" onclick="location.href = 'http://localhost:15000/portal/index';" type="button" value="Back">
+height: 30px;" onclick="location.href = 'http://50.18.202.70:15000/portal/index';" type="button" value="Back">
 		<input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;margin-left: 80;
 height: 30px;" type="submit" value="Submit">
 		</div>
 		
 		<br>
-		<a href="http://localhost:15000/portal/login/ForgotPassword"> Forgot Password? </a>
+		<a href="http://50.18.202.70:15000/portal/login/ForgotPassword"> Forgot Password? </a>
 		</form>
 	</div>
 	</div>
