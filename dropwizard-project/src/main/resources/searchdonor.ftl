@@ -2,10 +2,14 @@
 
 <html>
 <head>
+
+<title>Search Donor</title>
+
 <style type="text/css">
 	<#include "style.css">
 	<#include "normalize.css">
 	</style>
+
 </head>
 
     

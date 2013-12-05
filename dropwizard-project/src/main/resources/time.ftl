@@ -1,6 +1,7 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.TimeView" -->
 <html>
 <head>
+<title>Book Appointment</title>
 <style>
 .availablestyle{
 background:#00FF00;

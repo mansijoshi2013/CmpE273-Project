@@ -110,16 +110,7 @@
         
         
         <div class = "home_tab_container" >
-       
-            <div style="visibility: visible; position: relative; -webkit-transition: 0.4s; transition: 0.4s; display: inline-block;" container="menu" listposition="left" state="selected">
-                <div >
-                    <div style="padding: 0px 4px; " >
-                        <p style="line-height: 35px; width: auto;" class="home_tab_container_text">HOME</p>
-                    </div>
-                </div>
-            </div>
-            
-            
+               
             <div style="visibility: visible; position: relative; -webkit-transition: 0.4s; transition: 0.4s; display: inline-block;" container="menu" listposition="center" state="">
                 <div >
                     <div skinpart="bg" style="padding: 0px 3px; display: inline-block;">

@@ -1,6 +1,7 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.ForgotPasswordView" -->
 <html>
 <head>
+<title>Forgot Password</title>
 <script>
 function validateEmail()
 {
