@@ -1,14 +1,14 @@
 <#-- @ftlvariable name="" type="edu.sjsu.cmpe.projectdemo.views.DonorEmailSentView" -->
 <html>
-<<<<<<< HEAD
+
 	<style type="text/css">
 	<#include "style.css">
 	<#include "normalize.css">
 	</style>
 	
-=======
+
 	<head><title>Email Sent</title></head>
->>>>>>> b84460f4d6b5c01bd2f5fdd250b22e30d2ded7eb
+
 	<body>
 	<div id="bgNode"class="bgNode" style="height: 505px; margin-top: 14;">
 <div id="SITE_HEADER" width="1080" height="200" x="0" y="0" scale="1" angle="0" styleid="hc3" style="visibility: visible; width: 980px; min-height: 200px; position: absolute;margin-left: 140px;">
