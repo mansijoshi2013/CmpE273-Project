@@ -206,7 +206,7 @@ function validateZipCode()
     </tr>
     
     <tr>
-         <td align="left"><input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;left: 175px;;
+         <td align="left"><input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;left: 175px;
 height: 30px;" type="submit" value="Register"></td>
     </tr>
     <tr>

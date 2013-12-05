@@ -2,6 +2,11 @@
 
 <html>
 <head>
+<style type="text/css">
+	<#include "style.css">
+	
+	<#include "normalize.css">
+	</style>
 </head>
 
     
@@ -61,7 +66,8 @@
 				</tr>
            </table>
             
-             <center><h2><input font-size: larger type="submit" value="search>>" name="s1"></h2><center>
+             <center><h2><input class="BDRP_sidebutton" style = "position:relative; width: 175px; margin-top: 15px;left: 175px;
+height: 30px;font-size: 20px" type="submit" value="search>>" name="s1"></h2><center>
              </div>
              <br><br>
             
