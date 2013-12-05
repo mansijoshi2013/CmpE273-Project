@@ -70,10 +70,10 @@
         <div style="margin-top:15px; margin-left: 90px;">
         <ol id="js-news" class="js-hidden">
 
-            <li class="news-item"><a href="http://localhost:15000/portal/index/news">Cupertino Blood Drive a big success!</a></li>
-            <li class="news-item"><a href="http://localhost:15000/portal/index/news">Emma Jackson with her testimony!</a></li>
-            <li class="news-item"><a href="http://localhost:15000/portal/index/news">San Jose Blood Drive coming up!</a></li>
-            <li class="news-item"><a href="http://localhost:15000/portal/index/news">One pint of blood can save up to three lives.</a></li>
+            <li class="news-item"><a href="http://50.18.202.70:15000/portal/index/news">Cupertino Blood Drive a big success!</a></li>
+            <li class="news-item"><a href="http://50.18.202.70:15000/portal/index/news">Emma Jackson with her testimony!</a></li>
+            <li class="news-item"><a href="http://50.18.202.70:15000/portal/index/news">San Jose Blood Drive coming up!</a></li>
+            <li class="news-item"><a href="http://50.18.202.70:15000/portal/index/news">One pint of blood can save up to three lives.</a></li>
 
         </ol>
         </div>
@@ -114,7 +114,7 @@
             <div style="visibility: visible; position: relative; -webkit-transition: 0.4s; transition: 0.4s; display: inline-block;" container="menu" listposition="center" state="">
                 <div >
                     <div skinpart="bg" style="padding: 0px 3px; display: inline-block;">
-                        <a href="http://localhost:15000/portal/index/news" skinpart="label" class="home_tab_container_text" style="line-height: 35px; width: auto;">NEWS</a>
+                        <a href="http://50.18.202.70:15000/portal/index/news" skinpart="label" class="home_tab_container_text" style="line-height: 35px; width: auto;">NEWS</a>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                 <div >
                     <div skinpart="bg" style="padding: 0px 4px 0px 3px;display: inline-block;">
                        
-                        <a href="http://localhost:15000/portal/index/AboutUs" skinpart="label" class="home_tab_container_text" style="line-height: 35px; width: auto;"> ABOUT US </a>
+                        <a href="http://50.18.202.70:15000/portal/index/AboutUs" skinpart="label" class="home_tab_container_text" style="line-height: 35px; width: auto;"> ABOUT US </a>
                     </div>
                 </div>
             </div>
