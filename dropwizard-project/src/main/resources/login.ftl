@@ -36,12 +36,7 @@
   		<div width="385" height="165" x="580" y="60" scale="1" angle="0" style="visibility: visible; left: 580px; top: 60px; width: 385px; min-height: 165px; position: absolute;">
         </div>
         </div>
-        
-        
-        
-        
-        
-        
+       
 	<div id="BDRP_form_div" style="padding: 50px 150px 10px;margin: 150px;">
 		<form style="text-align:center" action="" method="post">
 		<h1 align="center"> Login Page </h1>
