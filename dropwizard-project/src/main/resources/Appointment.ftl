@@ -52,7 +52,7 @@
     <tr>
    
         		   <td align="right"><b>Select Date:</b></td>
-     	 			<td align="left"><input type="date" min="2013-12-04" name="date"/></td>
+     	 			<td align="left"><input type="date" min="2013-12-05" name="date"/></td>
      	 			<td align="left"><input type="submit" class="BDRP_sidebutton" style= "position:relative; width:200px;" value="Continue"></td>
     			</tr>
    <input type="date" min="201>
